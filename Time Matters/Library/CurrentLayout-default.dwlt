@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 1113, y: 342}
   m_MaxSize: {x: 26008, y: 10021}
   vertical: 0
-  controlID: 60
+  controlID: 160
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_MinSize: {x: 882, y: 342}
   m_MaxSize: {x: 16007, y: 8042}
   vertical: 1
-  controlID: 61
+  controlID: 118
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_MinSize: {x: 882, y: 221}
   m_MaxSize: {x: 16007, y: 4021}
   vertical: 0
-  controlID: 62
+  controlID: 119
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -390,20 +390,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Fonts
+    - Assets/Images
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Fonts
+  - Assets/Images
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Time-Matters-Game\Time Matters
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 84390000
-    m_LastClickedID: 14724
-    m_ExpandedIDs: 000000005a39000000ca9a3b
+    m_SelectedIDs: a8390000
+    m_LastClickedID: 14760
+    m_ExpandedIDs: 00000000a039000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -431,7 +431,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005a390000
+    m_ExpandedIDs: 00000000a0390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -554,9 +554,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: d6d5ffff1cd6fffffcdbffffb6e8ffffe8e8ffff9ceaffff36faffff98faffff44fbffff14390000
+      m_SelectedIDs: 98d9ffff
+      m_LastClickedID: -9832
+      m_ExpandedIDs: c6dfffff0ae0fffff0e7ffff7aeeffff8ef8ffff20f9ffff24fbffff1639000030390000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -616,9 +616,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.000061035156, y: 0, z: 90}
+    m_Target: {x: 0.47810072, y: 0.43376547, z: 767.0905}
     speed: 2
-    m_Value: {x: -0.00006111976, y: 0.00000004178804, z: 90.00006}
+    m_Value: {x: 0.47810072, y: 0.43376547, z: 767.0905}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -668,9 +668,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.7367373
+    m_Target: 5.021219
     speed: 2
-    m_Value: 5.736737
+    m_Value: 4.804994
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -780,7 +780,7 @@ MonoBehaviour:
       width: 1658.6881
       height: 1706.6667
     m_MinimalGUI: 1
-  m_defaultScale: 0.4376953
+  m_defaultScale: 0.45
   m_LastWindowPixelSize: {x: 1089, y: 1152}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
