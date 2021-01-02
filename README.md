@@ -3,8 +3,8 @@
 ---
 
 - Designer : 이창근
-- StoryTeller : 이준근
-- SystemPlanner : 장현규
+- Story Teller : 이준근
+- System Planner : 장현규
 - Developer : 김명기
 
 ---
