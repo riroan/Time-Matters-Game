@@ -9,6 +9,7 @@ public class ScriptController : MonoBehaviour
     string[] script = new string[] { "Hello", "My Name is", "MyeongKi", "The end"};
     Text story;
 
+    
     private void Start()
     {
         // script load
@@ -17,6 +18,7 @@ public class ScriptController : MonoBehaviour
     private void Update()
     {
     }
+
 
     private void OnMouseUp()
     {
@@ -28,5 +30,4 @@ public class ScriptController : MonoBehaviour
             }
         }
     }
-
 }
