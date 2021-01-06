@@ -16,46 +16,17 @@ public class ScriptController : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
-            Ray touchray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    }
 
-            Physics.Raycast(touchray, out hit);
-
-            if (hit.collider != null)
-            {
-                Debug.Log(hit);
-                Debug.Log(hit.collider.gameObject.name);
-            }
-        }
-
-        if (Input.GetMouseButtonDown(0))
+    private void OnMouseUp()
+    {
+        if (gameObject.name == "board")
         {
             if (script.Length > currentScriptIx)
             {
                 story.text = script[currentScriptIx++];
-                Debug.Log(currentScriptIx);
             }
         }
     }
 
-    bool isTouched()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
-            Ray touchray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            Physics.Raycast(touchray, out hit);
-
-            if (hit.collider != null)
-            {
-                Debug.Log(hit);
-                Debug.Log(hit.collider.gameObject.name);
-                return true;
-            }
-        }
-        return false;
-    }
 }
