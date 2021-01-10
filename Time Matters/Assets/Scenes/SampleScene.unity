@@ -524,12 +524,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7a6141fdd45b5ff438ce1484da81a546, type: 3}
-    m_FontSize: 50
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 50
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -3930,6 +3930,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e6b9c0e3d35a94bb290f98ac4312cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  story: {fileID: 97696837}
+  dialogImage: {fileID: 1529367933}
+  isDialog: 0
 --- !u!61 &1993792776
 BoxCollider2D:
   m_ObjectHideFlags: 0
