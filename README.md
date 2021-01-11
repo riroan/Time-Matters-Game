@@ -2,10 +2,10 @@
  
 ---
 
-- Designer : 이창근
-- Story Teller : 이준근
-- System Planner : 장현규
-- Developer : 김명기
+- 이창근 : 디자이너, 개발(부)
+- 이준근 : 스토리기획
+- 장현규 : 시스템기획
+- 김명기 : 개발(정)
 
 ---
 
