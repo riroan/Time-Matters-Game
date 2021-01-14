@@ -15,11 +15,11 @@ public class Background_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(_speed * Time.delataTime, 0, 0);
+        //transform.Translate(_speed * Time.deltaTime, 0, 0);
 
-        if(transform.localposition.x <-2500.0f)
-        {
-            transform.localPosition = new Vector3(-1280.0f, 0, 0);
-        }
+        //if(transform.localPosition.x <-2500.0f)
+        //{
+        //    transform.localPosition = new Vector3(-1280.0f, 0, 0);
+        //}
     }
 }
