@@ -7,42 +7,74 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Dialog
 {
-    [TextArea]
     public string line;         // 현재 대사
-    public Sprite cg;           // 지금 대사에 그림이 있는지
-    public bool isChoose;       // 지금 대사가 선택해야하는 대사인지
+    public string imagePath;    // 그림 경로
+    public string[] choice;     // 선택 리스트
 }
 
 public class ScriptController : MonoBehaviour
 {
-    int currentScriptIx = 0;
-    Dialog[] scripts;
+    int currentScriptIx = 0;                    // 지금 몇번째 글 읽고 있음?
+    bool isDialog = false;                      // 지금 글 써지는중임?
+
+    const int maxChoice = 3;                    // 선택지 최대 몇개임?
+
+    Dialog[] prologScript;                      // 스크립트 클래스
     [SerializeField] Text story;
     [SerializeField] Image dialogImage;
+    [SerializeField] GameObject[] chooseBttn;
 
-    string[] script;
-    public bool isDialog = false;
+    Dialog[] currentScript;                     // 현재 스크립트 대화내용
+    [SerializeField] float dialogSpeed = 0.1f;  // 글씨 써지는 속도
 
     private void Start()
     {
-        // script load
-        script = File.ReadAllLines("Assets/Story/prologue.txt");
-        scripts = new Dialog[script.Length];
-        //showDialog();
+        prologScript = loadDialog<Dialog>("Assets/Story/prolog.json");
+        currentScript = prologScript;
+    }
+
+    void saveDialog<T>(T item, string path) // test
+    {
+        string str = JsonUtility.ToJson(item);
+        StreamWriter sw = new StreamWriter(path);
+        sw.Write(str);
+        sw.Close();
+    }
+
+    T[] loadDialog<T>(string path)
+    {
+        string[] str = File.ReadAllLines(path);
+        T[] item = new T[str.Length];
+        for (int i = 0; i < str.Length; i++)
+            item[i] = JsonUtility.FromJson<T>(str[i]);
+        return item;
     }
 
     void nextDialog()
     {
-        if (script.Length > currentScriptIx)
+        if (currentScript.Length > currentScriptIx)
         {
-            //story.text = script[currentScriptIx++];
-            StartCoroutine(Typing(story, script[currentScriptIx], 0.1f));
-        }
-    }
+            // 해당 라인에 이미지가 있으면 이미지 불러옴
+            if (currentScript[currentScriptIx].imagePath.Length > 0)
+            {
+                dialogImage.gameObject.SetActive(true);
+                dialogImage.sprite = Resources.Load<Sprite>(currentScript[currentScriptIx].imagePath);
+            }
+            else
+                dialogImage.gameObject.SetActive(false);
 
-    public void showDialog()
-    {
-        dialogImage.gameObject.SetActive(true);
+            for (int i = 0; i < maxChoice; i++)
+            {
+                if (i < currentScript[currentScriptIx].choice.Length)
+                {      // 선택지 활성화
+                    chooseBttn[i].SetActive(true);
+                    chooseBttn[i].transform.Find("Text").GetComponent<Text>().text = currentScript[currentScriptIx].choice[i];
+                }
+                else   // 선택지 비활성화
+                    chooseBttn[i].SetActive(false);
+            }
+            StartCoroutine(Typing(story, currentScript[currentScriptIx].line, dialogSpeed));
+        }
     }
 
 
@@ -55,7 +87,7 @@ public class ScriptController : MonoBehaviour
         else if (isDialog)
         {
             StopAllCoroutines();
-            story.text = script[currentScriptIx++];
+            story.text = currentScript[currentScriptIx++].line;
             isDialog = false;
         }
     }
