@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    int currnet_ix = 0; // 현재 대사 인덱스
-
     // Start is called before the first frame update
     void Start()
     {
