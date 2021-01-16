@@ -4,12 +4,36 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
 public class Dialog
 {
-    public string line;         // 현재 대사
-    public string imagePath;    // 그림 경로
-    public string[] choice;     // 선택 리스트
+    // read-only
+    public string Line;         // 현재 대사
+    public string ImagePath;    // 그림 경로
+    public string[] Choice;     // 선택 리스트
+    public string[] Answer1;     // 선택에 따른 답
+    public string[] Answer2;
+    public string[] Answer3;
+    public List<string[]> Answer;
+
+    public Dialog(Dialog right)
+    {
+        Line = right.line;
+        ImagePath = right.imagePath;
+        Choice = right.choice;
+    }
+
+    void addItem(string[] strArr, List<string[]> listAnswer)
+    {
+        listAnswer.Add(strArr);
+    }
+
+    public string line { get { return Line; } }
+    public string imagePath { get { return ImagePath; } }
+    public string[] choice { get { return Choice; } }
+    public List<string[]> answer { get { return Answer; } }
+    public int numChoice { get { return Choice.Length; } }
+    public bool hasChoice { get { return Choice.Length > 0; } }
+    public bool hasImage {  get { return ImagePath.Length > 0; } }
 }
 
 public class ScriptController : MonoBehaviour
@@ -19,7 +43,9 @@ public class ScriptController : MonoBehaviour
 
     const int maxChoice = 3;                    // 선택지 최대 몇개임?
 
-    Dialog[] prologScript;                      // 스크립트 클래스
+    Dialog[] prologScript;
+    Dialog[] Chapter1;
+
     [SerializeField] Text story;
     [SerializeField] Image dialogImage;
     [SerializeField] GameObject[] chooseBttn;
@@ -29,11 +55,13 @@ public class ScriptController : MonoBehaviour
 
     private void Start()
     {
-        prologScript = loadDialog<Dialog>("Assets/Story/prolog.json");
+        prologScript = loadDialog("Assets/Story/prolog.json");
+        //Chapter1 = loadDialog("Assets/Story/Chapter1.json");
+
         currentScript = prologScript;
     }
 
-    void saveDialog<T>(T item, string path) // test
+    void saveDialog(Dialog item, string path) // test
     {
         string str = JsonUtility.ToJson(item);
         StreamWriter sw = new StreamWriter(path);
@@ -41,12 +69,12 @@ public class ScriptController : MonoBehaviour
         sw.Close();
     }
 
-    T[] loadDialog<T>(string path)
+    Dialog[] loadDialog(string path)
     {
         string[] str = File.ReadAllLines(path);
-        T[] item = new T[str.Length];
+        Dialog[] item = new Dialog[str.Length];
         for (int i = 0; i < str.Length; i++)
-            item[i] = JsonUtility.FromJson<T>(str[i]);
+            item[i] = new Dialog(JsonUtility.FromJson<Dialog>(str[i]));
         return item;
     }
 
@@ -55,32 +83,36 @@ public class ScriptController : MonoBehaviour
         if (currentScript.Length > currentScriptIx)
         {
             // 해당 라인에 이미지가 있으면 이미지 불러옴
-            if (currentScript[currentScriptIx].imagePath.Length > 0)
+            if (currentScript[currentScriptIx].hasImage)
             {
                 dialogImage.gameObject.SetActive(true);
                 dialogImage.sprite = Resources.Load<Sprite>(currentScript[currentScriptIx].imagePath);
             }
             else
-                dialogImage.gameObject.SetActive(false);
-
-            for (int i = 0; i < maxChoice; i++)
             {
-                if (i < currentScript[currentScriptIx].choice.Length)
-                {      // 선택지 활성화
-                    chooseBttn[i].SetActive(true);
-                    chooseBttn[i].transform.Find("Text").GetComponent<Text>().text = currentScript[currentScriptIx].choice[i];
+                dialogImage.gameObject.SetActive(false);
+            }
+
+            if (currentScript[currentScriptIx].hasChoice)
+            {
+                for (int i = 0; i < maxChoice; i++)
+                {
+                    if (i < currentScript[currentScriptIx].numChoice)
+                    {      // 선택지 활성화
+                        chooseBttn[i].SetActive(true);
+                        chooseBttn[i].transform.Find("Text").GetComponent<Text>().text = currentScript[currentScriptIx].choice[i];
+                    }
+                    else   // 선택지 비활성화
+                        chooseBttn[i].SetActive(false);
                 }
-                else   // 선택지 비활성화
-                    chooseBttn[i].SetActive(false);
             }
             StartCoroutine(Typing(story, currentScript[currentScriptIx].line, dialogSpeed));
         }
     }
 
-
-    private void OnMouseUp()
+    public void goNextDialog()
     {
-        if (gameObject.name == "board" && !isDialog)
+        if (!isDialog)
         {
             nextDialog();
         }

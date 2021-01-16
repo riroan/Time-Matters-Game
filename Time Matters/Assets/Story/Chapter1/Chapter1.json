@@ -1,0 +1,136 @@
+{"Line":"현장에 도착했을 때 수많은 경찰과 군인들이 바리케이트를 치고 있는 모습이 보입니다. OO은 상황이 어떤지 물어보기 위해 높아 보이는 사람에게 질문을 합니다.","ImagePath":"","Choice":["무슨 일입니까?","여기 지휘권자가 누굽니까?","지금 진입이 가능한가요?"], "Ix" : 0, "ChildIx":[1,5,7], "ParentIx":-1}
+{"Line":"OO: 무슨일입니까?","ImagePath":"","Choice":[], "Ix" : 1, "ChildIx":[2], "ParentIx":0}
+{"Line":"경찰: 테러입니다.","ImagePath":"","Choice":[], "Ix" : 2, "ChildIx":[3], "ParentIx":1}
+{"Line":"OO: 테러 라니요?","ImagePath":"","Choice":[], "Ix" : 3, "ChildIx":[4], "ParentIx":2}
+{"Line":"경찰: 정체불명의 단체가 건물 내부의 사람들에게 총기를 난사했다고 합니다. 건물 내부로 진입하려 했지만 로비에서 저항이 거세어 대치 중입니다.","ImagePath":"","Choice":[], "Ix" : 4, "ChildIx":[10], "ParentIx":3}
+{"Line":"OO: 여기 지휘권자가 누굽니까?","ImagePath":"","Choice":[], "Ix" : 5, "ChildIx":[6], "ParentIx":0}
+{"Line":"경찰: 현재 **대위님이 현재 지휘중 이십니다. 지금 지통실에 계십니다.","ImagePath":"","Choice":[], "Ix" : 6, "ChildIx":[10],"ParentIx":5}
+{"Line":"OO: 지금 진입이 가능한가요?","ImagePath":"","Choice":[], "Ix" : 7, "ChildIx":[8], "ParentIx":0}
+{"Line":"경찰: 현재로서는 많이 어려울 것 같습니다. 현재 로비에 진입을 시도하고 있지만 저항이 거세어 어려움을 겪고 있습니다.","ImagePath":"","Choice":[], "Ix" : 8, "ChildIx":[9], "ParentIx":7}
+{"Line":"OO: 젠장! 우리는 들어가야 한다고!","ImagePath":"","Choice":[], "Ix" : 9, "ChildIx":[10], "ParentIx":8}
+{"Line":"대화도중 경찰은 무전을 받아 대화가 끊겼다.","ImagePath":"","Choice":[], "Ix" : 10, "ChildIx":[11], "ParentIx":9}
+{"Line":"경찰: OO님? OO님을 데리러 한 분이 오실 거랍니다. 여기서 잠시 대기해 주세요","ImagePath":"","Choice":[], "Ix" : 11, "ChildIx":[12], "ParentIx":10}
+{"Line":"경찰의 말이 끝난지 얼마되지 않아 요원중 고참급으로 보이는 사람이 다른 요원에게 지시를 내리고 OO을 데려갔다.","ImagePath":"","Choice":[], "Ix" : 12, "ChildIx":[13], "ParentIx":11}
+{"Line":"현장지휘관: 우린 무슨일이 있어도 발사를 멈춰야 합니다. 많이 위험할 겁니다. 그런데, 발사 취소에 OO씨가 꼭 있어야 합니까?","ImagePath":"","Choice":[], "Ix" : 13, "ChildIx":[14], "ParentIx":12}
+{"Line":"OO: 네 발사 취소 시퀀스를 알고 있는 사람은 현재 저 말고는 없습니다.","ImagePath":"","Choice":[], "Ix" : 14, "ChildIx":[15], "ParentIx":13}
+{"Line":"현장지휘관: 아니, 제 말은 창근씨가 꼭 안으로 들어가지 않고, 특수부대만 들어가면 취소가 불가능한 상황인 겁니까?","ImagePath":"","Choice":[], "Ix" : 15, "ChildIx":[16], "ParentIx":14}
+{"Line":"OO: ….네","ImagePath":"","Choice":[], "Ix" : 16, "ChildIx":[17], "ParentIx":15}
+{"Line":"잠시 뒤, 특수부대원들이 OO과 요원들에게 다가와 상황을 보고하기 시작했다.","ImagePath":"","Choice":[], "Ix" : 17, "ChildIx":[18], "ParentIx":16}
+{"Line":"**: 현재 건물 로비에 파악된 적은 대략 2명정도로 예상됩니다. 강제로 진입하려면 할 수는 있지만 피해가 다소 예상됩니다.","ImagePath":"","Choice":[], "Ix" : 18, "ChildIx":[19], "ParentIx":17}
+{"Line":"OO: 건물 뒤쪽으로 작은 출입구가 있습니다.","ImagePath":"","Choice":[], "Ix" : 19, "ChildIx":[20], "ParentIx":18}
+{"Line":"**: 정확히 어느쪽이지요?","ImagePath":"","Choice":[], "Ix" : 20, "ChildIx":[21], "ParentIx":19}
+{"Line":"OO: 여깁니다. 담배를 태우느라 자주 이용했던 곳입니다.","ImagePath":"","Choice":[], "Ix" : 21, "ChildIx":[22], "ParentIx":20}
+{"Line":"**: 그 문을 통하면 올라갈 길은 있다는 말씀이시군요","ImagePath":"","Choice":[], "Ix" : 22, "ChildIx":[23], "ParentIx":21}
+{"Line":"OO: 네 계단도, 엘리베이터도 있습니다. 하지만 건물 뒤쪽으로 돌아가는데 시간이 다소 쓰일 것 같습니다. 길면 2분정도?","ImagePath":"","Choice":[], "Ix" : 23, "ChildIx":[24], "ParentIx":22}
+{"Line":"**: 그럼 일단 취소를 위해 저희가 필요한 것은 뭡니까?","ImagePath":"","Choice":[], "Ix" : 24, "ChildIx":[25], "ParentIx":23}
+{"Line":"OO: 발사 취소는 3층의 통제실에서 가능합니다. 통제실 출입은 키카드가 필요합니다. 1층의 전산실에 전부 보관되어 있습니다.","ImagePath":"","Choice":[], "Ix" : 25, "ChildIx":[26], "ParentIx":24}
+{"Line":"OO: 그리고 최종 취소에는 취소 패스워드와 열쇠가 필요합니다. 취소 패스워드는 2층의 제 연구실에 있는 컴퓨터에서 30분마다 갱신됩니다. 열쇠는 바로 옆의 금고에 보관되어 있고요","ImagePath":"","Choice":[], "Ix" : 26, "ChildIx":[27], "ParentIx":25}
+{"Line":"**: 으음…비밀번호는 어떻게 됩니까?","ImagePath":"","Choice":[], "Ix" : 26, "ChildIx":[27], "ParentIx":25}
+{"Line":"OO: 지문인식입니다.","ImagePath":"","Choice":[], "Ix" : 27, "ChildIx":[28], "ParentIx":26}
+{"Line":"**: 그쪽은 문제 없군요, 그럼 진입을 시작해야겠습니다. 어느쪽으로 가는게 좋겠습니까?","ImagePath":"","Choice":["지금 시간이 없습니다. 위험하지만 정문으로 가는게 좋을 것 같습니다.","시간은 없지만 확실한 방법이 좋을 것 같습니다. 뒷문으로 가는게 좋을 것 같습니다."], "Ix" : 28, "ChildIx":[29,30], "ParentIx":27}
+{"Line":"특수부대원들이 성공적으로 적들을 제압한후 로비에 들어설 수 있었습니다.","ImagePath":"","Choice":[], "Ix" : 29, "ChildIx":[31], "ParentIx":28}
+{"Line":"뒷문으로 가는데 시간이 들기는 했지만 다행히 적이 없었습니다. 문은 열려 있었고 안전하게 건물내부로 진입할 수 있었습니다.","ImagePath":"","Choice":[], "Ix" : 30, "ChildIx":[31], "ParentIx":28}
+{"Line":"건물 내부로 진입한 후 전산실에 가던 도중 앞서가던 정찰조로부터 무전이 들어왔다","ImagePath":"","Choice":[], "Ix" : 31, "ChildIx":[32], "ParentIx":30}
+{"Line":"**: 현재 진행 경로에는 적이 없는 듯합니다. 다만, 사망자가 있다고 합니다. 앞으로 가셔서 신원을 확인해 주시겠습니까?","ImagePath":"","Choice":[], "Ix" : 32, "ChildIx":[33], "ParentIx":31}
+{"Line":"OO:  네 알겠습니다 .","ImagePath":"","Choice":[], "Ix" : 33, "ChildIx":[34], "ParentIx":32}
+{"Line":"정찰조가 말했던 장소에 도착한 OO은 끔찍한 광경에 망을 이을 수 없었다. 그곳에는 족히 열명은 되어보이는 사람들이 피를 흘린채 쓰러져 있었다.","ImagePath":"","Choice":[], "Ix" : 34, "ChildIx":[35], "ParentIx":33}
+{"Line":"벽과 정수기, 화분에 튄 피들은 이곳에서 얼마나 끔찍한 일이 벌어졌는지 말해주기 충분했다. 그 끔찍한 장면속에서 OO은 누군가 꿈틀거리는 것을 알아 차렸다. 그 사람은 전산실에서 근무하던 A양임을 알아 보았다.","ImagePath":"","Choice":[], "Ix" : 35, "ChildIx":[36], "ParentIx":34}
+{"Line":"OO: 저기! 저희 직원이 있습니다. 아직 살아 있는 것 같은데 도와주세요!","ImagePath":"","Choice":[], "Ix" : 36, "ChildIx":[37], "ParentIx":35}
+{"Line":"**: 지금 시간이 없습니다. 부상자는 뒤에 진입하는 인원에게 맡기시고 저희는 전산실로 가야 합니다.","ImagePath":"","Choice":[], "Ix" : 37, "ChildIx":[38], "ParentIx":36}
+{"Line":"OO: 하지만 지금 조치하지 않으면 죽을지도 몰라요!","ImagePath":"","Choice":[], "Ix" : 38, "ChildIx":[39], "ParentIx":37}
+{"Line":"**: 물론 저 사람을 돕는 것이 옳다는 것은 저도 압니다. 하지만 지금 시간이 지체될수록 수천, 수만명이 죽을 수 있습니다. 다시 묻겠습니다. 어떻게 하는게 지금 작전에 도움이 되겠습니까?","ImagePath":"","Choice":["…..알겠습니다. 계속 가시죠","살려야 합니다. 그게 도움이 될 겁니다."], "Ix" : 39, "ChildIx":[40,94], "ParentIx":38}
+{"Line":"OO은 요원들과 함께 길을 나아가기 시작했다. 작지만 분명히 들리는 동료의 신음소리가 계속하여 OO의 귀에 들린다.","ImagePath":"","Choice":[], "Ix" : 40, "ChildIx":[41], "ParentIx":39}
+{"Line":"OO: 미안합니다, 미안합니다, 미안합니다…","ImagePath":"","Choice":[], "Ix" : 41, "ChildIx":[42], "ParentIx":40}
+{"Line":"OO은 자신의 사과가 A에게 들리기를 기도하며 앞으로 나아갔다. 왼쪽 복도의 상태도 미팅룸과 다르지 않았다. ","ImagePath":"","Choice":[], "Ix" : 42, "ChildIx":[43], "ParentIx":41}
+{"Line":"군데군데 죽었는지 모를 사람들이 쓰러져 있었고, 온 복도에는 피가 흥건했다. ","ImagePath":"","Choice":[], "Ix" : 43, "ChildIx":[44], "ParentIx":42}
+{"Line":"강렬하게 올라오는 피비린내에 OO은 구역질이 올라오며 잠깐 휘청거렸지만 이내 자신이 버리고 온 A에 대한 죄책감으로 인해 조금도 지체해서는 안된다는 것을 알기에 앞으로 나아간다. ","ImagePath":"","Choice":[], "Ix" : 44, "ChildIx":[45], "ParentIx":43}
+{"Line":"앞으로 나아가다 보니 복도의 끝에 도달하였다.","ImagePath":"","Choice":[], "Ix" : 45, "ChildIx":[46], "ParentIx":44}
+{"Line":"OO: 이 복도 끝에 넓은 사무공간이 나옵니다. 그곳에 들어서서 왼쪽 방 끝에 전산실이 있습니다.","ImagePath":"","Choice":[], "Ix" : 46, "ChildIx":[47], "ParentIx":45}
+{"Line":"**: 예 알겠습니다. 아 혹시 사무공간의 구조가 어떻게 되는지 아십니까?","ImagePath":"","Choice":[], "Ix" : 47, "ChildIx":[48], "ParentIx":46}
+{"Line":"OO:  아 큰 직사각형 방이고 파티션으로 가득합니다. ","ImagePath":"","Choice":[], "Ix" : 48, "ChildIx":[49], "ParentIx":47}
+{"Line":"**: 젠장… 파티션은 기습하기에 아주 좋은 엄폐물입니다. 아주 조심해야겠습니다.","ImagePath":"","Choice":[], "Ix" : 49, "ChildIx":[50], "ParentIx":48}
+{"Line":"대화후 진입팀은 천천히 앞으로 나아가 사무구역 입구에 도달하였다. 사무구역에 진입하기 직전, **은 대원들에게 빠른 손짓으로 수신호를 보냈고 대원들은 그에 답하였다.","ImagePath":"","Choice":[], "Ix" : 50, "ChildIx":[51], "ParentIx":49}
+{"Line":"**: 적이 있는 것 같답니다. 수는 불명. 두명의 위치는 파악되었고, 아직 저희의 존재를 모르는 것 같다고 합니다.","ImagePath":"","Choice":[], "Ix" : 51, "ChildIx":[52], "ParentIx":50}
+{"Line":"**: 물론 저희가 조용히 진입했다가 나오는 방법도 가능하지만 저희는 OO님이 키카드의 위치를 설명해 주신다 해도 시간이 걸릴 수도 있습니다.","ImagePath":"","Choice":[], "Ix" : 52, "ChildIx":[53], "ParentIx":51}
+{"Line":"**: 가장 확실한 적들은 모두 제압하고 OO님과 함께 전산실에 들어가는 것인데 어떻게 하시겠습니까?","ImagePath":"","Choice":["전산실 구조가 꽤 복잡합니다. 적들을 빠르게 처리할 수 있다면 그렇게 하는 편이 나을 겁니다. ","굳이 적들과 교전을 하지 않는 편이 좋겠습니다. 마침 전산실 문이 열려 있기도 하고요"], "Ix" : 53, "ChildIx":[54,75], "ParentIx":52}
+{"Line":"전산실 구조가 꽤 복잡합니다. 적들을 빠르게 처리할 수 있다면 그렇게 하는 편이 나을 겁니다. ","ImagePath":"","Choice":[], "Ix" : 54, "ChildIx":[55], "ParentIx":53}
+{"Line":"**: 네 알겠습니다. 귀를 막으세요","ImagePath":"","Choice":[], "Ix" : 55, "ChildIx":[56], "ParentIx":54}
+{"Line":"OO이 귀를 막자마자 적과 교전이 시작되었다. 귀를 막았는데도 커다란 총소리들을 막아주기엔 역부족이었다.","ImagePath":"","Choice":[], "Ix" : 56, "ChildIx":[57], "ParentIx":55}
+{"Line":"이윽고, 총소리는 멎었고, 대원들은 OO을 붙잡고 빠르게 안으로 들어갔다. OO의 눈에는 두명의 대원들이 쓰러져 있는 것이 보였다. ","ImagePath":"","Choice":[], "Ix" : 57, "ChildIx":[58], "ParentIx":56}
+{"Line":"&&: 씨발","ImagePath":"","Choice":[], "Ix" : 58, "ChildIx":[59], "ParentIx":57}
+{"Line":"&&은 욕을하며 적으로 보이는 쓰러진 사람에게 다가가 칼로 찌르기 시작했다.","ImagePath":"","Choice":[], "Ix" : 59, "ChildIx":[60], "ParentIx":58}
+{"Line":"&&:씨발 새끼야! 왜 숨어있어! 니가 내 친구를 죽여? 너도 죽어!","ImagePath":"","Choice":[], "Ix" : 60, "ChildIx":[61], "ParentIx":59}
+{"Line":"**이 말리기 전까지 &&은 계속하여 찔렀다.","ImagePath":"","Choice":[], "Ix" : 61, "ChildIx":[62], "ParentIx":60}
+{"Line":"&&이 진정한후 OO과 살아남은 대원들은 전산실에 진입하였다. OO이 키카드를 찾기 시작했지만 나오지 않았다.","ImagePath":"","Choice":[], "Ix" : 62, "ChildIx":[63], "ParentIx":61}
+{"Line":"없어진 키카드에 모두 당황하고 있던 그때 뒤에 있던 캐비닛 안에서 소리가 들리기 시작했다.","ImagePath":"","Choice":[], "Ix" : 63, "ChildIx":[64], "ParentIx":62}
+{"Line":"???: 살려주세요","ImagePath":"","Choice":[], "Ix" : 64, "ChildIx":[65], "ParentIx":63}
+{"Line":"대원들이 캐비닛에서 의문의 남성을 꺼내 바닥에 깔아 뭉갰다. OO은 그가 같이 일하는 동료 B임을 알아 볼 수 있었다.","ImagePath":"","Choice":[], "Ix" : 65, "ChildIx":[66], "ParentIx":64}
+{"Line":"OO: B? B맞나?","ImagePath":"","Choice":[], "Ix" : 66, "ChildIx":[67], "ParentIx":65}
+{"Line":"B: 네 저 맞습니다!","ImagePath":"","Choice":[], "Ix" : 67, "ChildIx":[68], "ParentIx":66}
+{"Line":"서로 알아보는 눈치이자 **은 그의 결박을 풀고 B군을 일으켰다.","ImagePath":"","Choice":[], "Ix" : 68, "ChildIx":[69], "ParentIx":67}
+{"Line":"OO: 그래 살아있어서 다행이야. 그런데 혹시 여기에 있던 키카드가 어디에 있는지 알고 있나?","ImagePath":"","Choice":[], "Ix" : 69, "ChildIx":[70], "ParentIx":68}
+{"Line":"B: 예 그거라면 테러가 시작되자 A양이 가지고 대피해야 한다고 말했습니다","ImagePath":"","Choice":[], "Ix" : 70, "ChildIx":[71], "ParentIx":69}
+{"Line":"OO: A양이…? 젠장, A양이 가지고 있었군. 빨리 A양에게 돌아가야 합니다. ","ImagePath":"","Choice":[], "Ix" : 71, "ChildIx":[72], "ParentIx":70}
+{"Line":"B: 저기… 저는 어떻게 해야합니까?","ImagePath":"","Choice":[], "Ix" : 72, "ChildIx":[73], "ParentIx":71}
+{"Line":"**: 중앙 미팅룸까지 에스코트하겠습니다. 나가는 길은 저희가 뚫고 왔으니 비어 있습니다. 거기서 부터는 혼자 나가시면 됩니다.","ImagePath":"","Choice":[], "Ix" : 73, "ChildIx":[74], "ParentIx":72}
+{"Line":"대화가 끝난 후 그들은 A양이 있던 장소로 이동하기 시작했다.","ImagePath":"","Choice":[], "Ix" : 74, "ChildIx":[87], "ParentIx":73}
+{"Line":"굳이 적들과 교전을 하지 않는 편이 좋겠습니다. 마침 전산실 문이 열려 있기도 하고요","ImagePath":"","Choice":[], "Ix" : 75, "ChildIx":[76], "ParentIx":53}
+{"Line":"OO은 바닥에 흥건한 피로 벽에 그림을 그리기 시작했다.","ImagePath":"","Choice":[], "Ix" : 76, "ChildIx":[77], "ParentIx":75}
+{"Line":"OO: ….그래서 키카드들은 이 통에 들어 있을 겁니다.","ImagePath":"","Choice":[], "Ix" : 77, "ChildIx":[78], "ParentIx":76}
+{"Line":"**: 네 알겠습니다. 투입!","ImagePath":"","Choice":[], "Ix" : 78, "ChildIx":[79], "ParentIx":77}
+{"Line":"**의 말이 끝나자 준비하고 있던 두명의 대원이 몸을 아주 낮춘채 빠르게 왼쪽으로 꺾어 사라졌다.","ImagePath":"","Choice":[], "Ix" : 79, "ChildIx":[80], "ParentIx":78}
+{"Line":"초조하게 그들을 기다리며 시간이 흘러갔다. 얼마 지나지 않아 대원 두명이 돌아왔다. 하지만 그들은 빈손으로 돌아왔다.","ImagePath":"","Choice":[], "Ix" : 80, "ChildIx":[81], "ParentIx":79}
+{"Line":"OO: 아니 여기에 없을리가 없는데….","ImagePath":"","Choice":[], "Ix" : 81, "ChildIx":[82], "ParentIx":80}
+{"Line":"**: 보안에 중요한 키카드를 보안을 최우선으로 생각하는 전산실에서 가지고 있다가, 테러가 벌어진다면…","ImagePath":"","Choice":[], "Ix" : 82, "ChildIx":[83], "ParentIx":81}
+{"Line":"OO: 설마 A양이? A양이 키카드를 숨기기 위해 가져갔을 수도 있습니다.","ImagePath":"","Choice":[], "Ix" : 83, "ChildIx":[84], "ParentIx":82}
+{"Line":"**: 이런 젠장, 다시 돌아 가야겠습니다.","ImagePath":"","Choice":[], "Ix" : 84, "ChildIx":[85], "ParentIx":83}
+{"Line":"**: 이미 지나왔던 길이니 경계는 최소로 하고 빠르게 진행한다.","ImagePath":"","Choice":[], "Ix" : 85, "ChildIx":[86], "ParentIx":84}
+{"Line":"그들은 서둘러 미팅룸으로 이동하기 시작했다.","ImagePath":"","Choice":[], "Ix" : 86, "ChildIx":[87], "ParentIx":85}
+{"Line":"미팅룸에 도착하니 A양이 원래 위치에서 조금 떨어진 곳까지 기어갔는지 그녀의 피로 길게 흔적이 나 있었고 그녀는 완전히 쓰러져 있었다.","ImagePath":"","Choice":[], "Ix" : 87, "ChildIx":[88], "ParentIx":86}
+{"Line":"**: 사망입니다. 얼마 지나지 않은 것 같습니다.","ImagePath":"","Choice":[], "Ix" : 88, "ChildIx":[89], "ParentIx":87}
+{"Line":"OO: 미안해, 미안해 A","ImagePath":"","Choice":[], "Ix" : 89, "ChildIx":[90], "ParentIx":88}
+{"Line":"눈물을 쏟으며 무릎을 꿇은 OO을 뒤로한 채 **은 그녀의 손에 있던 키카드 뭉치를 꺼내 들었다.","ImagePath":"","Choice":[], "Ix" : 90, "ChildIx":[91], "ParentIx":89}
+{"Line":"**: 이게 맞습니까?","ImagePath":"","Choice":[], "Ix" : 91, "ChildIx":[92], "ParentIx":90}
+{"Line":"OO: 네 맞습니다.","ImagePath":"","Choice":[], "Ix" : 92, "ChildIx":[93], "ParentIx":91}
+{"Line":"**: 이제는 빨리 올라가야 합니다. 여유가 없습니다.","ImagePath":"","Choice":[], "Ix" : 93, "ChildIx":[112], "ParentIx":92}
+{"Line":"OO: 살려야 합니다. 그게 도움이 될 겁니다.","ImagePath":"","Choice":[], "Ix" : 94, "ChildIx":[95], "ParentIx":39}
+{"Line":"**: 왜 그렇습니까?","ImagePath":"","Choice":[], "Ix" : 95, "ChildIx":[96], "ParentIx":94}
+{"Line":"OO: 전산실에 무슨일이 있었는지, 아직 그곳에 키카드가 남아있는지 탈취되진 않았는지 제일 잘 알겁니다.","ImagePath":"","Choice":[], "Ix" : 96, "ChildIx":[97], "ParentIx":95}
+{"Line":"**:네 그럼 그렇게 하겠습니다. 호진! 환자를 치료해. 나머지는 셋씩 각 통로를 경계한다.","ImagePath":"","Choice":[], "Ix" : 97, "ChildIx":[98], "ParentIx":96}
+{"Line":"호진:넵","ImagePath":"","Choice":[], "Ix" : 98, "ChildIx":[99], "ParentIx":97}
+{"Line":"호진이라고 불린 대원은 A한테 다가가 응급처치를 시작하였다.","ImagePath":"","Choice":[], "Ix" : 99, "ChildIx":[100], "ParentIx":98}
+{"Line":"다행히 응급처치가 효과가 있었는지 A양의 혈색이 돌아오기 시작했다.","ImagePath":"","Choice":[], "Ix" : 100, "ChildIx":[101], "ParentIx":99}
+{"Line":"OO: 감사합니다.","ImagePath":"","Choice":[], "Ix" : 101, "ChildIx":[102], "ParentIx":100}
+{"Line":"호진: 아닙니다. 오히려 제가 더 감사합니다.","ImagePath":"","Choice":[], "Ix" : 102, "ChildIx":[103], "ParentIx":101}
+{"Line":"OO: 예?","ImagePath":"","Choice":[], "Ix" : 103, "ChildIx":[104], "ParentIx":102}
+{"Line":"호진: 다수를 살려야 한다는 이유 때문에 이분을 무시하고 지나 갔으면 저는 그 행위가 옳았다고 저 자신한테 정당화할 수 없었을 겁니다. ","ImagePath":"","Choice":[], "Ix" : 104, "ChildIx":[105], "ParentIx":103}
+{"Line":"응급조치가 끝나자 A양이 작게 신음했다. 정신을 차린 A양이 주변에 있는 인원을 보고 공포에 빠졌지만 OO을 알아보고 금방 안정이 되었다.","ImagePath":"","Choice":[], "Ix" : 105, "ChildIx":[106], "ParentIx":104}
+{"Line":"OO: 다행이야, 지금 여기서 어떤 일이 일어나고 있는 지는 잘 알고 있겠지. 혹시 키카드가 어디에 있는지 알고 있나? ","ImagePath":"","Choice":[], "Ix" : 106, "ChildIx":[107], "ParentIx":105}
+{"Line":"A:  네 제가 키카드는 모두 로비 안쪽 안내데스크에 가져다 놨습니다. 출근하는 대로 드리려고요. ","ImagePath":"","Choice":[], "Ix" : 107, "ChildIx":[108], "ParentIx":106}
+{"Line":"대화가 끝난 직후 대원들은 OO에게 로비의 구조를 대강 물어본 후 키카드를 가져왔다.","ImagePath":"","Choice":[], "Ix" : 108, "ChildIx":[109,110], "ParentIx":107}
+{"Line":"찾아왔습니다","ImagePath":"","Choice":[], "Ix" : 109, "ChildIx":[111], "ParentIx":108}
+{"Line":"다행히 로비에는 적이 없었습니다. 아마 다른 곳으로 이동한 것 같습니다.","ImagePath":"","Choice":[], "Ix" : 110, "ChildIx":[111], "ParentIx":108}
+{"Line":"**:  이제 2층의 키와 비밀 번호 차례군요.","ImagePath":"","Choice":[], "Ix" : 111, "ChildIx":[112], "ParentIx":109}
+{"Line":"그들은 이제 2층을 향해 나아가기 시작했다. 2층으로 올라가는 엘리베이터에 도착한 그들은 엘레베이터를 작동시키려 하였지만 작동하지 않았다.","ImagePath":"","Choice":[], "Ix" : 112, "ChildIx":[113], "ParentIx":111}
+{"Line":"**: 전원이 나갔군요. 계단이 있습니까? ","ImagePath":"","Choice":[], "Ix" : 113, "ChildIx":[114], "ParentIx":112}
+{"Line":"OO:  보안 때문에 일반 계단이 비상계단처럼 사용됩니다. 아까 로비쪽에 있는 큰 중앙계단이 전부입니다. ","ImagePath":"","Choice":[], "Ix" : 114, "ChildIx":[115], "ParentIx":113}
+{"Line":"**:  음… OO씨의 사무실은 2층 어디쯤에 있습니까? ","ImagePath":"","Choice":[], "Ix" : 115, "ChildIx":[116], "ParentIx":114}
+{"Line":"OO:  엘리베이터를 타고 가면 이부에서 봤을 때 오른쪽 복도 끝에 있습니다. ","ImagePath":"","Choice":[], "Ix" : 116, "ChildIx":[117], "ParentIx":115}
+{"Line":"**:  엘리베이터를 안 타면 다시 저 입구쪽 복도를 2층에서도 똑같이 지나와야 한다는 말씀이시군요. ","ImagePath":"","Choice":[], "Ix" : 117, "ChildIx":[118], "ParentIx":116}
+{"Line":"OO:  네 맞습니다. ","ImagePath":"","Choice":[], "Ix" : 118, "ChildIx":[119], "ParentIx":117}
+{"Line":"**:  원진 엘리베이터 전원을 복구하려면 얼마나 걸리겠나? ","ImagePath":"","Choice":[], "Ix" : 119, "ChildIx":[120], "ParentIx":118}
+{"Line":"원진:  여기서는 불가능 합니다. 외부에 요청을 해야 하는데 그러면 아마 10분 정도 걸릴 겁니다. 그리고 엘리베이터가 작동하지 않는 것처럼 보여야 하기 때문에 추가로 5분, 총 15분 소요 예상입니다. ","ImagePath":"","Choice":[], "Ix" : 120, "ChildIx":[121], "ParentIx":119}
+{"Line":"**:  작전 시간의 4분의 1을 여기에 쓴다라… 일단 요청은 해보게 ","ImagePath":"","Choice":[], "Ix" : 121, "ChildIx":[122], "ParentIx":120}
+{"Line":"OO:  시간이 없는데 계단이 낫지 않겠습니까? ","ImagePath":"","Choice":[], "Ix" : 122, "ChildIx":[123], "ParentIx":121}
+{"Line":"**:  엘리베이터가 작동하지 않는 이상 진입로는 하나밖에 없습니다. ","ImagePath":"","Choice":[], "Ix" : 123, "ChildIx":[124], "ParentIx":122}
+{"Line":"**:  그렇기 때문에 매복이 있을 가능성이 높습니다. ","ImagePath":"","Choice":[], "Ix" : 124, "ChildIx":[125], "ParentIx":123}
+{"Line":"OO:  그러면… ","ImagePath":"","Choice":[], "Ix" : 125, "ChildIx":[126], "ParentIx":124}
+{"Line":"**:  피해를 감수하고 계단으로 빠르게 가느냐, 시간이 걸리지만 엘리베이터를 통해 안전하게 가느냐 인데…. 엘리베이터가 3층까지 연결되어 있나요? ","ImagePath":"","Choice":[], "Ix" : 126, "ChildIx":[127], "ParentIx":125}
+{"Line":"OO:  네 바로 올라갈 수 있습니다. " ,"ImagePath":"","Choice":[], "Ix" : 127, "ChildIx":[128], "ParentIx":126}
+{"Line":"**:  그럼 엘리베이터를 고치면 바로 진입이 가능해지겠군요. 어떻게 하시겠습니까? 저희보다 이 건물의 구조를 잘 알고 있으니 어떻게 하시겠습니까? " ,"ImagePath":"","Choice":["엘리베이터를 고치고 2층으로 올라감","계단으로 올라감"], "Ix" : 128, "ChildIx":[129,132], "ParentIx":127}
+{"Line":"OO:  엘리베이터가 제 사무실과 더 가깝고 고쳐 지기만 한다면 바로 3층으로 올라갈 수 있습니다. 엘리베이터로 가시죠 " ,"ImagePath":"","Choice":[], "Ix" : 129, "ChildIx":[130], "ParentIx":128}
+{"Line":"**:  알겠습니다. 원진! 외부에 수리 요청하고 넌 엘리베이터 배선을 손 보고있어 우리가 올라간다는 것을 몰라야 하니 잘 해봐" ,"ImagePath":"","Choice":[], "Ix" : 130, "ChildIx":[131], "ParentIx":129}
+{"Line":"원진:  넵 알겠습니다! " ,"ImagePath":"","Choice":[], "Ix" : 131, "ChildIx":[-1], "ParentIx":130}
+{"Line":"OO:  발사 시퀀스를 취소하는데 있어서 시간이 생각보다 길 가능성이 있습니다. 1층에서도 이렇게 지체했는데 이대로면 제시간안에 취소하지 못할 수 있습니다. 대장님과 대원분들께는 정말 죄송하지만… " ,"ImagePath":"","Choice":[], "Ix" : 132, "ChildIx":[133], "ParentIx":128}
+{"Line":"**:  네 알겠습니다. 전원 로비로 다시 진행한다. 가서 방탄방패좀 가져오자고." ,"ImagePath":"","Choice":[], "Ix" : 133, "ChildIx":[134], "ParentIx":132}
+{"Line":"대원들:  네! 알겠습니다! " ,"ImagePath":"","Choice":[], "Ix" : 134, "ChildIx":[-1], "ParentIx":133}
