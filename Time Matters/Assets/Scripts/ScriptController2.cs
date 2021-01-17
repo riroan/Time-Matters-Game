@@ -34,6 +34,12 @@ public class Graph
 {
     public Node[] nodes;
 
+    public Graph(string path)
+    {
+        nodes = loadData(path);
+        connect();
+    }
+
     public void connect()
     {
         for (int i = 0; i < nodes.Length; i++)
@@ -41,12 +47,20 @@ public class Graph
             nodes[i].children = new Node[nodes[i].childIx.Length];
             for (int j = 0; j < nodes[i].childIx.Length; j++)
             {
-                if (!nodes[i].isEnd)
+                if (!nodes[i].isEnd)        // 꼬리노드이면 아들을 추가할 필요가 없음
                     nodes[i].children[j] = nodes[nodes[i].childIx[j]];
-                if (!nodes[i].isHead)
+                if (!nodes[i].isHead)       // 머리노드이면 부모를 추가할 필요가 없음
                     nodes[i].parent = nodes[nodes[i].parentIx];
             }
         }
+    }
+    Node[] loadData(string path)
+    {
+        string[] str = File.ReadAllLines(path);
+        Node[] item = new Node[str.Length];
+        for (int i = 0; i < str.Length; i++)
+            item[i] = JsonUtility.FromJson<Node>(str[i]);
+        return item;
     }
 
     public Node this[int ix] { get { return nodes[ix]; } }
@@ -72,25 +86,10 @@ public class ScriptController2 : MonoBehaviour
 
     private void Start()
     {
-        graphP = new Graph();   // 프롤로그 그래프
-        chapter1 = new Graph(); // 챕터 1
-        
-        graphP.nodes = loadData("Assets/Story/Prolog/prolog.json");
-        chapter1.nodes = loadData("Assets/Story/Chapter1/Chapter1.json");
-        graphP.connect();
-        chapter1.connect();
-        currentScript = chapter1;
-    }
+        graphP = new Graph("Assets/Story/Prolog/prolog.json");   // 프롤로그 그래프
+        chapter1 = new Graph("Assets/Story/Chapter1/Chapter1.json"); // 챕터 1
 
-    Node[] loadData(string path)
-    {
-        string[] str = File.ReadAllLines(path);
-        Node[] item = new Node[str.Length];
-        for (int i = 0; i < str.Length; i++)
-        {
-            item[i] = JsonUtility.FromJson<Node>(str[i]);
-        }
-        return item;
+        currentScript = chapter1;
     }
 
     void nextDialog()
@@ -109,13 +108,13 @@ public class ScriptController2 : MonoBehaviour
             {
                 dialogImage.gameObject.SetActive(false);
             }
-            showChooseBttn();
             StartCoroutine(Typing(story, currentScript[currentScriptIx].line, dialogSpeed));
         }
     }
 
     void showChooseBttn()
     {
+        print(currentScriptIx);
         for (int i = 0; i < maxChoice; i++)
         {
             if (i < currentScript[currentScriptIx].numChoice)
@@ -129,11 +128,12 @@ public class ScriptController2 : MonoBehaviour
         }
     }
 
-    public void choosed(int ix)
+    public void choosed(int ix)     // 버튼 클릭한경우 인덱스 받아옴
     {
-        mustChoose = false;
-        currentScriptIx = currentScript[--currentScriptIx].childIx[ix];
-        goNextDialog();
+        mustChoose = false;         // 더이상 안골라도 됨
+        currentScriptIx = currentScript[--currentScriptIx].childIx[ix];     // 다음출력할 노드 위치
+        showChooseBttn();           // 버튼 없애기 위해 넣었는데 연속으로 선택지가 나오면 오류발생함
+        goNextDialog();             // 다음 메시지로 이동
     }
 
     public void goNextDialog()
@@ -142,9 +142,10 @@ public class ScriptController2 : MonoBehaviour
         {
             nextDialog();
         }
-        else if (isDialog)
+        else
         {
             StopAllCoroutines();
+            showChooseBttn();
             story.text = currentScript[currentScriptIx++].line;
             isDialog = false;
         }
@@ -159,6 +160,7 @@ public class ScriptController2 : MonoBehaviour
             yield return new WaitForSeconds(speed);
         }
         isDialog = false;
+        showChooseBttn();
         currentScriptIx++;
     }
 }
