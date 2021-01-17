@@ -55,8 +55,11 @@ public class Graph
 public class ScriptController2 : MonoBehaviour
 {
     bool isDialog = false;
+    bool chapterEnd = false;
     int maxChoice = 3;
-    int currentScriptIx = -1;
+    int currentScriptIx = 0;
+    bool mustChoose = false;
+
     Graph currentScript;
     Graph graphP;
     Graph chapter1;
@@ -65,6 +68,7 @@ public class ScriptController2 : MonoBehaviour
     [SerializeField] Text story;
     [SerializeField] GameObject[] chooseBttn;
     [SerializeField] float dialogSpeed = 0.1f;
+
 
     private void Start()
     {
@@ -91,8 +95,10 @@ public class ScriptController2 : MonoBehaviour
 
     void nextDialog()
     {
-        if (!currentScript[currentScriptIx].isEnd)
+        if (!chapterEnd && !mustChoose)
         {
+            if (currentScript[currentScriptIx].isEnd)
+                chapterEnd = true;
             // 해당 라인에 이미지가 있으면 이미지 불러옴
             if (currentScript[currentScriptIx].hasImage)
             {
@@ -103,19 +109,31 @@ public class ScriptController2 : MonoBehaviour
             {
                 dialogImage.gameObject.SetActive(false);
             }
-
-            for (int i = 0; i < maxChoice; i++)
-            {
-                if (i < currentScript[currentScriptIx].numChoice)
-                {      // 선택지 활성화
-                    chooseBttn[i].SetActive(true);
-                    chooseBttn[i].transform.Find("Text").GetComponent<Text>().text = currentScript[currentScriptIx].choice[i];
-                }
-                else   // 선택지 비활성화
-                    chooseBttn[i].SetActive(false);
-            }
+            showChooseBttn();
             StartCoroutine(Typing(story, currentScript[currentScriptIx].line, dialogSpeed));
         }
+    }
+
+    void showChooseBttn()
+    {
+        for (int i = 0; i < maxChoice; i++)
+        {
+            if (i < currentScript[currentScriptIx].numChoice)
+            {      // 선택지 활성화
+                chooseBttn[i].SetActive(true);
+                chooseBttn[i].transform.Find("Text").GetComponent<Text>().text = currentScript[currentScriptIx].choice[i];
+                mustChoose = true;
+            }
+            else   // 선택지 비활성화
+                chooseBttn[i].SetActive(false);
+        }
+    }
+
+    public void choosed(int ix)
+    {
+        mustChoose = false;
+        currentScriptIx = currentScript[--currentScriptIx].childIx[ix];
+        goNextDialog();
     }
 
     public void goNextDialog()
