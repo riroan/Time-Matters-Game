@@ -64,6 +64,7 @@ public class Graph
             }
         }
     }
+
     Node[] loadData(string path)
     {
         string[] str = File.ReadAllLines(path);
@@ -93,15 +94,21 @@ public class ScriptController2 : MonoBehaviour
     [SerializeField] Text story;
     [SerializeField] GameObject[] chooseBttn;
     [SerializeField] float dialogSpeed = 0.1f;
-
+    bool mobile = true;
 
     private void Start()
     {
-        graphP = new Graph("Assets/Story/Prolog/prolog.json");   // 프롤로그 그래프
-        chapter1 = new Graph("Assets/Story/Chapter1/Chapter1.json"); // 챕터 1
-
+        if (mobile)
+        {
+            graphP = new Graph(Application.persistentDataPath + "/prolog.txt");   // 프롤로그 그래프
+            chapter1 = new Graph(Application.persistentDataPath + "/Chapter1.txt"); // 챕터 1
+        }
+        else
+        {
+            graphP = new Graph("Assets/Story/prolog.json");   // 프롤로그 그래프
+            chapter1 = new Graph("Assets/Story/Chapter1.json"); // 챕터 1
+        }
         currentScript = chapter1;
-        print("noerror");
     }
 
     void nextDialog()
@@ -149,8 +156,6 @@ public class ScriptController2 : MonoBehaviour
 
     public void goNextDialog()
     {
-        print(currentScriptIx);
-
         if (!isTyping)          // 글자가 입력되는중이 아닐경우
         {
             nextDialog();       // 다음 대사 불러옴
