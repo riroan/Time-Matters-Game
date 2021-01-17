@@ -13,10 +13,12 @@ public class Node
     [SerializeField] string[] Choice;
     [SerializeField] int ParentIx;
     [SerializeField] int[] ChildIx;
+    public int numEvent;
     public Node[] children;
     public Node parent;
 
-    public bool isEnd { get { return childIx[0] == -1; } }
+    public bool isRandom { get { return choice.Length == 0 && childIx.Length > 1; } }
+    public bool isEnd { get { return childIx[0] <= -1; } }
     public bool isHead { get { return ParentIx == -1; } }
     public int ix { get { return Ix; } }
     public string line { get { return Line; } }
@@ -33,6 +35,8 @@ public class Node
 public class Graph
 {
     public Node[] nodes;
+    public int randomEventStartIx = -1;
+    public int[] randomEventIx;
 
     public Graph(string path)
     {
@@ -44,6 +48,12 @@ public class Graph
     {
         for (int i = 0; i < nodes.Length; i++)
         {
+            if (nodes[i].line == "Warning!")
+            {
+                randomEventStartIx = i;
+                randomEventIx = nodes[i].childIx;
+
+            }
             nodes[i].children = new Node[nodes[i].childIx.Length];
             for (int j = 0; j < nodes[i].childIx.Length; j++)
             {
@@ -68,11 +78,12 @@ public class Graph
 
 public class ScriptController2 : MonoBehaviour
 {
-    bool isDialog = false;
+    bool isTyping = false;
     bool chapterEnd = false;
+    bool mustChoose = false;
     int maxChoice = 3;
     int currentScriptIx = 0;
-    bool mustChoose = false;
+    int rememberIx = -1;
 
     Graph currentScript;
     Graph graphP;
@@ -90,6 +101,7 @@ public class ScriptController2 : MonoBehaviour
         chapter1 = new Graph("Assets/Story/Chapter1/Chapter1.json"); // 챕터 1
 
         currentScript = chapter1;
+        print("noerror");
     }
 
     void nextDialog()
@@ -114,7 +126,6 @@ public class ScriptController2 : MonoBehaviour
 
     void showChooseBttn()
     {
-        print(currentScriptIx);
         for (int i = 0; i < maxChoice; i++)
         {
             if (i < currentScript[currentScriptIx].numChoice)
@@ -131,36 +142,74 @@ public class ScriptController2 : MonoBehaviour
     public void choosed(int ix)     // 버튼 클릭한경우 인덱스 받아옴
     {
         mustChoose = false;         // 더이상 안골라도 됨
-        currentScriptIx = currentScript[--currentScriptIx].childIx[ix];     // 다음출력할 노드 위치
+        currentScriptIx = currentScript[currentScript[currentScriptIx].parentIx].childIx[ix];     // 다음출력할 노드 위치
         showChooseBttn();           // 버튼 없애기 위해 넣었는데 연속으로 선택지가 나오면 오류발생함
         goNextDialog();             // 다음 메시지로 이동
     }
 
     public void goNextDialog()
     {
-        if (!isDialog)
+        print(currentScriptIx);
+
+        if (!isTyping)          // 글자가 입력되는중이 아닐경우
         {
-            nextDialog();
+            nextDialog();       // 다음 대사 불러옴
+        }
+        else                    // 글자가 입력되는중일경우
+        {
+            StopAllCoroutines();    // 글자 입력 중단
+            showChooseBttn();       // 버튼 보이기
+            story.text = currentScript[currentScriptIx].line;       // 글자 즉시 입력
+            isTyping = false;       // 입력 끝남
+            updateIx();             // 다음대사 인덱스 찾음
+        }
+    }
+
+    void updateIx()
+    {
+        if (currentScript[currentScriptIx].isRandom)    // 만약 랜덤이벤트다?
+        {
+            // 랜덤 결과 불러옴(확률 동일)
+            int randomNumber = Random.Range(0, currentScript[currentScriptIx].childIx.Length);
+            currentScriptIx = currentScript[currentScriptIx].childIx[randomNumber];
         }
         else
         {
-            StopAllCoroutines();
-            showChooseBttn();
-            story.text = currentScript[currentScriptIx++].line;
-            isDialog = false;
+            if (chapterEnd || currentScript[currentScriptIx].isEnd) // 아무튼 끝났다면
+            {
+                if (rememberIx >= 0)    // 돌아갈곳이 있는가?
+                {
+                    currentScriptIx = rememberIx;   // 돌아가라
+                    rememberIx = -1;                // 더이상 돌아갈 곳은 없다
+                    chapterEnd = false;             // 사실 끝난게 아닌거임 ㅋ
+                }
+                else
+                {
+                    print("chapter End");           // 이러면 ㄹㅇ 끝난거임
+                    // loadNextChapter();
+                }
+            }
+            else if (currentScript[currentScriptIx].numEvent > 0)       // 돌발 이벤트가 있는가?
+            {
+                //currentScript[currentScriptIx].numEvent--;            // 돌발이벤트 횟수 1회 감소
+                rememberIx = currentScript[currentScriptIx].childIx[0]; // 돌아올곳을 기억하자
+                currentScriptIx = currentScript.randomEventStartIx;     // 돌발이벤트 장소로 이동
+            }
+            else           // 평범한경우
+                currentScriptIx = currentScript[currentScriptIx].childIx[0];    // 평범하게 이동
         }
     }
 
     IEnumerator Typing(Text txt, string message, float speed)
     {
-        isDialog = true;
+        isTyping = true;
         for (int i = 0; i < message.Length; i++)
         {
             txt.text = message.Substring(0, i + 1);
             yield return new WaitForSeconds(speed);
         }
-        isDialog = false;
+        isTyping = false;
         showChooseBttn();
-        currentScriptIx++;
+        updateIx();
     }
 }
