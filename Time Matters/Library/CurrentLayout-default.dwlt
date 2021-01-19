@@ -126,7 +126,11 @@ MonoBehaviour:
   m_MinSize: {x: 1114, y: 342}
   m_MaxSize: {x: 26009, y: 10021}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 86
+=======
+  controlID: 179
+>>>>>>> Stashed changes
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,7 +274,11 @@ MonoBehaviour:
   m_MinSize: {x: 882, y: 342}
   m_MaxSize: {x: 16007, y: 8042}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 87
+=======
+  controlID: 180
+>>>>>>> Stashed changes
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -297,7 +305,11 @@ MonoBehaviour:
   m_MinSize: {x: 882, y: 221}
   m_MaxSize: {x: 16007, y: 4021}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 88
+=======
+  controlID: 181
+>>>>>>> Stashed changes
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -402,9 +414,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: c23b0000
     m_LastClickedID: 15298
     m_ExpandedIDs: 00000000b03b0000b23b000000ca9a3b
+=======
+    m_SelectedIDs: 923b0000
+    m_LastClickedID: 15250
+    m_ExpandedIDs: 00000000823b0000843b000000ca9a3b
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -432,7 +450,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< Updated upstream
     m_ExpandedIDs: 00000000b03b0000b23b0000
+=======
+    m_ExpandedIDs: 00000000823b0000843b0000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -459,7 +481,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -557,7 +579,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< Updated upstream
       m_ExpandedIDs: cef9ffffa2390000f4390000083a0000163a0000223a00002e3a0000543a0000cc3a0000fa3a0000
+=======
+      m_ExpandedIDs: 44fbffff
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
