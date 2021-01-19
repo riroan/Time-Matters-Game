@@ -1,87 +1,114 @@
-﻿using System.Collections;
+﻿using System.IO;
+using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Dialog
+
+public class Node 
 {
-    // read-only
-    public string Line;         // 현재 대사
-    public string ImagePath;    // 그림 경로
-    public string[] Choice;     // 선택 리스트
-    public string[] Answer1;     // 선택에 따른 답
-    public string[] Answer2;
-    public string[] Answer3;
-    public List<string[]> Answer;
+    [SerializeField] int Ix;
+    [SerializeField] string Line;
+    [SerializeField] string ImagePath;
+    [SerializeField] string[] Choice;
+    [SerializeField] int ParentIx;
+    [SerializeField] int[] ChildIx;
+    public int numEvent;
+    public Node[] children;
+    public Node parent;
 
-    public Dialog(Dialog right)
-    {
-        Line = right.line;
-        ImagePath = right.imagePath;
-        Choice = right.choice;
-    }
-
-    void addItem(string[] strArr, List<string[]> listAnswer)
-    {
-        listAnswer.Add(strArr);
-    }
-
+    public bool isRandom { get { return choice.Length == 0 && childIx.Length > 1; } }
+    public bool isEnd { get { return childIx[0] <= -1; } }
+    public bool isHead { get { return ParentIx == -1; } }
+    public int ix { get { return Ix; } }
     public string line { get { return Line; } }
     public string imagePath { get { return ImagePath; } }
     public string[] choice { get { return Choice; } }
-    public List<string[]> answer { get { return Answer; } }
-    public int numChoice { get { return Choice.Length; } }
-    public bool hasChoice { get { return Choice.Length > 0; } }
-    public bool hasImage {  get { return ImagePath.Length > 0; } }
+    public int parentIx { get { return ParentIx; } }
+    public int[] childIx { get { return ChildIx; } }
+    public Node this[int ix] { get { return children[ix]; } }
+    public int numChoice { get { return choice.Length; } }
+    public bool hasChoice { get { return numChoice > 0; } }
+    public bool hasImage { get { return imagePath.Length > 0; } }
+}
+
+public class Graph
+{
+    public Node[] nodes;
+    public int randomEventStartIx = -1;
+    public int[] randomEventIx;
+
+    public Graph(string path)
+    {
+        nodes = loadData(path);
+        connect();
+    }
+
+    public void connect()
+    {
+        for (int i = 0; i < nodes.Length; i++)
+        {
+            if (nodes[i].line == "Warning!")
+            {
+                randomEventStartIx = i;
+                randomEventIx = nodes[i].childIx;
+
+            }
+            nodes[i].children = new Node[nodes[i].childIx.Length];
+            for (int j = 0; j < nodes[i].childIx.Length; j++)
+            {
+                if (!nodes[i].isEnd)        // 꼬리노드이면 아들을 추가할 필요가 없음
+                    nodes[i].children[j] = nodes[nodes[i].childIx[j]];
+                if (!nodes[i].isHead)       // 머리노드이면 부모를 추가할 필요가 없음
+                    nodes[i].parent = nodes[nodes[i].parentIx];
+            }
+        }
+    }
+
+    Node[] loadData(string path)
+    {
+        TextAsset txt = (TextAsset)Resources.Load(path);
+        string[] str = txt.text.Split('\n');
+        Node[] item = new Node[str.Length];
+        for (int i = 0; i < str.Length; i++)
+            item[i] = JsonUtility.FromJson<Node>(str[i]);
+        return item;
+    }
+
+    public Node this[int ix] { get { return nodes[ix]; } }
 }
 
 public class ScriptController : MonoBehaviour
 {
-    int currentScriptIx = 0;                    // 지금 몇번째 글 읽고 있음?
-    bool isDialog = false;                      // 지금 글 써지는중임?
+    bool isTyping = false;
+    bool chapterEnd = false;
+    bool mustChoose = false;
+    int maxChoice = 3;
+    int currentScriptIx = 0;
+    int rememberIx = -1;
 
-    const int maxChoice = 3;                    // 선택지 최대 몇개임?
+    Graph currentScript;
+    Graph graphP;
+    Graph chapter1;
 
-    Dialog[] prologScript;
-    Dialog[] Chapter1;
-
-    [SerializeField] Text story;
     [SerializeField] Image dialogImage;
+    [SerializeField] Text story;
     [SerializeField] GameObject[] chooseBttn;
-
-    Dialog[] currentScript;                     // 현재 스크립트 대화내용
-    [SerializeField] float dialogSpeed = 0.1f;  // 글씨 써지는 속도
+    [SerializeField] float dialogSpeed = 0.1f;
 
     private void Start()
     {
-        prologScript = loadDialog("Assets/Story/prolog.json");
-        //Chapter1 = loadDialog("Assets/Story/Chapter1.json");
-
-        currentScript = prologScript;
-    }
-
-    void saveDialog(Dialog item, string path) // test
-    {
-        string str = JsonUtility.ToJson(item);
-        StreamWriter sw = new StreamWriter(path);
-        sw.Write(str);
-        sw.Close();
-    }
-
-    Dialog[] loadDialog(string path)
-    {
-        string[] str = File.ReadAllLines(path);
-        Dialog[] item = new Dialog[str.Length];
-        for (int i = 0; i < str.Length; i++)
-            item[i] = new Dialog(JsonUtility.FromJson<Dialog>(str[i]));
-        return item;
+        graphP = new Graph("Story/prolog");   // 프롤로그 그래프
+        chapter1 = new Graph("Story/Chapter1"); // 챕터 1
+        currentScript = chapter1;
     }
 
     void nextDialog()
     {
-        if (currentScript.Length > currentScriptIx)
+        if (!chapterEnd && !mustChoose)
         {
+            if (currentScript[currentScriptIx].isEnd)
+                chapterEnd = true;
             // 해당 라인에 이미지가 있으면 이미지 불러옴
             if (currentScript[currentScriptIx].hasImage)
             {
@@ -92,47 +119,94 @@ public class ScriptController : MonoBehaviour
             {
                 dialogImage.gameObject.SetActive(false);
             }
-
-            if (currentScript[currentScriptIx].hasChoice)
-            {
-                for (int i = 0; i < maxChoice; i++)
-                {
-                    if (i < currentScript[currentScriptIx].numChoice)
-                    {      // 선택지 활성화
-                        chooseBttn[i].SetActive(true);
-                        chooseBttn[i].transform.Find("Text").GetComponent<Text>().text = currentScript[currentScriptIx].choice[i];
-                    }
-                    else   // 선택지 비활성화
-                        chooseBttn[i].SetActive(false);
-                }
-            }
             StartCoroutine(Typing(story, currentScript[currentScriptIx].line, dialogSpeed));
         }
     }
 
+    void showChooseBttn()
+    {
+        for (int i = 0; i < maxChoice; i++)
+        {
+            if (i < currentScript[currentScriptIx].numChoice)
+            {      // 선택지 활성화
+                chooseBttn[i].SetActive(true);
+                chooseBttn[i].transform.Find("Text").GetComponent<Text>().text = currentScript[currentScriptIx].choice[i];
+                mustChoose = true;
+            }
+            else   // 선택지 비활성화
+                chooseBttn[i].SetActive(false);
+        }
+    }
+
+    public void choosed(int ix)     // 버튼 클릭한경우 인덱스 받아옴
+    {
+        mustChoose = false;         // 더이상 안골라도 됨
+        currentScriptIx = currentScript[currentScript[currentScriptIx].parentIx].childIx[ix];     // 다음출력할 노드 위치
+        showChooseBttn();           // 버튼 없애기 위해 넣었는데 연속으로 선택지가 나오면 오류발생함
+        goNextDialog();             // 다음 메시지로 이동
+    }
+
     public void goNextDialog()
     {
-        if (!isDialog)
+        if (!isTyping)          // 글자가 입력되는중이 아닐경우
         {
-            nextDialog();
+            nextDialog();       // 다음 대사 불러옴
         }
-        else if (isDialog)
+        else                    // 글자가 입력되는중일경우
         {
-            StopAllCoroutines();
-            story.text = currentScript[currentScriptIx++].line;
-            isDialog = false;
+            StopAllCoroutines();    // 글자 입력 중단
+            showChooseBttn();       // 버튼 보이기
+            story.text = currentScript[currentScriptIx].line;       // 글자 즉시 입력
+            isTyping = false;       // 입력 끝남
+            updateIx();             // 다음대사 인덱스 찾음
+        }
+    }
+
+    void updateIx()
+    {
+        if (currentScript[currentScriptIx].isRandom)    // 만약 랜덤이벤트다?
+        {
+            // 랜덤 결과 불러옴(확률 동일)
+            int randomNumber = Random.Range(0, currentScript[currentScriptIx].childIx.Length);
+            currentScriptIx = currentScript[currentScriptIx].childIx[randomNumber];
+        }
+        else
+        {
+            if (chapterEnd || currentScript[currentScriptIx].isEnd) // 아무튼 끝났다면
+            {
+                if (rememberIx >= 0)    // 돌아갈곳이 있는가?
+                {
+                    currentScriptIx = rememberIx;   // 돌아가라
+                    rememberIx = -1;                // 더이상 돌아갈 곳은 없다
+                    chapterEnd = false;             // 사실 끝난게 아닌거임 ㅋ
+                }
+                else
+                {
+                    story.text = "Chapter End";           // 이러면 ㄹㅇ 끝난거임
+                    // loadNextChapter();
+                }
+            }
+            else if (currentScript[currentScriptIx].numEvent > 0)       // 돌발 이벤트가 있는가?
+            {
+                //currentScript[currentScriptIx].numEvent--;            // 돌발이벤트 횟수 1회 감소
+                rememberIx = currentScript[currentScriptIx].childIx[0]; // 돌아올곳을 기억하자
+                currentScriptIx = currentScript.randomEventStartIx;     // 돌발이벤트 장소로 이동
+            }
+            else           // 평범한경우
+                currentScriptIx = currentScript[currentScriptIx].childIx[0];    // 평범하게 이동
         }
     }
 
     IEnumerator Typing(Text txt, string message, float speed)
     {
-        isDialog = true;
+        isTyping = true;
         for (int i = 0; i < message.Length; i++)
         {
             txt.text = message.Substring(0, i + 1);
             yield return new WaitForSeconds(speed);
         }
-        isDialog = false;
-        currentScriptIx++;
+        isTyping = false;
+        showChooseBttn();
+        updateIx();
     }
 }

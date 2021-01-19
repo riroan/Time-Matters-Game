@@ -3,7 +3,6 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - GameManager
     - ScriptController
-    - ScriptController2
     - UtilButton
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -42,6 +41,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 81
@@ -52,8 +53,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11266}
     - Class: 114
       Script: {instanceID: 11384}
-    - Class: 114
-      Script: {instanceID: 11396}
     - Class: 114
       Script: {instanceID: 11558}
     - Class: 114
@@ -121,12 +120,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UtilButton
-  - hash:
-      serializedVersion: 2
-      Hash: 91840fd907e3b21a2f72ccf2b9dfddfc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScriptController
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -306,7 +299,7 @@ ScriptsOnlyBuild:
       Hash: 46f23ef2e18548ce393f3068d9223d63
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ScriptController2
+    className: ScriptController
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
