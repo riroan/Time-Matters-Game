@@ -51,7 +51,7 @@
 {"Line":"대화후 진입팀은 천천히 앞으로 나아가 사무구역 입구에 도달하였다. 사무구역에 진입하기 직전, **은 대원들에게 빠른 손짓으로 수신호를 보냈고 대원들은 그에 답하였다.","ImagePath":"","Choice":[], "Ix" : 50, "ChildIx":[51], "ParentIx":49, "numEvent":0}
 {"Line":"**: 적이 있는 것 같답니다. 수는 불명. 두명의 위치는 파악되었고, 아직 저희의 존재를 모르는 것 같다고 합니다.","ImagePath":"","Choice":[], "Ix" : 51, "ChildIx":[52], "ParentIx":50, "numEvent":0}
 {"Line":"**: 물론 저희가 조용히 진입했다가 나오는 방법도 가능하지만 저희는 OO님이 키카드의 위치를 설명해 주신다 해도 시간이 걸릴 수도 있습니다.","ImagePath":"","Choice":[], "Ix" : 52, "ChildIx":[53], "ParentIx":51, "numEvent":0}
-{"Line":"**: 가장 확실한 적들은 모두 제압하고 OO님과 함께 전산실에 들어가는 것인데 어떻게 하시겠습니까?","ImagePath":"","Choice":["전산실 구조가 꽤 복잡합니다. 적들을 빠르게 처리할 수 있다면 그렇게 하는 편이 나을 겁니다. ","굳이 적들과 교전을 하지 않는 편이 좋겠습니다. 마침 전산실 문이 열려 있기도 하고요"], "Ix" : 53, "ChildIx":[54,75], "ParentIx":52, "numEvent":0}
+{"Line":"**: 가장 확실한 적들은 모두 제압하고 OO님과 함께 전산실에 들어가는 것인데 어떻게 하시겠습니까?","ImagePath":"","Choice":["전산실 구조가 꽤 복잡합니다.\n 적들을 빠르게 처리할 수 있다면 그렇게 하는 편이 나을 겁니다. ","굳이 적들과 교전을 하지 않는 편이 좋겠습니다.\n 마침 전산실 문이 열려 있기도 하고요"], "Ix" : 53, "ChildIx":[54,75], "ParentIx":52, "numEvent":0}
 {"Line":"전산실 구조가 꽤 복잡합니다. 적들을 빠르게 처리할 수 있다면 그렇게 하는 편이 나을 겁니다. ","ImagePath":"","Choice":[], "Ix" : 54, "ChildIx":[55], "ParentIx":53, "numEvent":0}
 {"Line":"**: 네 알겠습니다. 귀를 막으세요","ImagePath":"","Choice":[], "Ix" : 55, "ChildIx":[56], "ParentIx":54, "numEvent":0}
 {"Line":"OO이 귀를 막자마자 적과 교전이 시작되었다. 귀를 막았는데도 커다란 총소리들을 막아주기엔 역부족이었다.","ImagePath":"","Choice":[], "Ix" : 56, "ChildIx":[57], "ParentIx":55, "numEvent":0}
@@ -114,7 +114,7 @@
 {"Line":"**: 전원이 나갔군요. 계단이 있습니까? ","ImagePath":"","Choice":[], "Ix" : 113, "ChildIx":[114], "ParentIx":112, "numEvent":0}
 {"Line":"OO:  보안 때문에 일반 계단이 비상계단처럼 사용됩니다. 아까 로비쪽에 있는 큰 중앙계단이 전부입니다. ","ImagePath":"","Choice":[], "Ix" : 114, "ChildIx":[115], "ParentIx":113, "numEvent":0}
 {"Line":"**:  음… OO씨의 사무실은 2층 어디쯤에 있습니까? ","ImagePath":"","Choice":[], "Ix" : 115, "ChildIx":[116], "ParentIx":114, "numEvent":0}
-{"Line":"OO:  엘리베이터를 타고 가면 이부에서 봤을 때 오른쪽 복도 끝에 있습니다. ","ImagePath":"","Choice":[], "Ix" : 116, "ChildIx":[117], "ParentIx":115, "numEvent":0}
+{"Line":"OO:  엘리베이터를 타고 가면 외부에서 봤을 때 오른쪽 복도 끝에 있습니다. ","ImagePath":"","Choice":[], "Ix" : 116, "ChildIx":[117], "ParentIx":115, "numEvent":0}
 {"Line":"**:  엘리베이터를 안 타면 다시 저 입구쪽 복도를 2층에서도 똑같이 지나와야 한다는 말씀이시군요. ","ImagePath":"","Choice":[], "Ix" : 117, "ChildIx":[118], "ParentIx":116, "numEvent":0}
 {"Line":"OO:  네 맞습니다. ","ImagePath":"","Choice":[], "Ix" : 118, "ChildIx":[119], "ParentIx":117, "numEvent":0}
 {"Line":"**:  원진 엘리베이터 전원을 복구하려면 얼마나 걸리겠나? ","ImagePath":"","Choice":[], "Ix" : 119, "ChildIx":[120], "ParentIx":118, "numEvent":0}
