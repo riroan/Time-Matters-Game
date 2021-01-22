@@ -2130,12 +2130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683959b0dd068a44aba7bc1450a000fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  options: {fileID: 711822419}
-  coninues: {fileID: 711171389}
-  settings: {fileID: 1608062927}
-  mainmenu: {fileID: 549232175}
-  insettings: {fileID: 0}
-  mainpage: {fileID: 0}
+  Bttn: {fileID: 0}
+  Bttn_comp: {fileID: 0}
+  Button_continue: {fileID: 0}
 --- !u!1 &589755112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,12 +2481,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683959b0dd068a44aba7bc1450a000fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  options: {fileID: 711822419}
-  coninues: {fileID: 711171389}
-  settings: {fileID: 1608062927}
-  mainmenu: {fileID: 549232175}
-  insettings: {fileID: 0}
-  mainpage: {fileID: 0}
+  Bttn: {fileID: 0}
+  Bttn_comp: {fileID: 0}
+  Button_continue: {fileID: 0}
 --- !u!1 &711822419
 GameObject:
   m_ObjectHideFlags: 0
@@ -4295,12 +4289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683959b0dd068a44aba7bc1450a000fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  options: {fileID: 711822419}
-  coninues: {fileID: 711171389}
-  settings: {fileID: 1608062927}
-  mainmenu: {fileID: 549232175}
-  insettings: {fileID: 0}
-  mainpage: {fileID: 0}
+  Bttn: {fileID: 0}
+  Bttn_comp: {fileID: 0}
+  Button_continue: {fileID: 0}
 --- !u!1 &1628339291
 GameObject:
   m_ObjectHideFlags: 0
@@ -4989,12 +4980,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683959b0dd068a44aba7bc1450a000fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  options: {fileID: 711822419}
-  coninues: {fileID: 711822419}
-  settings: {fileID: 1608062927}
-  mainmenu: {fileID: 1523621546}
-  insettings: {fileID: 246257187}
-  mainpage: {fileID: 1523621546}
+  Bttn: {fileID: 0}
+  Bttn_comp: {fileID: 0}
+  Button_continue: {fileID: 0}
 --- !u!1 &1957894882
 GameObject:
   m_ObjectHideFlags: 0
