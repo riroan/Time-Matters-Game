@@ -12,15 +12,20 @@ public class UtilButton : MonoBehaviour
    // [SerializeField] GameObject insettings; // 인세팅 메뉴로 이동한다. 그곳에서 설정 가능하게 한다
    // [SerializeField] GameObject mainpage; // 맨 처음 메인 화면으로 되돌아간다.
 
+     
+  
 
     public void subButtonClick() // 왼쪽 위에 있는 메뉴 클릭 함수
     {
-        Bttn_comp.SetActive(true);
+        bool isActive = Bttn_comp.activeSelf; // 메뉴 누르면 작동하는 함수
+        Bttn_comp.SetActive(!isActive); // 자동적으로 온 오프
+
     }
 
     public void Btutton_continue_Clicked() // 계속하기 버튼을 누를 때의 함수
     {
-        Bttn_comp.SetActive(false);
+        bool isActive = Bttn_comp.activeSelf;
+        Bttn_comp.SetActive(!isActive); // 계속 버튼 누르면 off
 
     }
 
