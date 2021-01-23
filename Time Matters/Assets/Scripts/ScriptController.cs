@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class Node 
 {
     [SerializeField] int Ix;
@@ -40,7 +39,7 @@ public class Graph
 
     public Graph(string path)
     {
-        nodes = loadData(path);
+        loadData(path);
         connect();
     }
 
@@ -52,7 +51,6 @@ public class Graph
             {
                 randomEventStartIx = i;
                 randomEventIx = nodes[i].childIx;
-
             }
             nodes[i].children = new Node[nodes[i].childIx.Length];
             for (int j = 0; j < nodes[i].childIx.Length; j++)
@@ -65,14 +63,13 @@ public class Graph
         }
     }
 
-    Node[] loadData(string path)
+    void loadData(string path)
     {
         TextAsset txt = (TextAsset)Resources.Load(path);
         string[] str = txt.text.Split('\n');
-        Node[] item = new Node[str.Length];
+        nodes = new Node[str.Length];
         for (int i = 0; i < str.Length; i++)
-            item[i] = JsonUtility.FromJson<Node>(str[i]);
-        return item;
+            nodes[i] = JsonUtility.FromJson<Node>(str[i]);
     }
 
     public Node this[int ix] { get { return nodes[ix]; } }
@@ -80,45 +77,41 @@ public class Graph
 
 public class ScriptController : MonoBehaviour
 {
-    bool isTyping = false;
-    bool chapterEnd = false;
-    bool mustChoose = false;
-    int maxChoice = 3;
-    int currentScriptIx = 0;
-    int rememberIx = -1;
+    bool isTyping = false;          // 지금 스토리가 입력되는중인지
+    bool chapterEnd = false;        // 챕터가 끝났는지 (삭제예정)
+    bool mustChoose = false;        // 선택지가 있는지
+    int currentScriptIx = 0;        // 현재 스크립트 인덱스
+    int rememberIx = -1;            // 돌발이벤트에서 돌아갈곳이 있는지
+    int chapterIx = 0;              // 챕터 인덱스
+    const int maxChoice = 3;        // 최대 선택지 개수
 
     Graph currentScript;
-    Graph graphP;
-    Graph chapter1;
+    List<Graph> chapters = new List<Graph>();
 
     [SerializeField] Image dialogImage;
+    [SerializeField] Image Frame;
     [SerializeField] Text story;
     [SerializeField] GameObject[] chooseBttn;
-    [SerializeField] float dialogSpeed = 0.1f;
+    [SerializeField] float dialogSpeed = 0.2f;
+
+    readonly string[] chapterPath = new string[] { "Story/prolog", "Story/Chapter1" };
 
     private void Start()
     {
-        graphP = new Graph("Story/prolog");   // 프롤로그 그래프
-        chapter1 = new Graph("Story/Chapter1"); // 챕터 1
-        currentScript = chapter1;
+        foreach (string path in chapterPath)
+            chapters.Add(new Graph(path));
+        currentScript = chapters[chapterIx];
     }
 
     void nextDialog()
     {
-        if (!chapterEnd && !mustChoose)
+        if (!mustChoose)    // 선택해야되면 선택이나 하셈
         {
-            if (currentScript[currentScriptIx].isEnd)
-                chapterEnd = true;
             // 해당 라인에 이미지가 있으면 이미지 불러옴
             if (currentScript[currentScriptIx].hasImage)
-            {
-                dialogImage.gameObject.SetActive(true);
-                dialogImage.sprite = Resources.Load<Sprite>(currentScript[currentScriptIx].imagePath);
-            }
+                showImage();
             else
-            {
-                dialogImage.gameObject.SetActive(false);
-            }
+                hideImage();
             StartCoroutine(Typing(story, currentScript[currentScriptIx].line, dialogSpeed));
         }
     }
@@ -172,29 +165,44 @@ public class ScriptController : MonoBehaviour
         }
         else
         {
-            if (chapterEnd || currentScript[currentScriptIx].isEnd) // 아무튼 끝났다면
+            if (currentScript[currentScriptIx].isEnd) // 아무튼 끝났다면
             {
                 if (rememberIx >= 0)    // 돌아갈곳이 있는가?
                 {
                     currentScriptIx = rememberIx;   // 돌아가라
                     rememberIx = -1;                // 더이상 돌아갈 곳은 없다
-                    chapterEnd = false;             // 사실 끝난게 아닌거임 ㅋ
                 }
                 else
                 {
-                    story.text = "Chapter End";           // 이러면 ㄹㅇ 끝난거임
-                    // loadNextChapter();
+                    currentScript = chapters[++chapterIx];      // 이러면 ㄹㅇ 끝난거임, 다음 챕터불러오셈
+                    currentScriptIx = 0;
+                    return;
                 }
             }
-            else if (currentScript[currentScriptIx].numEvent > 0)       // 돌발 이벤트가 있는가?
+            if (currentScript[currentScriptIx].numEvent > 0)            // 돌발 이벤트가 있는가?
             {
-                //currentScript[currentScriptIx].numEvent--;            // 돌발이벤트 횟수 1회 감소
-                rememberIx = currentScript[currentScriptIx].childIx[0]; // 돌아올곳을 기억하자
+                currentScript[currentScriptIx].numEvent--;              // 돌발이벤트 횟수 1회 감소
+                rememberIx = currentScript[currentScriptIx].ix;         // 돌아올곳을 기억하자
                 currentScriptIx = currentScript.randomEventStartIx;     // 돌발이벤트 장소로 이동
             }
             else           // 평범한경우
                 currentScriptIx = currentScript[currentScriptIx].childIx[0];    // 평범하게 이동
         }
+    }
+
+    void showImage()
+    {
+        story.transform.position = new Vector3(0, -0.8f);
+        dialogImage.gameObject.SetActive(true);
+        Frame.gameObject.SetActive(true);
+        dialogImage.sprite = Resources.Load<Sprite>(currentScript[currentScriptIx].imagePath);
+    }
+
+    void hideImage()
+    {
+        story.transform.position = new Vector3(0, 0.8f);
+        dialogImage.gameObject.SetActive(false);
+        Frame.gameObject.SetActive(false);
     }
 
     IEnumerator Typing(Text txt, string message, float speed)
