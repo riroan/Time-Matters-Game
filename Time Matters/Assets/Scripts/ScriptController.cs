@@ -18,7 +18,7 @@ public class Node
 
     public bool isRandom { get { return choice.Length == 0 && childIx.Length > 1; } }
     public bool isEnd { get { return childIx[0] <= -1; } }
-    public bool isHead { get { return ParentIx == -1; } }
+    public bool isHead { get { return ParentIx <= -1; } }
     public int ix { get { return Ix; } }
     public string line { get { return Line; } }
     public string imagePath { get { return ImagePath; } }
@@ -78,8 +78,9 @@ public class Graph
 public class ScriptController : MonoBehaviour
 {
     bool isTyping = false;          // 지금 스토리가 입력되는중인지
-    bool chapterEnd = false;        // 챕터가 끝났는지 (삭제예정)
     bool mustChoose = false;        // 선택지가 있는지
+    bool isGameOver = false;        // 게임오버?
+    bool isGameEnd = false;         // 게임 끝?
     int currentScriptIx = 0;        // 현재 스크립트 인덱스
     int rememberIx = -1;            // 돌발이벤트에서 돌아갈곳이 있는지
     int chapterIx = 0;              // 챕터 인덱스
@@ -87,26 +88,58 @@ public class ScriptController : MonoBehaviour
 
     Graph currentScript;
     List<Graph> chapters = new List<Graph>();
+    List<int>[] history;
 
     [SerializeField] Image dialogImage;
     [SerializeField] Image Frame;
     [SerializeField] Text story;
     [SerializeField] GameObject[] chooseBttn;
+    [SerializeField] GameObject backBttn;
     [SerializeField] float dialogSpeed = 0.2f;
 
-    readonly string[] chapterPath = new string[] { "Story/prolog", "Story/Chapter1" };
+    readonly string[] chapterPath = new string[] { "Story/prolog", "Story/Chapter1","Story/Chapter2"};
 
     private void Start()
     {
         foreach (string path in chapterPath)
             chapters.Add(new Graph(path));
+        history = new List<int>[chapterPath.Length];
+        for (int i = 0; i < history.Length; i++)
+            history[i] = new List<int>();
         currentScript = chapters[chapterIx];
+    }
+
+    public void goNextDialog()  // 화면터치시 실행되는 함수
+    {
+        if (isGameOver)
+        {
+            gameOver();
+            return;
+        }
+        else if (isGameEnd)
+        {
+            ending();
+            return;
+        }
+        if (!isTyping)          // 글자가 입력되는중이 아닐경우
+        {
+            nextDialog();       // 다음 대사 불러옴
+        }
+        else                    // 글자가 입력되는중일경우
+        {
+            StopAllCoroutines();    // 글자 입력 중단
+            showChooseBttn();       // 버튼 보이기
+            story.text = currentScript[currentScriptIx].line;       // 글자 즉시 입력
+            isTyping = false;       // 입력 끝남
+            updateIx();             // 다음대사 인덱스 찾음
+        }
     }
 
     void nextDialog()
     {
         if (!mustChoose)    // 선택해야되면 선택이나 하셈
         {
+            history[chapterIx].Add(currentScriptIx);    // 기록 저장
             // 해당 라인에 이미지가 있으면 이미지 불러옴
             if (currentScript[currentScriptIx].hasImage)
                 showImage();
@@ -139,24 +172,35 @@ public class ScriptController : MonoBehaviour
         goNextDialog();             // 다음 메시지로 이동
     }
 
-    public void goNextDialog()
+    void gameOver()
     {
-        if (!isTyping)          // 글자가 입력되는중이 아닐경우
+        if (!isGameOver)
+            isGameOver = true;
+        else
         {
-            nextDialog();       // 다음 대사 불러옴
+            story.text = "Game Over...";
+            backBttn.SetActive(true);
         }
-        else                    // 글자가 입력되는중일경우
+    }
+
+    void ending()
+    {
+        if (!isGameEnd)
+            isGameEnd = true;
+        else
         {
-            StopAllCoroutines();    // 글자 입력 중단
-            showChooseBttn();       // 버튼 보이기
-            story.text = currentScript[currentScriptIx].line;       // 글자 즉시 입력
-            isTyping = false;       // 입력 끝남
-            updateIx();             // 다음대사 인덱스 찾음
+            story.text = "도시를 지켜냈다.\n(대충 이겼다는 뜻)";
+            backBttn.SetActive(true);
         }
     }
 
     void updateIx()
     {
+        if (currentScript[currentScriptIx].childIx[0] == -2)
+        {
+            gameOver();
+            return;
+        }
         if (currentScript[currentScriptIx].isRandom)    // 만약 랜덤이벤트다?
         {
             // 랜덤 결과 불러옴(확률 동일)
@@ -174,16 +218,24 @@ public class ScriptController : MonoBehaviour
                 }
                 else
                 {
-                    currentScript = chapters[++chapterIx];      // 이러면 ㄹㅇ 끝난거임, 다음 챕터불러오셈
-                    currentScriptIx = 0;
-                    return;
+                    try
+                    {
+                        currentScript = chapters[++chapterIx];      // 이러면 ㄹㅇ 끝난거임, 다음 챕터불러오셈
+                        currentScriptIx = 0;
+                        return;
+                    }
+                    catch 
+                    {
+                        ending();
+                    }
                 }
             }
             if (currentScript[currentScriptIx].numEvent > 0)            // 돌발 이벤트가 있는가?
             {
                 currentScript[currentScriptIx].numEvent--;              // 돌발이벤트 횟수 1회 감소
                 rememberIx = currentScript[currentScriptIx].ix;         // 돌아올곳을 기억하자
-                currentScriptIx = currentScript.randomEventStartIx;     // 돌발이벤트 장소로 이동
+                int randomNumber = Random.Range(0, currentScript[currentScript.randomEventStartIx].childIx.Length);
+                currentScriptIx = currentScript[currentScript.randomEventStartIx].childIx[randomNumber];     // 돌발이벤트 장소로 이동
             }
             else           // 평범한경우
                 currentScriptIx = currentScript[currentScriptIx].childIx[0];    // 평범하게 이동
@@ -192,7 +244,7 @@ public class ScriptController : MonoBehaviour
 
     void showImage()
     {
-        story.transform.position = new Vector3(0, -0.8f);
+        //story.transform.position = new Vector3(0, -1.2f);
         dialogImage.gameObject.SetActive(true);
         Frame.gameObject.SetActive(true);
         dialogImage.sprite = Resources.Load<Sprite>(currentScript[currentScriptIx].imagePath);
@@ -200,7 +252,7 @@ public class ScriptController : MonoBehaviour
 
     void hideImage()
     {
-        story.transform.position = new Vector3(0, 0.8f);
+        //story.transform.position = new Vector3(0, 0.8f);
         dialogImage.gameObject.SetActive(false);
         Frame.gameObject.SetActive(false);
     }

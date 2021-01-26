@@ -1,0 +1,123 @@
+{"Line":"원진: 다 고쳐졌습니다!" ,"ImagePath":"","Choice":[], "Ix" : 0, "ChildIx":[1], "ParentIx":-5, "numEvent":0}
+{"Line":"시간이 얼마 지나지 않아 엘리베이터 문이 열리고 엘리베이터를 고치던 대원이 소리쳤다." ,"ImagePath":"","Choice":[], "Ix" : 1, "ChildIx":[2], "ParentIx":0, "numEvent":0}
+{"Line":"**: 좋아 가볼까? OO씨는 제일 안쪽으로 타세요." ,"ImagePath":"","Choice":[], "Ix" : 2, "ChildIx":[3], "ParentIx":1, "numEvent":0}
+{"Line":"**: 모두 올라갈 준비해! 바로 적이 있을 수 있으니 사격 준비하도록" ,"ImagePath":"","Choice":[], "Ix" : 3, "ChildIx":[4], "ParentIx":2, "numEvent":0}
+{"Line":"대원들: 예!" ,"ImagePath":"","Choice":[], "Ix" : 4, "ChildIx":[5], "ParentIx":3, "numEvent":0}
+{"Line":"비장한 표정의 대원들이 짧고 낮게 대답하고, 엘리베이터의 문이 서서히 닫히기 시작했다. " ,"ImagePath":"","Choice":[], "Ix" : 5, "ChildIx":[6], "ParentIx":4, "numEvent":0}
+{"Line":"엘리베이터에는 빛 한줄기조차 없었고 아무 소리 올라가기 시작했다." ,"ImagePath":"","Choice":[], "Ix" : 6, "ChildIx":[7], "ParentIx":5, "numEvent":0}
+{"Line":"얼마 지나지 않아 엘리베이터는 도착했고 문열리는 소리와 함께 2층 풍경이 보이기 시작했다. 2층은 매우 어두웠다." ,"ImagePath":"","Choice":[], "Ix" : 7, "ChildIx":[8], "ParentIx":6, "numEvent":0}
+{"Line":"**: 앞의 대원들은 일단 내려서 투입구역 확보하고 나머지 인원은 빠르게 야간 투시경을 착용한다." ,"ImagePath":"","Choice":[], "Ix" : 8, "ChildIx":[9], "ParentIx":7, "numEvent":0}
+{"Line":"얼마 지나지 않아 모든 대원들이 야간 투시경을 장착하였고 야간 투시경을 통해서 본 2층에는 아무도 없었다." ,"ImagePath":"","Choice":[], "Ix" : 9, "ChildIx":[10], "ParentIx":8, "numEvent":0}
+{"Line":"그런데 갑자기 **이 정지 수신호를 보냈다." ,"ImagePath":"","Choice":[], "Ix" : 10, "ChildIx":[-100], "ParentIx":9, "numEvent":0}
+{"Line":"그들이 로비에 거의 도착했을 무렵 경찰과 교신하던 대원이 외쳤다." ,"ImagePath":"","Choice":[], "Ix" : 11, "ChildIx":[12], "ParentIx":-5, "numEvent":0}
+{"Line":"&&: 교신을 했는데 방탄 방패가 있다고 합니다. 그런데 시간이 걸린다고 합니다." ,"ImagePath":"","Choice":[], "Ix" : 12, "ChildIx":[13], "ParentIx":11, "numEvent":0}
+{"Line":"OO: 얼마나 걸린다고 합니까?" ,"ImagePath":"","Choice":[], "Ix" : 13, "ChildIx":[14], "ParentIx":12, "numEvent":0}
+{"Line":"&&: 아무리 못해도 N분은 걸린다고 합니다." ,"ImagePath":"","Choice":["그냥 진행한다.","기다린다."], "Ix" : 14, "ChildIx":[15], "ParentIx":13, "numEvent":0}
+{"Line":"OO: 시간이 부족합니다 그냥 진행해야 합니다." ,"ImagePath":"","Choice":[], "Ix" : 15, "ChildIx":[16], "ParentIx":14, "numEvent":0}
+{"Line":"**: 예 알겠습니다. 진입해!" ,"ImagePath":"","Choice":[], "Ix" : 16, "ChildIx":[17], "ParentIx":15, "numEvent":0}
+{"Line":"그들은 빠른 속도로 진입하기 시작했다." ,"ImagePath":"","Choice":[], "Ix" : 17, "ChildIx":[18], "ParentIx":16, "numEvent":0}
+{"Line":"그들은 목적을 이루기 위해 빠르게 진입했지만 적들의 강력한 화력 앞에서는 아무 것도 할 수 없었다." ,"ImagePath":"","Choice":[], "Ix" : 18, "ChildIx":[19], "ParentIx":17, "numEvent":0}
+{"Line":"그저 바닥에 엎드려서 고통이 끝나는 것 만을 기다려야 했다." ,"ImagePath":"","Choice":[], "Ix" : 19, "ChildIx":[-100], "ParentIx":18, "numEvent":0}
+{"Line":"피해가 있었지만 그들은 목적지에 도착할 수 있었다." ,"ImagePath":"","Choice":[], "Ix" : 20, "ChildIx":[21], "ParentIx":17, "numEvent":0}
+{"Line":"2층은 마치 밤이내린 듯 어둡기만 하다. OO을 제외한 모든 인원은 야간 투시경을 착용하였다." ,"ImagePath":"","Choice":[], "Ix" : 21, "ChildIx":[22], "ParentIx":20, "numEvent":0}
+{"Line":"OO: 방패가 있는 것이 좋을 것 같습니다. 시간은 없지만 확실한 게 좋죠" ,"ImagePath":"","Choice":[], "Ix" : 22, "ChildIx":[23], "ParentIx":14, "numEvent":0}
+{"Line":"**: 같은 생각입니다. 방패가 올때까지 기다린다." ,"ImagePath":"","Choice":[], "Ix" : 23, "ChildIx":[24], "ParentIx":22, "numEvent":0}
+{"Line":"얼마 지나지 않아 방패가 도착하였다." ,"ImagePath":"","Choice":[], "Ix" : 24, "ChildIx":[25], "ParentIx":23, "numEvent":0}
+{"Line":"**: 전 대원 진입 준비! 방패뒤에 최대한 몸을 가린채 빠르게 진입한다!" ,"ImagePath":"","Choice":[], "Ix" : 25, "ChildIx":[26], "ParentIx":24, "numEvent":0}
+{"Line":"대장의 명령이 떨어지자 그들은 방패를 앞세워 나아가기 시작했다." ,"ImagePath":"","Choice":[], "Ix" : 26, "ChildIx":[27], "ParentIx":25, "numEvent":0}
+{"Line":"이윽고 복도의 끝에서 반짝이는 총구 화염과 함께 적들의 거센 저항이 시작되었다. 하지만 그것은 이동 속도를 늦출 뿐 막지는 못했고 방패 뒤에 있는 대원들의 반격에 점점 사라지기 시작했다." ,"ImagePath":"","Choice":[], "Ix" : 27, "ChildIx":[28], "ParentIx":26, "numEvent":0}
+{"Line":"그렇게 도달한 2층은 마치 밤이 된 것처럼 어둡기만 했다. OO을 제외한 모든 인원은 야간 투시경을 착용하였다." ,"ImagePath":"","Choice":[], "Ix" : 28, "ChildIx":[29], "ParentIx":27, "numEvent":0}
+{"Line":"**: 통로에 적이 있습니다. 로비방향 통로라 저희의 일에 방해가 되지 않을 수도 있는데 일단은 거리가 꽤 가까워서 위험합니다." ,"ImagePath":"","Choice":[], "Ix" : 29, "ChildIx":[30], "ParentIx":28, "numEvent":0}
+{"Line":"**: 다만 그들은 로비방향을 바라보고 있으니 처리하려면 쉽게 처리가 가능할 것 같습니다. 어떻게 하는게 좋겠습니까?" ,"ImagePath":"","Choice":["적을 처리한다.","무시하고 사무구역으로 직행한다."], "Ix" : 30, "ChildIx":[31], "ParentIx":29, "numEvent":0}
+{"Line":"OO: 그들을 남겨두면 나중에 문제가 될 것 같습니다. 빠르게 처리하고 나아가시죠" ,"ImagePath":"","Choice":[], "Ix" : 31, "ChildIx":[32], "ParentIx":30, "numEvent":0}
+{"Line":"**: 그렇게 하겠습니다." ,"ImagePath":"","Choice":[], "Ix" : 32, "ChildIx":[33], "ParentIx":31, "numEvent":0}
+{"Line":"**은 대원 2명을 보냈다." ,"ImagePath":"","Choice":[], "Ix" : 33, "ChildIx":[34], "ParentIx":32, "numEvent":0}
+{"Line":"얼마 지나지 않아 아주 작은 소음기 소리가 났다. 그 소리가 끝나자 마자 적들이 있던 곳에서 커다란 폭발음이 들려왔다." ,"ImagePath":"","Choice":[], "Ix" : 34, "ChildIx":[35], "ParentIx":33, "numEvent":0}
+{"Line":"&&: 이런 젠장!" ,"ImagePath":"","Choice":[], "Ix" : 35, "ChildIx":[36], "ParentIx":34, "numEvent":0}
+{"Line":"폭발 소리가 난 직후 현장에 가보니 형체를 폭파의 흔적만 남아있을 뿐 아무것도 남아 있지 않습니다. 대원들이 동요하기 시작하자 **이 입을 엽니다." ,"ImagePath":"","Choice":[], "Ix" : 36, "ChildIx":[37], "ParentIx":35, "numEvent":0}
+{"Line":"**: 어쩔 수 없다. 희생은 각오했다 앞으로 계속 나아간다. 오른쪽 통로라고요?" ,"ImagePath":"","Choice":[], "Ix" : 37, "ChildIx":[38], "ParentIx":36, "numEvent":0}
+{"Line":"OO: 네 맞습니다." ,"ImagePath":"","Choice":[], "Ix" : 38, "ChildIx":[39], "ParentIx":37, "numEvent":0}
+{"Line":"**: 그곳의 특징은 어떻습니까?" ,"ImagePath":"","Choice":[], "Ix" : 39, "ChildIx":[40], "ParentIx":38, "numEvent":0}
+{"Line":"OO: 1층과는 다르게 파티션은 없습니다. 사람이 숨어 있을 만한 엄폐물도 없고요. 그렇게 크게 위험하지는 않을 것입니다." ,"ImagePath":"","Choice":[], "Ix" : 40, "ChildIx":[41], "ParentIx":39, "numEvent":0}
+{"Line":"**: 알겠습니다. 진입한다." ,"ImagePath":"","Choice":[], "Ix" : 41, "ChildIx":[42], "ParentIx":40, "numEvent":0}
+{"Line":"대화가 끝나고 그들은 다시 목표를 향해 나아가기 시작한다." ,"ImagePath":"","Choice":[], "Ix" : 42, "ChildIx":[43], "ParentIx":41, "numEvent":0}
+{"Line":"OO: 바로 가는 게 나을 것 같습니다. 시간이 없습니다." ,"ImagePath":"","Choice":[], "Ix" : 43, "ChildIx":[44], "ParentIx":30, "numEvent":0}
+{"Line":"**: 네 알겠습니다. 오른쪽 통로가 맞습니까?" ,"ImagePath":"","Choice":[], "Ix" : 44, "ChildIx":[45], "ParentIx":43, "numEvent":0}
+{"Line":"OO: 네" ,"ImagePath":"","Choice":[], "Ix" : 45, "ChildIx":[46], "ParentIx":44, "numEvent":0}
+{"Line":"**: 바로 진입한다." ,"ImagePath":"","Choice":[], "Ix" : 46, "ChildIx":[47], "ParentIx":45, "numEvent":0}
+{"Line":"거의 달리던 그들 앞에서 갑자기 총소리가 들렸고, 맨 앞에서 달리던 대원 하나가 쓰러졌다." ,"ImagePath":"","Choice":[], "Ix" : 47, "ChildIx":[48], "ParentIx":46, "numEvent":0}
+{"Line":"갑작스런 기습에 그들은 그저 무기력하게 쓰러지기만 할 뿐 아무것도 하지 못했다. 총성이 멈췄을 때는 아무도 남아있지 않았다." ,"ImagePath":"","Choice":[], "Ix" : 48, "ChildIx":[-2], "ParentIx":47, "numEvent":0}
+{"Line":"$$: 이런 젠장!" ,"ImagePath":"","Choice":[], "Ix" : 49, "ChildIx":[50], "ParentIx":47, "numEvent":0}
+{"Line":"총격이 가해지자 마자 대원들은 반사적으로 적들을 향해 사격을 하였고 적들은 쓰러졌다." ,"ImagePath":"","Choice":[], "Ix" : 50, "ChildIx":[51], "ParentIx":49, "numEvent":0}
+{"Line":"**: 누가 쏜거야! 분명히 2층 확보했을 텐데." ,"ImagePath":"","Choice":[], "Ix" : 51, "ChildIx":[52], "ParentIx":50, "numEvent":0}
+{"Line":"$$: 아마 저희가 올라왔을 때 처음 봤던 2명인거 같습니다." ,"ImagePath":"","Choice":[], "Ix" : 52, "ChildIx":[53], "ParentIx":51, "numEvent":0}
+{"Line":"OO은 자신이 내렸던 선택을 떠올리며 죄책감으로 가득 찼다. 하지만 그가 할 수 있는 것은 그저 앞으로 걸어가는 것뿐이었다." ,"ImagePath":"","Choice":[], "Ix" : 53, "ChildIx":[54], "ParentIx":52, "numEvent":0}
+{"Line":"계속해서 복도를 지나가던 중 OO은 사무구역에서 빛이 새어나오는 것을 확인합니다." ,"ImagePath":"","Choice":[], "Ix" : 54, "ChildIx":[55], "ParentIx":53, "numEvent":0}
+{"Line":"OO: 사무구역에서 빛이 새어 나옵니다." ,"ImagePath":"","Choice":[], "Ix" : 55, "ChildIx":[56], "ParentIx":54, "numEvent":0}
+{"Line":"**: 정지!" ,"ImagePath":"","Choice":[], "Ix" : 56, "ChildIx":[57], "ParentIx":55, "numEvent":0}
+{"Line":"모든 팀원들이 멈춘 후 **과 대원들은 빛의 근원지에 다가가 정찰을 하고 돌아온다." ,"ImagePath":"","Choice":[], "Ix" : 57, "ChildIx":[58], "ParentIx":56, "numEvent":0}
+{"Line":"**: 중앙에 모닥불처럼 불이 피워져 있습니다. 아마 테러리스트들이 쓰다가 폭발 소리를 듣고 주변에 숨은 것 같습니다. OO씨 방이 어디입니까?" ,"ImagePath":"","Choice":[], "Ix" : 58, "ChildIx":[59], "ParentIx":57, "numEvent":0}
+{"Line":"OO: 정확하게 입구 반대편에 있습니다." ,"ImagePath":"","Choice":[], "Ix" : 59, "ChildIx":[60], "ParentIx":58, "numEvent":0}
+{"Line":"**: 바로 근처군요 빠르게 진입하겠습니다." ,"ImagePath":"","Choice":[], "Ix" : 60, "ChildIx":[61], "ParentIx":59, "numEvent":0}
+{"Line":"대화가 끝난 직후 그들은 OO의 사무실에 들어 갈 수 있었다. 사무실 안은 테러리스트들이 모든 물품들을 파손시키고 간 후였다." ,"ImagePath":"","Choice":[], "Ix" : 61, "ChildIx":[62], "ParentIx":60, "numEvent":0}
+{"Line":"당신은 피해 상황을 정확히 확인하기 위해 방안을 둘러봅니다." ,"ImagePath":"","Choice":[], "Ix" : 62, "ChildIx":[63], "ParentIx":61, "numEvent":0}
+{"Line":"OO은 자신의 사무실을 둘러보았습니다. OO이 지금껏 일해왔던 사무실은 지금은 폐가와 같습니다." ,"ImagePath":"","Choice":[], "Ix" : 63, "ChildIx":[64], "ParentIx":62, "numEvent":0}
+{"Line":"테러리스트들이 금고를 열려고 한 시도들이 이곳 저곳 남아 있습니다." ,"ImagePath":"","Choice":[], "Ix" : 64, "ChildIx":[65], "ParentIx":63, "numEvent":0}
+{"Line":"금고는 자신의 몫을 제대로 한 것 같습니다." ,"ImagePath":"","Choice":[], "Ix" : 65, "ChildIx":[66], "ParentIx":64, "numEvent":0}
+{"Line":"하지만 전원이 연결되어 있지 않아 비밀번호를 입력할 수 없습니다. 전원을 공급할 방법을 찾아야 합니다." ,"ImagePath":"","Choice":[], "Ix" : 66, "ChildIx":[67], "ParentIx":65, "numEvent":0}
+{"Line":"OO은 컴퓨터가 괜찮은 지 확인했습니다." ,"ImagePath":"","Choice":[], "Ix" : 67, "ChildIx":[68], "ParentIx":66, "numEvent":0}
+{"Line":"안타깝게도 켜질 것 같지는 않습니다. 케이스는 깨져 있고 CPU와 그래픽 카드는 형체를 알아볼 수 없을 정도로 망가져 있습니다. " ,"ImagePath":"","Choice":[], "Ix" : 68, "ChildIx":[69], "ParentIx":67, "numEvent":0}
+{"Line":"다행히 하드드라이브 까지는 건들지 않은 것 같습니다. 이 하드드라이브를 연결 시킬 곳을 찾아야 합니다." ,"ImagePath":"","Choice":[], "Ix" : 69, "ChildIx":[70], "ParentIx":68, "numEvent":0}
+{"Line":"OO: 이제 이 하드를 다른 컴퓨터에 연결시키기만 하면 됩니다." ,"ImagePath":"","Choice":[], "Ix" : 70, "ChildIx":[71], "ParentIx":69, "numEvent":0}
+{"Line":"**: 다른 컴퓨터는 어디에 있죠?" ,"ImagePath":"","Choice":[], "Ix" : 71, "ChildIx":[72], "ParentIx":70, "numEvent":0}
+{"Line":"OO: 근처에 또다른 사무구역이 있습니다. 제대로 작동하는 컴퓨터가 있길 기도해야죠" ,"ImagePath":"","Choice":[], "Ix" : 72, "ChildIx":[73], "ParentIx":71, "numEvent":0}
+{"Line":"**: 그런데 지금 단전되어 있는 것 같은데 컴퓨터는 어떻게 가동시킵니까?" ,"ImagePath":"","Choice":[], "Ix" : 73, "ChildIx":[74], "ParentIx":72, "numEvent":0}
+{"Line":"OO: 아…." ,"ImagePath":"","Choice":[], "Ix" : 74, "ChildIx":[75], "ParentIx":73, "numEvent":0}
+{"Line":"&&: 현재 무전을 해봤는데 외부에서 원인을 파악하고 있답니다. 곧 있으면 복구 시킬 수 있다고 합니다." ,"ImagePath":"","Choice":[], "Ix" : 75, "ChildIx":[76], "ParentIx":74, "numEvent":0}
+{"Line":"**: 알겠네. 그럼 저희는 2층의 안전을 확보하겠습니다. OO님과 원진은 여기 있어주세요." ,"ImagePath":"","Choice":[], "Ix" : 76, "ChildIx":[77], "ParentIx":75, "numEvent":0}
+{"Line":"OO: 네 알겠습니다." ,"ImagePath":"","Choice":[], "Ix" : 77, "ChildIx":[78], "ParentIx":76, "numEvent":0}
+{"Line":"**과 원진을 제외한 대원들이 나간 후 시간이 흘렀지만 돌아오는 사람은 없었고 그저 폭발음과 총소리가 요란하게 날 뿐이었다." ,"ImagePath":"","Choice":[], "Ix" : 78, "ChildIx":[79], "ParentIx":77, "numEvent":0}
+{"Line":"OO: 더 이상 기다릴 수 없습니다. 저희도 방법을 찾아 봐야합니다." ,"ImagePath":"","Choice":[], "Ix" : 79, "ChildIx":[80], "ParentIx":78, "numEvent":0}
+{"Line":"원진: 다른 방법이 있나요?" ,"ImagePath":"","Choice":[], "Ix" : 80, "ChildIx":[81], "ParentIx":79, "numEvent":0}
+{"Line":"OO:음… 아 UPS면 될 겁니다. 연구자료 보존을 위해서 각 방마다 하나씩은 있을 겁니다." ,"ImagePath":"","Choice":[], "Ix" : 81, "ChildIx":[82], "ParentIx":80, "numEvent":0}
+{"Line":"원진: UPS가 뭐죠?" ,"ImagePath":"","Choice":[], "Ix" : 82, "ChildIx":[83], "ParentIx":81, "numEvent":0}
+{"Line":"OO: 쉽게 말하면 컴퓨터용 보조 배터리 같은 겁니다. 그걸로 컴퓨터를 키면 코드를 알아낼 수 있을 거에요." ,"ImagePath":"","Choice":[], "Ix" : 83, "ChildIx":[84], "ParentIx":82, "numEvent":0}
+{"Line":"원진: 안됩니다. 밖에서 나는 소리를 들어보니 적들의 저항이 완강한 것 같습니다. 여기에 남아서 기다리는 것이 좋습니다. " ,"ImagePath":"","Choice":["그냥 나간다","가만히 대기한다"], "Ix" : 84, "ChildIx":[85], "ParentIx":83, "numEvent":0}
+{"Line":"OO: 지금은 시간이 없습니다. 여기서 더 늦으면 수많은 사람이 죽을지도 모릅니다." ,"ImagePath":"","Choice":[], "Ix" : 85, "ChildIx":[86], "ParentIx":84, "numEvent":0}
+{"Line":"원진: 괜찮겠습니까? 잘못되면 모든 계획이 끝납니다." ,"ImagePath":"","Choice":[], "Ix" : 86, "ChildIx":[87], "ParentIx":85, "numEvent":0}
+{"Line":"OO: 어차피 늦어도 끝납니다. 어떻게 끝나든 저는 제시간내에 끝낼 수 있는 방법을 선택할 겁니다." ,"ImagePath":"","Choice":[], "Ix" : 87, "ChildIx":[88], "ParentIx":86, "numEvent":0}
+{"Line":"OO의 말이 끝나자 원진은 UPS와 하드드라이브를 가방에 넣고 문을 나섰다. 문을 나서자 보이는 것은 짙은 연기가 전부였다." ,"ImagePath":"","Choice":[], "Ix" : 88, "ChildIx":[89], "ParentIx":87, "numEvent":0}
+{"Line":"이내 그들은 바로 옆방에 도착할 수 있었다. 그러나 그들을 맞이한 건 완전히 파괴된 컴퓨터와 방전된 UPS였다." ,"ImagePath":"","Choice":[], "Ix" : 89, "ChildIx":[90], "ParentIx":88, "numEvent":0}
+{"Line":"OO: 젠장! 이 친구는 UPS를 쓰고 있었군요. 여기서는 건질 게 없습니다." ,"ImagePath":"","Choice":[], "Ix" : 90, "ChildIx":[91], "ParentIx":89, "numEvent":0}
+{"Line":"원진: 바로 다음방으로 가시지요" ,"ImagePath":"","Choice":[], "Ix" : 91, "ChildIx":[92], "ParentIx":90, "numEvent":0}
+{"Line":"그들은 다른 방에 도착하였다. 이곳도 이전 방들처럼 기물들이 	파괴되어 있었다." ,"ImagePath":"","Choice":[], "Ix" : 92, "ChildIx":[93], "ParentIx":91, "numEvent":0}
+{"Line":"그렇게 찾은 UPS를 가방에 넣고 다시 OO과 원진은 또 다른 UPS를 찾기 위해 방을 나섰다." ,"ImagePath":"","Choice":[], "Ix" : 93, "ChildIx":[94], "ParentIx":92, "numEvent":0}
+{"Line":"OO: 이런 여기도 제대로 된 게 없군요" ,"ImagePath":"","Choice":[], "Ix" : 94, "ChildIx":[95], "ParentIx":93, "numEvent":0}
+{"Line":"하지만 OO의 염려와 달리 엎어진 책상 밑에서 정상 작동하는 UPS를 찾을 수 있었다." ,"ImagePath":"","Choice":[], "Ix" : 95, "ChildIx":[96], "ParentIx":94, "numEvent":0}
+{"Line":"원진: 좋습니다. 빠르게 챙기고 다음방으로 넘어가지요." ,"ImagePath":"","Choice":[], "Ix" : 96, "ChildIx":[97], "ParentIx":95, "numEvent":0}
+{"Line":"그렇게 찾은 UPS를 가방에 넣고 OO과 원진은 방을 나섰다." ,"ImagePath":"","Choice":[], "Ix" : 97, "ChildIx":[98], "ParentIx":96, "numEvent":0}
+{"Line":"이윽고 원진이 문을 열자 다시 한번 매캐한 연기가 그들의 코를 찔렀다." ,"ImagePath":"","Choice":[], "Ix" : 98, "ChildIx":[99], "ParentIx":97, "numEvent":0}
+{"Line":"그 순간 연기 속에서 번쩍이는 총구 화염과 함께 큰 소리가 났다. 앞서가던 원진 또한 대응 사격을 하였고 방 안에서는 더 이상의 위협은 없었다." ,"ImagePath":"","Choice":[], "Ix" : 99, "ChildIx":[100], "ParentIx":98, "numEvent":0}
+{"Line":"OO: 큰일 날뻔했네요. 잠깐만요. 괜찮아요?" ,"ImagePath":"","Choice":[], "Ix" : 100, "ChildIx":[101], "ParentIx":99, "numEvent":0}
+{"Line":"말이 끝나기 무섭게 원진은 균형을 잃고 쓰러졌다." ,"ImagePath":"","Choice":[], "Ix" : 101, "ChildIx":[102], "ParentIx":100, "numEvent":0}
+{"Line":"OO: 괜찮아요? 정신 차리세요!" ,"ImagePath":"","Choice":[], "Ix" : 102, "ChildIx":[103], "ParentIx":101, "numEvent":0}
+{"Line":"원진: 괜찮습니다. 이 정도면 죽지 않아요 지금 시간이 부족하니 빨리 해주세요." ,"ImagePath":"","Choice":[], "Ix" : 103, "ChildIx":[104], "ParentIx":102, "numEvent":0}
+{"Line":"OO: 그래도 피가 너무 많이 나요 응급 조치를 해야 해요!" ,"ImagePath":"","Choice":[], "Ix" : 104, "ChildIx":[105], "ParentIx":103, "numEvent":0}
+{"Line":"원진: 전 괜찮습니다. 작업을 먼저 진행해 주세요!" ,"ImagePath":"","Choice":[], "Ix" : 105, "ChildIx":[106], "ParentIx":104, "numEvent":0}
+{"Line":"원진의 완강한 태도에 OO은 어쩔 수 없이 UPS를 컴퓨터에 연결하여 작업을 시작하였다. 다행히 컴퓨터와 하드드라이브는 정상 작동하였다." ,"ImagePath":"","Choice":[], "Ix" : 106, "ChildIx":[107], "ParentIx":105, "numEvent":0}
+{"Line":"하드드라이브가 연결되어 코드를 알아내려 하는 순간 UPS에 방전 경고신호가 켜졌다." ,"ImagePath":"","Choice":[], "Ix" : 107, "ChildIx":[108], "ParentIx":106, "numEvent":0}
+{"Line":"OO: 이런 젠장! UPS가 모자랍니다! 다음 방으로 가야합니다." ,"ImagePath":"","Choice":[], "Ix" : 108, "ChildIx":[109], "ParentIx":107, "numEvent":0}
+{"Line":"하지만 대답이 없었다." ,"ImagePath":"","Choice":[], "Ix" : 109, "ChildIx":[110], "ParentIx":108, "numEvent":0}
+{"Line":"OO이 뒤를 돌아보자 원진이 죽은 것을 볼 수 있었다. 그의 군복에는 피가 가득했으며 마지막까지 고통을 참느라 일그러진 얼굴만이 보였다." ,"ImagePath":"","Choice":[], "Ix" : 110, "ChildIx":[111], "ParentIx":109, "numEvent":0}
+{"Line":"OO: 젠장…. 젠장! 어떻게 해야지?" ,"ImagePath":"","Choice":[], "Ix" : 111, "ChildIx":[112], "ParentIx":110, "numEvent":0}
+{"Line":"OO은 이제 혼자만 남아있어 할 수 있는 게 없었다. 하지만 그가 할 수 있는 것은 오직 나가서 새로운 UPS를 찾는 것이었다." ,"ImagePath":"","Choice":[], "Ix" : 112, "ChildIx":[113], "ParentIx":111, "numEvent":0}
+{"Line":"OO: 이젠… 어찌됐든 나갈 수밖에 없어" ,"ImagePath":"","Choice":[], "Ix" : 113, "ChildIx":[114], "ParentIx":112, "numEvent":0}
+{"Line":"OO이 문을 열고 나가자 어느정도 연기가 가라 앉아 시야가 확보되어 있었다." ,"ImagePath":"","Choice":[], "Ix" : 114, "ChildIx":[115], "ParentIx":113, "numEvent":0}
+{"Line":"그 순간 옆에서 누군가 소리쳤다." ,"ImagePath":"","Choice":[], "Ix" : 115, "ChildIx":[116], "ParentIx":114, "numEvent":0}
+{"Line":"??: 손들어!" ,"ImagePath":"","Choice":[], "Ix" : 116, "ChildIx":[117], "ParentIx":115, "numEvent":0}
+{"Line":"다행히 **의 목소리였고 **은 얼마 지나지 않아 OO을 알아봤다." ,"ImagePath":"","Choice":[], "Ix" : 117, "ChildIx":[118], "ParentIx":116, "numEvent":0}
+{"Line":"**: 괜찮으십니까?" ,"ImagePath":"","Choice":[], "Ix" : 118, "ChildIx":[119], "ParentIx":117, "numEvent":0}
+{"Line":"OO: 저는 괜찮습니다. 하지만 UPS가 부족합니다. " ,"ImagePath":"","Choice":[], "Ix" : 119, "ChildIx":[120], "ParentIx":118, "numEvent":0}
+{"Line":"OO: 원래 있던 곳에서 이방까지 있던 방들은 저와 원진이 찾아봤으니 그 방들을 제외하고 찾아 주세요." ,"ImagePath":"","Choice":[], "Ix" : 120, "ChildIx":[121], "ParentIx":119, "numEvent":0}
+{"Line":"**: 일단 알겠습니다." ,"ImagePath":"","Choice":[], "Ix" : 121, "ChildIx":[122], "ParentIx":120, "numEvent":0}
+{"Line":"" ,"ImagePath":"","Choice":[], "Ix" : 121, "ChildIx":[122], "ParentIx":120, "numEvent":0}
