@@ -12,23 +12,25 @@ public class Node
     [SerializeField] string[] Choice;
     [SerializeField] int ParentIx;
     [SerializeField] int[] ChildIx;
+    [SerializeField] bool FixElevator;
     public int numEvent;
     public Node[] children;
     public Node parent;
 
-    public bool isRandom { get { return choice.Length == 0 && childIx.Length > 1; } }
-    public bool isEnd { get { return childIx[0] <= -1; } }
-    public bool isHead { get { return ParentIx <= -1; } }
-    public int ix { get { return Ix; } }
-    public string line { get { return Line; } }
-    public string imagePath { get { return ImagePath; } }
-    public string[] choice { get { return Choice; } }
-    public int parentIx { get { return ParentIx; } }
-    public int[] childIx { get { return ChildIx; } }
-    public Node this[int ix] { get { return children[ix]; } }
-    public int numChoice { get { return choice.Length; } }
-    public bool hasChoice { get { return numChoice > 0; } }
-    public bool hasImage { get { return imagePath.Length > 0; } }
+    public bool isRandom { get => choice.Length == 0 && childIx.Length > 1; } 
+    public bool isEnd { get => childIx[0] <= -1;  }
+    public bool isHead { get => ParentIx <= -1; } 
+    public bool fixElevator { get => FixElevator; }
+    public int ix { get => Ix;  }
+    public string imagePath { get => ImagePath; }
+    public string line { get => Line.Replace(' ', '\u00A0').Replace("OO",GameManager.instance.playerName); }
+    public string[] choice { get => Choice; } 
+    public int parentIx { get => ParentIx; }
+    public int[] childIx { get => ChildIx; } 
+    public Node this[int ix] { get => children[ix]; }
+    public int numChoice { get => choice.Length; } 
+    public bool hasChoice { get => numChoice > 0; }
+    public bool hasImage { get => imagePath.Length > 0; } 
 }
 
 public class Graph
@@ -60,6 +62,8 @@ public class Graph
                 if (!nodes[i].isHead)       // 머리노드이면 부모를 추가할 필요가 없음
                     nodes[i].parent = nodes[nodes[i].parentIx];
             }
+            Debug.Log(i);
+            Debug.Log(nodes[i].fixElevator);
         }
     }
 
@@ -69,7 +73,9 @@ public class Graph
         string[] str = txt.text.Split('\n');
         nodes = new Node[str.Length];
         for (int i = 0; i < str.Length; i++)
+        {
             nodes[i] = JsonUtility.FromJson<Node>(str[i]);
+        }
     }
 
     public Node this[int ix] { get { return nodes[ix]; } }
@@ -94,15 +100,38 @@ public class ScriptController : MonoBehaviour
     [SerializeField] Image Frame;
     [SerializeField] Text story;
     [SerializeField] GameObject[] chooseBttn;
-    [SerializeField] GameObject backBttn;
+    [SerializeField] GameObject gameOverObject;
     [SerializeField] float dialogSpeed = 0.2f;
 
+    Text uuu;
+
     readonly string[] chapterPath = new string[] { "Story/prolog", "Story/Chapter1","Story/Chapter2"};
+
+    public void TTT()
+    {
+        StartCoroutine("eee");
+    }
+
+    IEnumerator eee()
+    {
+        string u = uuu.text;
+        for (int i = 0; i < 3; i++)
+        {
+            uuu.text = "<color=#ff0000>" + u +"</color>";
+            yield return new WaitForSeconds(0.1f);
+            uuu.text = "<color=#ffffff>" + u + "</color>";
+            yield return new WaitForSeconds(0.1f);
+        }
+        print("코루틴 끝");
+    }
 
     private void Start()
     {
         foreach (string path in chapterPath)
+        {
+            print("path");
             chapters.Add(new Graph(path));
+        }
         history = new List<int>[chapterPath.Length];
         for (int i = 0; i < history.Length; i++)
             history[i] = new List<int>();
@@ -140,6 +169,7 @@ public class ScriptController : MonoBehaviour
         if (!mustChoose)    // 선택해야되면 선택이나 하셈
         {
             history[chapterIx].Add(currentScriptIx);    // 기록 저장
+            GameManager.instance.fixedElevator |= currentScript[currentScriptIx].fixElevator;   // 엘리베이터 고쳤는지 확인하는 flag
             // 해당 라인에 이미지가 있으면 이미지 불러옴
             if (currentScript[currentScriptIx].hasImage)
                 showImage();
@@ -178,8 +208,7 @@ public class ScriptController : MonoBehaviour
             isGameOver = true;
         else
         {
-            story.text = "Game Over...";
-            backBttn.SetActive(true);
+            gameOverObject.SetActive(true);
         }
     }
 
@@ -190,7 +219,7 @@ public class ScriptController : MonoBehaviour
         else
         {
             story.text = "도시를 지켜냈다.\n(대충 이겼다는 뜻)";
-            backBttn.SetActive(true);
+            //gameO.SetActive(true);
         }
     }
 
@@ -220,8 +249,7 @@ public class ScriptController : MonoBehaviour
                 {
                     try
                     {
-                        currentScript = chapters[++chapterIx];      // 이러면 ㄹㅇ 끝난거임, 다음 챕터불러오셈
-                        currentScriptIx = 0;
+                        nextChapter();
                         return;
                     }
                     catch 
@@ -240,6 +268,15 @@ public class ScriptController : MonoBehaviour
             else           // 평범한경우
                 currentScriptIx = currentScript[currentScriptIx].childIx[0];    // 평범하게 이동
         }
+    }
+
+    void nextChapter()
+    {
+        currentScript = chapters[++chapterIx];      // 이러면 ㄹㅇ 끝난거임, 다음 챕터불러오셈
+        if (chapterIx == 2 && !GameManager.instance.fixedElevator)
+            currentScriptIx = 11;
+        else
+            currentScriptIx = 0;
     }
 
     void showImage()

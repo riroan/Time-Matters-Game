@@ -1,0 +1,63 @@
+{"Line":"3층 복도에 진입한 OO과 대원들은 생각보다 조용한 광경에 당황했다. " ,"ImagePath":"","Choice":[], "Ix" : 0, "ChildIx":[1], "ParentIx":-1, "numEvent":0}
+{"Line":"**: 여기는 지키고 있지 않았나 봅니다." ,"ImagePath":"","Choice":[], "Ix" : 1, "ChildIx":[2], "ParentIx":0, "numEvent":0}
+{"Line":"짧게 말을 마친 **은 주위를 경계하면 천천히 컨트롤 룸 정문 방향으로 향했다." ,"ImagePath":"","Choice":[], "Ix" : 2, "ChildIx":[3], "ParentIx":1, "numEvent":0}
+{"Line":"문은 군데군데 침입의 흔적이 있었지만 여전히 굳게 닫혀 있었다." ,"ImagePath":"","Choice":[], "Ix" : 3, "ChildIx":[4], "ParentIx":2, "numEvent":0}
+{"Line":"**: 테러리스트들이 이 곳까지 들어올려 했군요, 하지만 못 들어 간 것 같습니다." ,"ImagePath":"","Choice":[], "Ix" : 4, "ChildIx":[5], "ParentIx":3, "numEvent":0}
+{"Line":"OO: 아무래도 강화처리된 문이라서요." ,"ImagePath":"","Choice":[], "Ix" : 5, "ChildIx":[6], "ParentIx":4, "numEvent":0}
+{"Line":"**: 그럼..." ,"ImagePath":"","Choice":[], "Ix" : 6, "ChildIx":[7], "ParentIx":5, "numEvent":0}
+{"Line":"**: 이제 저희를 막는 것은 아무것도 없군요." ,"ImagePath":"","Choice":[], "Ix" : 7, "ChildIx":[8], "ParentIx":6, "numEvent":0}
+{"Line":"OO: 네 맞습니다." ,"ImagePath":"","Choice":[], "Ix" : 8, "ChildIx":[9], "ParentIx":7, "numEvent":0}
+{"Line":"**: 알겠습니다. 모두 진입준비!" ,"ImagePath":"","Choice":[], "Ix" : 9, "ChildIx":[10], "ParentIx":8, "numEvent":0}
+{"Line":"OO이 키카드를 긁자, 육중한 문이 천천히 열리기 시작했다." ,"ImagePath":"","Choice":[], "Ix" : 10, "ChildIx":[11], "ParentIx":9, "numEvent":0}
+{"Line":"끼기기기긱" ,"ImagePath":"","Choice":[], "Ix" : 11, "ChildIx":[12], "ParentIx":10, "numEvent":0}
+{"Line":"갑자기 잘 열리던 문이 어디에 끼인 듯 멈추어 버렸다. 하지만 다행히도 한명씩 통과하면 못할 것도 없는 크기였다." ,"ImagePath":"","Choice":[], "Ix" : 12, "ChildIx":[13], "ParentIx":11, "numEvent":0}
+{"Line":"**: 제가 먼저 가보겠습니다." ,"ImagePath":"","Choice":[], "Ix" : 13, "ChildIx":[14], "ParentIx":12, "numEvent":0}
+{"Line":"**은 말을 마친뒤 먼저 좁은 틈을 비집고 넘어갔다." ,"ImagePath":"","Choice":[], "Ix" : 14, "ChildIx":[15], "ParentIx":13, "numEvent":0}
+{"Line":"잠시 뒤, 안쪽에서 대장의 목소리가 들렸다." ,"ImagePath":"","Choice":[], "Ix" : 15, "ChildIx":[16], "ParentIx":14, "numEvent":0}
+{"Line":"**: 컨트롤 룸에는 아무도 없습니다. OO씨, 먼저 들어오시죠." ,"ImagePath":"","Choice":[], "Ix" : 16, "ChildIx":[17], "ParentIx":15, "numEvent":0}
+{"Line":"OO은 **의 말을 듣고 좁은 틈 사이로 들어가는 순간 **은 OO을 잡아당겼다." ,"ImagePath":"","Choice":[], "Ix" : 17, "ChildIx":[18], "ParentIx":16, "numEvent":0}
+{"Line":"OO이 넘어진 사이 **은 바지춤에서 권총을 꺼내 들고 뒤이어 따라오던 대원 하나를 향해 발사했다." ,"ImagePath":"","Choice":[], "Ix" : 18, "ChildIx":[19], "ParentIx":17, "numEvent":0}
+{"Line":"그러고 난 뒤 문밖으로 수류탄을 던진다" ,"ImagePath":"","Choice":[], "Ix" : 19, "ChildIx":[20], "ParentIx":18, "numEvent":0}
+{"Line":"쾅!" ,"ImagePath":"","Choice":[], "Ix" : 20, "ChildIx":[21], "ParentIx":19, "numEvent":0}
+{"Line":"문 바로 밖에서 터졌는지 엄청난 소리와 함께 중간에서 총을 맞은 대원이 상반신만 안으로 밀려들어왔다." ,"ImagePath":"","Choice":[], "Ix" : 21, "ChildIx":[22], "ParentIx":20, "numEvent":0}
+{"Line":"OO: 이게 무슨...?" ,"ImagePath":"","Choice":[], "Ix" : 22, "ChildIx":[23], "ParentIx":21, "numEvent":0}
+{"Line":"**: 혼란스럽겠지. 하지만 걱정마 난 널 죽일 생각은 없으니까." ,"ImagePath":"","Choice":[], "Ix" : 23, "ChildIx":[24], "ParentIx":22, "numEvent":0}
+{"Line":"OO: 설마…?" ,"ImagePath":"","Choice":[], "Ix" : 24, "ChildIx":[25], "ParentIx":23, "numEvent":0}
+{"Line":"테러리스트 **: 맞아 난 너희들이 테러리스트라고 부르는 쪽이야. 너희 편은 아니지" ,"ImagePath":"","Choice":[], "Ix" : 25, "ChildIx":[26], "ParentIx":24, "numEvent":0}
+{"Line":"OO: 왜...  왜 이런 짓을?" ,"ImagePath":"","Choice":[], "Ix" : 26, "ChildIx":[27], "ParentIx":25, "numEvent":0}
+{"Line":"테러리스트**: 왜 이렇게 번거롭게 했냐고?" ,"ImagePath":"","Choice":[], "Ix" : 27, "ChildIx":[28], "ParentIx":26, "numEvent":0}
+{"Line":"테러리스트**: 어차피 폭파가 목적인데 왜 굳이 취소하려는 너의 뒤를 봐주고 내 부하들을 내 손으로 죽여가며 목숨 걸고 너를 이곳까지 데려왔냐고? 기만이라 생각하고 있겠지만 기만은 아니야" ,"ImagePath":"","Choice":[], "Ix" : 28, "ChildIx":[29], "ParentIx":27, "numEvent":0}
+{"Line":"OO: 그럼 왜 날 이곳까지 데려온 거지?" ,"ImagePath":"","Choice":[], "Ix" : 29, "ChildIx":[30], "ParentIx":28, "numEvent":0}
+{"Line":"테러리스트**: 시간이 좀 남았네. 내가 이야기를 하나 해줄게." ,"ImagePath":"","Choice":[], "Ix" : 30, "ChildIx":[31], "ParentIx":29, "numEvent":0}
+{"Line":"테러리스트**: 세상은 아주 혼란해 그건 너도 알고 있을 거야. 기아, 환경, 전쟁! 모든 문제가 온 세상에서 터지고 있지." ,"ImagePath":"","Choice":[], "Ix" : 31, "ChildIx":[32], "ParentIx":30, "numEvent":0}
+{"Line":"테러리스트**: 몇 년만 지나면 인간만 아니라 지구가 죽을 거야." ,"ImagePath":"","Choice":[], "Ix" : 32, "ChildIx":[33], "ParentIx":31, "numEvent":0}
+{"Line":"테러리스트**: 그래서 나는 계속해서 고민했지. 어떻게 이 문제를 해결할까?" ,"ImagePath":"","Choice":[], "Ix" : 33, "ChildIx":[34], "ParentIx":32, "numEvent":0}
+{"Line":"OO: 그래서 사람들을 다 죽이려고? 그게 니, 생각이야?" ,"ImagePath":"","Choice":[], "Ix" : 34, "ChildIx":[35], "ParentIx":33, "numEvent":0}
+{"Line":"테러리스트**: 어느정도 맞는 말이야. 결국 이 난리는 인간이 많은 부분을 만들었지." ,"ImagePath":"","Choice":[], "Ix" : 35, "ChildIx":[36], "ParentIx":34, "numEvent":0}
+{"Line":"테러리스트**: 하지만 다 죽이는 건 우리의 목표가 아니야. 그저 숫자를 조금 줄여야 된다고 결론냈어." ,"ImagePath":"","Choice":[], "Ix" : 36, "ChildIx":[37], "ParentIx":35, "numEvent":0}
+{"Line":"테러리스트**: 지금 인간의 수가 다른 종에 비해 수가 많아. 인간의 수가 줄면 지금 우리에게 닥친 거의 모든 문제들이 해결돼." ,"ImagePath":"","Choice":[], "Ix" : 37, "ChildIx":[38], "ParentIx":36, "numEvent":0}
+{"Line":"테러리스트**: 예를 들어 환경문제? 수많은 사람들의 니즈를 충족시키려 수많은 나무는 잘려나가고, 땅은 갈려 나가고 구멍이 뚫려." ,"ImagePath":"","Choice":[], "Ix" : 38, "ChildIx":[39], "ParentIx":37, "numEvent":0}
+{"Line":"테러리스트**: 또 사회문제? 결국 한정된 자원을 두고 서로 싸우는 거야." ,"ImagePath":"","Choice":[], "Ix" : 39, "ChildIx":[40], "ParentIx":38, "numEvent":0}
+{"Line":"테러리스트**: 하지만 사람들 수가 줄어들면? 모든 게 해결되지. 서울이 그 해결의 시작이 될 거야." ,"ImagePath":"","Choice":[], "Ix" : 40, "ChildIx":[41], "ParentIx":39, "numEvent":0}
+{"Line":"OO: ..." ,"ImagePath":"","Choice":[], "Ix" : 41, "ChildIx":[42], "ParentIx":40, "numEvent":0}
+{"Line":"테러리스트**: 너한테 부탁할 게 있지." ,"ImagePath":"","Choice":[], "Ix" : 42, "ChildIx":[43], "ParentIx":41, "numEvent":0}
+{"Line":"OO: 만약 내가 싫다고 하면?" ,"ImagePath":"","Choice":[], "Ix" : 43, "ChildIx":[44], "ParentIx":42, "numEvent":0}
+{"Line":"테러리스트**: 단어만 부탁이라고 했을 뿐이야." ,"ImagePath":"","Choice":[], "Ix" : 44, "ChildIx":[45], "ParentIx":43, "numEvent":0}
+{"Line":"**은 그 대답을 예상한 듯 권총을 들어 OO의 머리에 겨눴다." ,"ImagePath":"","Choice":[], "Ix" : 45, "ChildIx":[46], "ParentIx":44, "numEvent":0}
+{"Line":"테러리스트**: 너가 해야 할 일은 매우 간단해. 궤도를 좀 수정해줘." ,"ImagePath":"","Choice":[], "Ix" : 46, "ChildIx":[47], "ParentIx":45, "numEvent":0}
+{"Line":"테러리스트**: 지금은 단순히 출력을 줄여서 서울에 떨어지게 만들었어." ,"ImagePath":"","Choice":[], "Ix" : 47, "ChildIx":[48], "ParentIx":46, "numEvent":0}
+{"Line":"테러리스트**: 하지만 네가 수정을 좀 해서 서울을 향해 수직으로 떨어지게 만들어주면 공중에서 터질 확률이 줄겠지." ,"ImagePath":"","Choice":[], "Ix" : 48, "ChildIx":[49], "ParentIx":47, "numEvent":0}
+{"Line":"테러리스트**: 서울 안쪽에서만 터질수 있게 해주면 살려 보내주지." ,"ImagePath":"","Choice":[], "Ix" : 49, "ChildIx":[50], "ParentIx":48, "numEvent":0}
+{"Line":"OO: 내가 이 미친 짓에 가담할 거라 생각해?" ,"ImagePath":"","Choice":[], "Ix" : 50, "ChildIx":[51], "ParentIx":49, "numEvent":0}
+{"Line":"테러리스트**: 그래, 선택은 자유지. 하지만 어떤 선택을 하든 서울이 불타는 결과는 똑같은데 너는 다르지. 살고 싶으면 내 말을 듣는 게 좋을 거야" ,"ImagePath":"","Choice":[], "Ix" : 51, "ChildIx":[52], "ParentIx":50, "numEvent":0}
+{"Line":"억겁과 같은 찰나가 지나간후 OO은(는) 고민끝에 입을 열었다." ,"ImagePath":"","Choice":["그의 말을 따른다.","경로 수정하는 척하며 취소시도.","수정하지 않고 버틴다."], "Ix" : 52, "ChildIx":[53], "ParentIx":51, "numEvent":0}
+{"Line":"OO: ......알겠습니다." ,"ImagePath":"","Choice":[], "Ix" : 53, "ChildIx":[54], "ParentIx":52, "numEvent":0}
+{"Line":"테러리스트**: 역시 똑똑해. 약간의 위험을 감수할 가치가 있었어." ,"ImagePath":"","Choice":[], "Ix" : 54, "ChildIx":[55], "ParentIx":53, "numEvent":0}
+{"Line":"테러리스트**이 망연자실한 OO의 어깨에 손을 올리고 말했다." ,"ImagePath":"","Choice":[], "Ix" : 55, "ChildIx":[56], "ParentIx":54, "numEvent":0}
+{"Line":"테러리스트**: 새로운 세상에 온 걸 환영해." ,"ImagePath":"","Choice":[], "Ix" : 56, "ChildIx":[57], "ParentIx":55, "numEvent":0}
+{"Line":"테러리스트**: 인류의 성장을 위한 도약이라 생각하라고. 참고로 한동안 대도시는 피하는 게 좋을 거야. 그리고 무덤속에 묻히기 전까지 조용히 있으라고." ,"ImagePath":"","Choice":[], "Ix" : 57, "ChildIx":[58], "ParentIx":56, "numEvent":0}
+{"Line":"말을 마친 **은 문을 나섰다. 그 자리에서 OO이 할 수 있는 것은 아무것도 없었다." ,"ImagePath":"","Choice":[], "Ix" : 58, "ChildIx":[59], "ParentIx":57, "numEvent":0}
+{"Line":"OO: 알겠습니다." ,"ImagePath":"","Choice":[], "Ix" : 59, "ChildIx":[60], "ParentIx":58, "numEvent":0}
+{"Line":"테러리스트**: 인류의 더 나은 성장을 위한 한 걸음이라고 생각하면 좀 나아질 거야. 참고로 대도시는 한동안 피하는 게 좋을 거야." ,"ImagePath":"","Choice":[], "Ix" : 60, "ChildIx":[61], "ParentIx":59, "numEvent":0}
+{"Line":"OO은(는) 대답하지 않고 컴퓨터로 다가갔다. 잠깐의 시간이 지나고, OO은 뒷통수에 차가운 감촉을 느꼈다." ,"ImagePath":"","Choice":[], "Ix" : 61, "ChildIx":[62], "ParentIx":60, "numEvent":0}
+{"Line":"OO은(는) 대답하지 않고 컴퓨터로 다가갔다. 잠깐의 시간이 지나고, OO은 뒷통수에 차가운 감촉을 느꼈다." ,"ImagePath":"","Choice":[], "Ix" : 61, "ChildIx":[62], "ParentIx":60, "numEvent":0}

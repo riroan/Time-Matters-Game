@@ -1,33 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public string playerName;
 
+    public int remainTime;
+    public int numCo;
+    public bool fixedElevator;
+
     private void Awake()
     {
+        reset();
         if (instance) Destroy(gameObject);
         instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void getName(Text TName)
     {
-        
+        playerName = TName.text;
     }
 
-    // 저장한 데이터 불러오는 함수
-    void load_data()
-    { 
-
-    }
-
-    // Update is called once per frame
-    void Update()
+    public void reset()
     {
-        
+        numCo = 10;
+        remainTime = 60;
+        playerName = "창근";
+        fixedElevator = false;
     }
 }
