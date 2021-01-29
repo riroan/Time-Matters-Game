@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class InGameManager : MonoBehaviour
 {
-    [SerializeField] Text hour;
-    [SerializeField] Text minute;
-    [SerializeField] Text numCo;
+    public Text hour;
+    public Text minute;
+    public Text numCo;
 
     const int minPerHour = 60;
 
@@ -16,7 +16,7 @@ public class InGameManager : MonoBehaviour
         hour.text = (GameManager.instance.remainTime / minPerHour).ToString();
 
         int T_min = GameManager.instance.remainTime % minPerHour;
-        minute.text = T_min == 0 ? "00" : T_min.ToString() ;
+        minute.text = T_min == 0 ? "00" : T_min.ToString();
         numCo.text = GameManager.instance.numCo.ToString();
     }
 }

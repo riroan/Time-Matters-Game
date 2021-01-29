@@ -5,8 +5,10 @@ using UnityEngine.Advertisements;
 
 public class ADManager : MonoBehaviour
 {
+    ScriptController theScript;
     private void Awake()
     {
+        theScript = FindObjectOfType<ScriptController>();
         Advertisement.Initialize("3991804", true);
         Advertisement.Initialize("3991805", true);
     }
@@ -14,12 +16,10 @@ public class ADManager : MonoBehaviour
     {
         if (Advertisement.IsReady())
         {
-            print("광고 실행");
             Advertisement.Show();
-        }
-        else
-        {
-            print("준비 안됨");
+            GameManager.instance.numViewAds--;
+            theScript.gameOverObject.SetActive(false);
+            
         }
     }
 }

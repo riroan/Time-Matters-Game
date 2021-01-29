@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Node 
+public class Node
 {
     [SerializeField] int Ix;
     [SerializeField] string Line;
@@ -12,7 +12,9 @@ public class Node
     [SerializeField] string[] Choice;
     [SerializeField] int ParentIx;
     [SerializeField] int[] ChildIx;
-    [SerializeField] bool FixElevator;
+    [SerializeField] int Flag;
+    [SerializeField] int LoseCo;
+    [SerializeField] int LoseTime;
     public int numEvent;
     public Node[] children;
     public Node parent;
@@ -20,8 +22,12 @@ public class Node
     public bool isRandom { get => choice.Length == 0 && childIx.Length > 1; } 
     public bool isEnd { get => childIx[0] <= -1;  }
     public bool isHead { get => ParentIx <= -1; } 
-    public bool fixElevator { get => FixElevator; }
+    public bool isLoseCo { get => LoseCo > 0; }
+    public bool isLoseTime { get => LoseTime > 0; }
+    public int flag { get => Flag; }
     public int ix { get => Ix;  }
+    public int loseCo { get => LoseCo; }
+    public int loseTime { get => LoseTime; }
     public string imagePath { get => ImagePath; }
     public string line { get => Line.Replace(' ', '\u00A0').Replace("OO",GameManager.instance.playerName); }
     public string[] choice { get => Choice; } 
@@ -62,8 +68,6 @@ public class Graph
                 if (!nodes[i].isHead)       // 머리노드이면 부모를 추가할 필요가 없음
                     nodes[i].parent = nodes[nodes[i].parentIx];
             }
-            Debug.Log(i);
-            Debug.Log(nodes[i].fixElevator);
         }
     }
 
@@ -91,19 +95,23 @@ public class ScriptController : MonoBehaviour
     int rememberIx = -1;            // 돌발이벤트에서 돌아갈곳이 있는지
     int chapterIx = 0;              // 챕터 인덱스
     const int maxChoice = 3;        // 최대 선택지 개수
+    const int minPerHour = 60;      // 1시간= 60분
 
     Graph currentScript;
     List<Graph> chapters = new List<Graph>();
     List<int>[] history;
 
+    InGameManager theInGame;
+
+    IEnumerator typeCoroutine;
+
     [SerializeField] Image dialogImage;
     [SerializeField] Image Frame;
     [SerializeField] Text story;
     [SerializeField] GameObject[] chooseBttn;
-    [SerializeField] GameObject gameOverObject;
     [SerializeField] float dialogSpeed = 0.2f;
 
-    Text uuu;
+    public GameObject gameOverObject;
 
     readonly string[] chapterPath = new string[] { "Story/prolog", "Story/Chapter1","Story/Chapter2"};
 
@@ -112,21 +120,21 @@ public class ScriptController : MonoBehaviour
         StartCoroutine("eee");
     }
 
-    IEnumerator eee()
+    IEnumerator textEffect(Text T)
     {
-        string u = uuu.text;
-        for (int i = 0; i < 3; i++)
+        string str = T.text;
+        for (int i = 0; i < 4; i++)
         {
-            uuu.text = "<color=#ff0000>" + u +"</color>";
-            yield return new WaitForSeconds(0.1f);
-            uuu.text = "<color=#ffffff>" + u + "</color>";
-            yield return new WaitForSeconds(0.1f);
+            T.text = "<color=#ff0000>" + str +"</color>";
+            yield return new WaitForSeconds(0.15f);
+            T.text = "<color=#ffffff>" + str + "</color>";
+            yield return new WaitForSeconds(0.15f);
         }
-        print("코루틴 끝");
     }
 
     private void Start()
     {
+        theInGame = FindObjectOfType<InGameManager>();
         foreach (string path in chapterPath)
         {
             print("path");
@@ -156,7 +164,7 @@ public class ScriptController : MonoBehaviour
         }
         else                    // 글자가 입력되는중일경우
         {
-            StopAllCoroutines();    // 글자 입력 중단
+            StopCoroutine(typeCoroutine);
             showChooseBttn();       // 버튼 보이기
             story.text = currentScript[currentScriptIx].line;       // 글자 즉시 입력
             isTyping = false;       // 입력 끝남
@@ -168,15 +176,37 @@ public class ScriptController : MonoBehaviour
     {
         if (!mustChoose)    // 선택해야되면 선택이나 하셈
         {
+            print(GameManager.instance.eventFlag);
             history[chapterIx].Add(currentScriptIx);    // 기록 저장
-            GameManager.instance.fixedElevator |= currentScript[currentScriptIx].fixElevator;   // 엘리베이터 고쳤는지 확인하는 flag
+            GameManager.instance.eventFlag |= currentScript[currentScriptIx].flag;   // 이벤트가 있는지 확인하는 플래그
+            if (currentScript[currentScriptIx].isLoseCo)            // 대원을 잃는가?
+                updateCo();
+            if (currentScript[currentScriptIx].isLoseTime)
+                updateTime();
             // 해당 라인에 이미지가 있으면 이미지 불러옴
             if (currentScript[currentScriptIx].hasImage)
                 showImage();
             else
                 hideImage();
-            StartCoroutine(Typing(story, currentScript[currentScriptIx].line, dialogSpeed));
+            typeCoroutine = Typing(story, currentScript[currentScriptIx].line, dialogSpeed);
+            StartCoroutine(typeCoroutine);
         }
+    }
+
+    void updateCo()
+    {
+        GameManager.instance.numCo -= currentScript[currentScriptIx].loseCo;
+        theInGame.numCo.text = GameManager.instance.numCo.ToString();
+        StartCoroutine("textEffect", theInGame.numCo);
+    }
+
+    void updateTime()
+    {
+        GameManager.instance.remainTime -= currentScript[currentScriptIx].loseTime;
+        theInGame.hour.text = (GameManager.instance.remainTime / minPerHour).ToString();
+        theInGame.minute.text = (GameManager.instance.remainTime % minPerHour).ToString();
+        StartCoroutine("textEffect", theInGame.hour);
+        StartCoroutine("textEffect", theInGame.minute);
     }
 
     void showChooseBttn()
@@ -209,6 +239,8 @@ public class ScriptController : MonoBehaviour
         else
         {
             gameOverObject.SetActive(true);
+            if (!GameManager.instance.canViewAds)
+                gameOverObject.transform.Find("Ads").gameObject.SetActive(false);
         }
     }
 
@@ -273,7 +305,7 @@ public class ScriptController : MonoBehaviour
     void nextChapter()
     {
         currentScript = chapters[++chapterIx];      // 이러면 ㄹㅇ 끝난거임, 다음 챕터불러오셈
-        if (chapterIx == 2 && !GameManager.instance.fixedElevator)
+        if (chapterIx == 2 && !GameManager.instance.isFixedElevator())  // 엘리베이터 안고친경우
             currentScriptIx = 11;
         else
             currentScriptIx = 0;
