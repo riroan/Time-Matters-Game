@@ -115,11 +115,6 @@ public class ScriptController : MonoBehaviour
 
     readonly string[] chapterPath = new string[] { "Story/prolog", "Story/Chapter1","Story/Chapter2"};
 
-    public void TTT()
-    {
-        StartCoroutine("eee");
-    }
-
     IEnumerator textEffect(Text T)
     {
         string str = T.text;
@@ -136,10 +131,7 @@ public class ScriptController : MonoBehaviour
     {
         theInGame = FindObjectOfType<InGameManager>();
         foreach (string path in chapterPath)
-        {
-            print("path");
             chapters.Add(new Graph(path));
-        }
         history = new List<int>[chapterPath.Length];
         for (int i = 0; i < history.Length; i++)
             history[i] = new List<int>();
@@ -176,7 +168,6 @@ public class ScriptController : MonoBehaviour
     {
         if (!mustChoose)    // 선택해야되면 선택이나 하셈
         {
-            print(GameManager.instance.eventFlag);
             history[chapterIx].Add(currentScriptIx);    // 기록 저장
             GameManager.instance.eventFlag |= currentScript[currentScriptIx].flag;   // 이벤트가 있는지 확인하는 플래그
             if (currentScript[currentScriptIx].isLoseCo)            // 대원을 잃는가?

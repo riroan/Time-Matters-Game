@@ -1,11 +1,11 @@
-{"Line":"당신은 정부를 위해 일하고 있는 무인 우주왕복선 탐사 프로젝트의 총 책임자입니다. ","ImagePath":"","Choice":[], "Ix" : 0, "ChildIx":[1], "ParentIx":-1, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"당신의 뛰어난 능력과 정부의 보조로 무인 우주 왕복선탐사 프로젝트가 마지막 단계에 들어설 수 있었습니다. ","ImagePath":"","Choice":[], "Ix" : 1, "ChildIx":[-2], "ParentIx":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"당신은 정부를 위해 일하고 있는 무인 우주왕복선 탐사 프로젝트의 총 책임자입니다. ","ImagePath":"","Choice":[], "Ix" : 0, "ChildIx":[1], "ParentIx":-1, "Flag":0, "LoseCo":0, "LoseTime":1}
+{"Line":"당신의 뛰어난 능력과 정부의 보조로 무인 우주 왕복선탐사 프로젝트가 마지막 단계에 들어설 수 있었습니다. ","ImagePath":"","Choice":[], "Ix" : 1, "ChildIx":[2], "ParentIx":0, "Flag":0, "LoseCo":1, "LoseTime":0}
 {"Line":"이제 발사만을 앞둔 당신은 팀원들과 함께 회식한 후 집으로 귀가하던 중 당신은 머리에 강한 충격을 느끼며 정신을 잃습니다.","ImagePath":"","Choice":[], "Ix" : 2, "ChildIx":[3], "ParentIx":1, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"... 긴 시간이 지난 후, 정신을 차려보니 주변에 보이는 풍경이 낯섭니다.","ImagePath":"","Choice":[], "Ix" : 3, "ChildIx":[4], "ParentIx":2, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"어느 정도 시간이 흐르고 당신은 정장을 입은 높아 보이는 사람들과 군인들이 방안에 있다는 것을 발견합니다.","ImagePath":"","Choice":[], "Ix" : 4, "ChildIx":[5], "ParentIx":3, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"당신이 어리둥절하고 있는 사이 정장을 입은 사람 한 명이 당신에게 다가옵니다.","ImagePath":"","Choice":[], "Ix" : 5, "ChildIx":[6], "ParentIx":4, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"그의 얼굴에는 공포와 긴장이 역력합니다.","ImagePath":"","Choice":[], "Ix" : 6, "ChildIx":[7], "ParentIx":5, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"???: 혹시 당신의 이름이 기억나십니까?(이름적게 할 예정)","ImagePath":"","Choice":[], "Ix" : 7, "ChildIx":[8], "ParentIx":6, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"???: 혹시 당신의 이름이 기억나십니까?","ImagePath":"","Choice":[], "Ix" : 7, "ChildIx":[8], "ParentIx":6, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: OO입니다. ","ImagePath":"","Choice":[], "Ix" : 8, "ChildIx":[9], "ParentIx":7, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 무슨.. 일입니까? ","ImagePath":"","Choice":[], "Ix" : 9, "ChildIx":[10], "ParentIx":8, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"정보원장:  나는 정보부 원장이네. 무슨 일인지는 자네가 더 길게 말해야 하겠지만. 그게 중요한 게 아니야, 자네는 이틀간 쓰러져 있었네 ","ImagePath":"","Choice":[], "Ix" : 10, "ChildIx":[11], "ParentIx":9, "Flag":0, "LoseCo":0, "LoseTime":0}

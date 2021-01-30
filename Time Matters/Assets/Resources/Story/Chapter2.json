@@ -109,9 +109,9 @@
 {"Line":"OO: 이런 젠장! UPS가 모자랍니다! 다음 방으로 가야 합니다." ,"ImagePath":"","Choice":[], "Ix" : 108, "ChildIx":[109], "ParentIx":107, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"하지만 대답이 없었다." ,"ImagePath":"","Choice":[], "Ix" : 109, "ChildIx":[110], "ParentIx":108, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO이(가) 뒤를 돌아보자 원진이 죽은 것을 볼 수 있었다. 그의 군복에는 피가 가득했으며 마지막까지 고통을 참느라 일그러진 얼굴만이 보였다." ,"ImagePath":"","Choice":[], "Ix" : 110, "ChildIx":[111], "ParentIx":109, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"OO: 젠장…. 젠장! 어떻게 해야지?" ,"ImagePath":"","Choice":[], "Ix" : 111, "ChildIx":[112], "ParentIx":110, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"OO: 젠장.... 젠장! 어떻게 해야지?" ,"ImagePath":"","Choice":[], "Ix" : 111, "ChildIx":[112], "ParentIx":110, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO은(는)(는) 이제 혼자만 남아있어 할 수 있는 게 없었다. 하지만 그가 할 수 있는 것은 오직 나가서 새로운 UPS를 찾는 것이었다." ,"ImagePath":"","Choice":[], "Ix" : 112, "ChildIx":[113], "ParentIx":111, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"OO: 이젠… 어찌 됐든 나갈 수밖에 없어" ,"ImagePath":"","Choice":[], "Ix" : 113, "ChildIx":[114], "ParentIx":112, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"OO: 이젠... 어찌 됐든 나갈 수밖에 없어" ,"ImagePath":"","Choice":[], "Ix" : 113, "ChildIx":[114], "ParentIx":112, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO이(가) 문을 열고 나가자 어느 정도 연기가 가라앉아 시야가 확보되어 있었다." ,"ImagePath":"","Choice":[], "Ix" : 114, "ChildIx":[115], "ParentIx":113, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"그 순간 옆에서 누군가 소리쳤다." ,"ImagePath":"","Choice":[], "Ix" : 115, "ChildIx":[116], "ParentIx":114, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"??: 손들어!" ,"ImagePath":"","Choice":[], "Ix" : 116, "ChildIx":[117], "ParentIx":115, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
@@ -125,7 +125,7 @@
 {"Line":"하지만 아무 대답도 없었다. OO은(는) 뒤를 돌아봤다. 뒤에는 피에 흠뻑 젖어 붉어진 군복과 고통 때문에 일그러진 얼굴만이 보였다." ,"ImagePath":"","Choice":[], "Ix" : 124, "ChildIx":[125], "ParentIx":123, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 젠장 젠장 젠장!" ,"ImagePath":"","Choice":[], "Ix" : 125, "ChildIx":[126], "ParentIx":124, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"그는 확실히 죽어있었다. OO은(는) 이제 시체 둘과 방안에 갇혀 있는 신세가 되었다." ,"ImagePath":"","Choice":["즉시 밖으로 향한다.","안에서 기다린다."], "Ix" : 126, "ChildIx":[127,132], "ParentIx":125, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"이젠… 어찌 됐든 나갈 수밖에 없어" ,"ImagePath":"","Choice":[], "Ix" : 127, "ChildIx":[128], "ParentIx":126, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"이젠... 어찌 됐든 나갈 수밖에 없어" ,"ImagePath":"","Choice":[], "Ix" : 127, "ChildIx":[128], "ParentIx":126, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO은(는) 시간이 부족했기에 문을 열고 나가기로 결정했다. 문을 열어보니 방금 전 상황과는 전혀 다르게, 연기가 많이 걷혀 있었고 어느 정도 시야가 확보되었다." ,"ImagePath":"","Choice":[], "Ix" : 128, "ChildIx":[129], "ParentIx":127, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"그런데 갑자기 옆에서 누가 소리치는 것이 들렸다." ,"ImagePath":"","Choice":[], "Ix" : 129, "ChildIx":[130], "ParentIx":128, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"??: 손들어!" ,"ImagePath":"","Choice":[], "Ix" : 130, "ChildIx":[131], "ParentIx":129, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}

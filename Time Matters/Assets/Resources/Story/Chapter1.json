@@ -14,7 +14,7 @@
 {"Line":"현장지휘관: 우린 무슨 일이 있어도 발사를 멈춰야 합니다. 많이 위험할 겁니다. 그런데, 발사 취소에 OO씨가 꼭 있어야 합니까?","ImagePath":"","Choice":[], "Ix" : 13, "ChildIx":[14], "ParentIx":12, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 네 발사 취소 시퀀스를 알고 있는 사람은 현재 저 말고는 없습니다.","ImagePath":"","Choice":[], "Ix" : 14, "ChildIx":[15], "ParentIx":13, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"현장지휘관: 아니, 제 말은 OO씨가 꼭 안으로 들어가지 않고, 특수부대만 들어가면 취소가 불가능한 상황인 겁니까?","ImagePath":"","Choice":[], "Ix" : 15, "ChildIx":[16], "ParentIx":14, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"OO: ….네","ImagePath":"","Choice":[], "Ix" : 16, "ChildIx":[17], "ParentIx":15, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"OO: ...네","ImagePath":"","Choice":[], "Ix" : 16, "ChildIx":[17], "ParentIx":15, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"잠시 뒤, 특수부대원들이 OO과 요원들에게 다가와 상황을 보고하기 시작했다.","ImagePath":"images/InstructionMan","Choice":[], "Ix" : 17, "ChildIx":[18], "ParentIx":16, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 현재 건물 로비에 파악된 적은 대략 2명 정도로 예상됩니다. 강제로 진입하려면 할 수는 있지만 피해가 다소 예상됩니다.","ImagePath":"","Choice":[], "Ix" : 18, "ChildIx":[19], "ParentIx":17, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 건물 뒤쪽으로 작은 출입구가 있습니다.","ImagePath":"","Choice":[], "Ix" : 19, "ChildIx":[20], "ParentIx":18, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
@@ -39,7 +39,7 @@
 {"Line":"OO: 하지만 지금 조치하지 않으면 죽을지도 몰라요!","ImagePath":"","Choice":[], "Ix" : 38, "ChildIx":[39], "ParentIx":37, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 물론 저 사람을 돕는 것이 옳다는 것은 저도 압니다. 하지만 지금 시간이 지체될수록 수천, 수만명이 죽을 수 있습니다. 다시 묻겠습니다. 어떻게 하는 게 지금 작전에 도움이 되겠습니까?","ImagePath":"","Choice":["무시하고 간다.","살린다."], "Ix" : 39, "ChildIx":[40,94], "ParentIx":38, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO은(는) 요원들과 함께 길을 나아가기 시작했다. 작지만 분명히 들리는 동료의 신음이 계속하여 OO의 귀에 들린다.","ImagePath":"","Choice":[], "Ix" : 40, "ChildIx":[41], "ParentIx":39, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"OO: 미안합니다, 미안합니다, 미안합니다…","ImagePath":"","Choice":[], "Ix" : 41, "ChildIx":[42], "ParentIx":40, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"OO: 미안합니다, 미안합니다, 미안합니다...","ImagePath":"","Choice":[], "Ix" : 41, "ChildIx":[42], "ParentIx":40, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO은(는) 자신의 사과가 A에게 들리기를 기도하며 앞으로 나아갔다. 왼쪽 복도의 상태도 미팅룸과 다르지 않았다. ","ImagePath":"","Choice":[], "Ix" : 42, "ChildIx":[43], "ParentIx":41, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"군데군데 죽었는지 모를 사람들이 쓰러져 있었고, 온 복도에는 피가 흥건했다. ","ImagePath":"","Choice":[], "Ix" : 43, "ChildIx":[44], "ParentIx":42, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"강렬하게 올라오는 피비린내에 OO은(는) 구역질이 올라오며 잠깐 휘청거렸지만 이내 자신이 버리고 온 A에 대한 죄책감으로 인해 조금도 지체해서는 안 된다는 것을 알기에 앞으로 나아간다. ","ImagePath":"","Choice":[], "Ix" : 44, "ChildIx":[45], "ParentIx":43, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
@@ -47,7 +47,7 @@
 {"Line":"OO: 이 복도 끝에 넓은 사무공간이 나옵니다. 그곳에 들어서서 왼쪽 방 끝에 전산실이 있습니다.","ImagePath":"","Choice":[], "Ix" : 46, "ChildIx":[47], "ParentIx":45, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 예 알겠습니다. 아 혹시 사무공간의 구조가 어떻게 되는지 아십니까?","ImagePath":"","Choice":[], "Ix" : 47, "ChildIx":[48], "ParentIx":46, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO:  아 큰 직사각형 방이고 파티션으로 가득합니다. ","ImagePath":"","Choice":[], "Ix" : 48, "ChildIx":[49], "ParentIx":47, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"**: 젠장… 파티션은 기습하기에 아주 좋은 엄폐물입니다. 아주 조심해야겠습니다.","ImagePath":"","Choice":[], "Ix" : 49, "ChildIx":[50], "ParentIx":48, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"**: 젠장... 파티션은 기습하기에 아주 좋은 엄폐물입니다. 아주 조심해야겠습니다.","ImagePath":"","Choice":[], "Ix" : 49, "ChildIx":[50], "ParentIx":48, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"대화 후 진입팀은 천천히 앞으로 나아가 사무구역 입구에 도달하였다. 사무구역에 진입하기 직전, **은 대원들에게 빠른 손짓으로 수신호를 보냈고 대원들은 그에 답하였다.","ImagePath":"","Choice":[], "Ix" : 50, "ChildIx":[51], "ParentIx":49, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 적이 있는 것 같답니다. 수는 불명. 두 명의 위치는 파악되었고, 아직 저희의 존재를 모르는 것 같다고 합니다.","ImagePath":"","Choice":[], "Ix" : 51, "ChildIx":[52], "ParentIx":50, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 물론 저희가 조용히 진입했다가 나오는 방법도 가능하지만, 저희는 OO님이 키카드의 위치를 설명해 주신다 해도 시간이 걸릴 수도 있습니다.","ImagePath":"","Choice":[], "Ix" : 52, "ChildIx":[53], "ParentIx":51, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
@@ -69,18 +69,18 @@
 {"Line":"서로 알아보는 눈치이자 **은 그의 결박을 풀고 B군을 일으켰다.","ImagePath":"","Choice":[], "Ix" : 68, "ChildIx":[69], "ParentIx":67, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 그래 살아있어서 다행이야. 그런데 혹시 여기에 있던 키카드가 어디에 있는지 알고 있나?","ImagePath":"","Choice":[], "Ix" : 69, "ChildIx":[70], "ParentIx":68, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"B: 예 그거라면 테러가 시작되자 A양이 가지고 대피해야 한다고 말했습니다","ImagePath":"","Choice":[], "Ix" : 70, "ChildIx":[71], "ParentIx":69, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"OO: A양이…? 젠장, A양이 가지고 있었군. 빨리 A양에게 돌아가야 합니다. ","ImagePath":"","Choice":[], "Ix" : 71, "ChildIx":[72], "ParentIx":70, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"B: 저기… 저는 어떻게 해야 합니까?","ImagePath":"","Choice":[], "Ix" : 72, "ChildIx":[73], "ParentIx":71, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"OO: A양이...? 젠장, A양이 가지고 있었군. 빨리 A양에게 돌아가야 합니다. ","ImagePath":"","Choice":[], "Ix" : 71, "ChildIx":[72], "ParentIx":70, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"B: 저기... 저는 어떻게 해야 합니까?","ImagePath":"","Choice":[], "Ix" : 72, "ChildIx":[73], "ParentIx":71, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 중앙 미팅룸까지 에스코트하겠습니다. 나가는 길은 저희가 뚫고 왔으니 비어 있습니다. 거기서부터는 혼자 나가시면 됩니다.","ImagePath":"","Choice":[], "Ix" : 73, "ChildIx":[74], "ParentIx":72, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"대화가 끝난 후 그들은 A양이 있던 장소로 이동하기 시작했다.","ImagePath":"","Choice":[], "Ix" : 74, "ChildIx":[87], "ParentIx":73, "numEvent":2, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 굳이 적들과 교전을 하지 않는 편이 좋겠습니다. 마침 전산실 문이 열려 있기도 하고요.","ImagePath":"","Choice":[], "Ix" : 75, "ChildIx":[76], "ParentIx":53, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO은(는) 바닥에 흥건한 피로 벽에 그림을 그리기 시작했다.","ImagePath":"","Choice":[], "Ix" : 76, "ChildIx":[77], "ParentIx":75, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"OO: ….그래서 키카드들은 이 통에 들어 있을 겁니다.","ImagePath":"","Choice":[], "Ix" : 77, "ChildIx":[78], "ParentIx":76, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"OO: ....그래서 키카드들은 이 통에 들어 있을 겁니다.","ImagePath":"","Choice":[], "Ix" : 77, "ChildIx":[78], "ParentIx":76, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 네 알겠습니다. 투입!","ImagePath":"","Choice":[], "Ix" : 78, "ChildIx":[79], "ParentIx":77, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**의 말이 끝나자 준비하고 있던 두 명의 대원이 몸을 아주 낮춘 채 빠르게 왼쪽으로 꺾어 사라졌다.","ImagePath":"","Choice":[], "Ix" : 79, "ChildIx":[80], "ParentIx":78, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"초조하게 그들을 기다리며 시간이 흘러갔다. 얼마 지나지 않아 대원 두명이 돌아왔다. 하지만 그들은 빈손으로 돌아왔다.","ImagePath":"","Choice":[], "Ix" : 80, "ChildIx":[81], "ParentIx":79, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"OO: 아니 여기에 없을 리가 없는데….","ImagePath":"","Choice":[], "Ix" : 81, "ChildIx":[82], "ParentIx":80, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"**: 보안에 중요한 키카드를 보안을 최우선으로 생각하는 전산실에서 가지고 있다가, 테러가 벌어진다면…","ImagePath":"","Choice":[], "Ix" : 82, "ChildIx":[83], "ParentIx":81, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"OO: 아니 여기에 없을 리가 없는데....","ImagePath":"","Choice":[], "Ix" : 81, "ChildIx":[82], "ParentIx":80, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"**: 보안에 중요한 키카드를 보안을 최우선으로 생각하는 전산실에서 가지고 있다가, 테러가 벌어진다면...","ImagePath":"","Choice":[], "Ix" : 82, "ChildIx":[83], "ParentIx":81, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 설마 A양이? A양이 키카드를 숨기기 위해 가져갔을 수도 있습니다.","ImagePath":"","Choice":[], "Ix" : 83, "ChildIx":[84], "ParentIx":82, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 이런 젠장, 다시 돌아가야겠습니다.","ImagePath":"","Choice":[], "Ix" : 84, "ChildIx":[85], "ParentIx":83, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 이미 지나왔던 길이니, 경계는 최소로 하고 빠르게 진행한다.","ImagePath":"","Choice":[], "Ix" : 85, "ChildIx":[86], "ParentIx":84, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
@@ -113,24 +113,24 @@
 {"Line":"그들은 이제 2층을 향해 나아가기 시작했다. 2층으로 올라가는 엘리베이터에 도착한 그들은 엘레베이터를 작동시키려 하였지만 작동하지 않았다.","ImagePath":"","Choice":[], "Ix" : 112, "ChildIx":[113], "ParentIx":111, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 전원이 나갔군요. 계단이 있습니까? ","ImagePath":"","Choice":[], "Ix" : 113, "ChildIx":[114], "ParentIx":112, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 보안 때문에 일반 계단이 비상계단처럼 사용됩니다. 아까 로비 쪽에 있는 큰 중앙계단이 전부입니다. ","ImagePath":"","Choice":[], "Ix" : 114, "ChildIx":[115], "ParentIx":113, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"**: 음… OO씨의 사무실은 2층 어디쯤 있습니까? ","ImagePath":"","Choice":[], "Ix" : 115, "ChildIx":[116], "ParentIx":114, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"**: 음... OO씨의 사무실은 2층 어디쯤 있습니까? ","ImagePath":"","Choice":[], "Ix" : 115, "ChildIx":[116], "ParentIx":114, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 엘리베이터를 타고 가면 외부에서 봤을 때 오른쪽 복도 끝에 있습니다. ","ImagePath":"","Choice":[], "Ix" : 116, "ChildIx":[117], "ParentIx":115, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 엘리베이터를 안 타면 다시 저 입구 쪽 복도를 2층에서도 똑같이 지나와야 한다는 말씀이시군요.","ImagePath":"","Choice":[], "Ix" : 117, "ChildIx":[118], "ParentIx":116, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 네 맞습니다. ","ImagePath":"","Choice":[], "Ix" : 118, "ChildIx":[119], "ParentIx":117, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 원진 엘리베이터 전원을 복구하려면 얼마나 걸리겠나? ","ImagePath":"","Choice":[], "Ix" : 119, "ChildIx":[120], "ParentIx":118, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"원진: 여기서는 불가능합니다. 외부에 요청해야 하는데 그러면 아마 10분 정도 걸릴 겁니다. 그리고 엘리베이터가 작동하지 않는 것처럼 보여야 하기 때문에 추가로 5분, 총 15분 소요 예상입니다. ","ImagePath":"","Choice":[], "Ix" : 120, "ChildIx":[121], "ParentIx":119, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"**: 작전 시간의 4분의 1을 여기에 쓴 다라… 일단 요청은 해보게 ","ImagePath":"","Choice":[], "Ix" : 121, "ChildIx":[122], "ParentIx":120, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"**: 작전 시간의 4분의 1을 여기에 쓴 다라... 일단 요청은 해보게 ","ImagePath":"","Choice":[], "Ix" : 121, "ChildIx":[122], "ParentIx":120, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 시간이 없는데 계단이 낫지 않겠습니까? ","ImagePath":"","Choice":[], "Ix" : 122, "ChildIx":[123], "ParentIx":121, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 엘리베이터가 작동하지 않는 이상 진입로는 하나밖에 없습니다. ","ImagePath":"","Choice":[], "Ix" : 123, "ChildIx":[124], "ParentIx":122, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 그렇기 때문에 매복이 있을 가능성이 높습니다. ","ImagePath":"","Choice":[], "Ix" : 124, "ChildIx":[125], "ParentIx":123, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"OO: 그러면… ","ImagePath":"","Choice":[], "Ix" : 125, "ChildIx":[126], "ParentIx":124, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"**: 피해를 감수하고 계단으로 빠르게 가느냐, 시간이 걸리지만, 엘리베이터를 통해 안전하게 가느냐인데…. 엘리베이터가 3층까지 연결되어 있나요? ","ImagePath":"","Choice":[], "Ix" : 126, "ChildIx":[127], "ParentIx":125, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"OO: 그러면... ","ImagePath":"","Choice":[], "Ix" : 125, "ChildIx":[126], "ParentIx":124, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"**: 피해를 감수하고 계단으로 빠르게 가느냐, 시간이 걸리지만, 엘리베이터를 통해 안전하게 가느냐인데.... 엘리베이터가 3층까지 연결되어 있나요? ","ImagePath":"","Choice":[], "Ix" : 126, "ChildIx":[127], "ParentIx":125, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 네 바로 올라갈 수 있습니다. " ,"ImagePath":"","Choice":[], "Ix" : 127, "ChildIx":[128], "ParentIx":126, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 그럼 엘리베이터를 고치면 바로 진입이 가능해지겠군요. 저희보다 이 건물의 구조를 잘 알고 있으니 어떻게 하시겠습니까? " ,"ImagePath":"","Choice":["엘리베이터를 고친다.","계단으로 간다."], "Ix" : 128, "ChildIx":[129,132], "ParentIx":127, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 엘리베이터가 제 사무실과 더 가깝고 고쳐 지기만 한다면 바로 3층으로 올라갈 수 있습니다. 엘리베이터로 가시죠 " ,"ImagePath":"","Choice":[], "Ix" : 129, "ChildIx":[130], "ParentIx":128, "numEvent":0, "Flag":1, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 알겠습니다. 원진! 외부에 수리 요청하고 넌 엘리베이터 배선을 손 보고있어 우리가 올라간다는 것을 몰라야 하니 잘 해봐" ,"ImagePath":"","Choice":[], "Ix" : 130, "ChildIx":[131], "ParentIx":129, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"원진: 넵 알겠습니다! " ,"ImagePath":"","Choice":[], "Ix" : 131, "ChildIx":[-1], "ParentIx":130, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"OO: 발사 시퀀스를 취소하는 데 있어서 시간이 생각보다 길 가능성이 있습니다. 1층에서도 이렇게 지체했는데 이대로면 제시간 안에 취소하지 못할 수 있습니다. 대장님과 대원분들께는 정말 죄송하지만… " ,"ImagePath":"","Choice":[], "Ix" : 132, "ChildIx":[133], "ParentIx":128, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"OO: 발사 시퀀스를 취소하는 데 있어서 시간이 생각보다 길 가능성이 있습니다. 1층에서도 이렇게 지체했는데 이대로면 제시간 안에 취소하지 못할 수 있습니다. 대장님과 대원분들께는 정말 죄송하지만... " ,"ImagePath":"","Choice":[], "Ix" : 132, "ChildIx":[133], "ParentIx":128, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"**: 네 알겠습니다. 전원 로비로 다시 진행한다. 가서 방탄 방패좀 가져오자고." ,"ImagePath":"","Choice":[], "Ix" : 133, "ChildIx":[134], "ParentIx":132, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"대원들: 네! 알겠습니다! " ,"ImagePath":"","Choice":[], "Ix" : 134, "ChildIx":[-1], "ParentIx":133, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"Warning!" ,"ImagePath":"","Choice":[], "Ix" : 135, "ChildIx":[136,152,167,178,189,203,211,222,245,257,272], "ParentIx":-1, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
@@ -160,7 +160,7 @@
 {"Line":"**: 알겠습니다." ,"ImagePath":"","Choice":[], "Ix" : 159, "ChildIx":[160], "ParentIx":158, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"대원 한 명이 그 사람을 정문까지 에스코트해 주었다. 다행히 그 인원은 안전하게 탈출할 수 있었다. " ,"ImagePath":"","Choice":[], "Ix" : 160, "ChildIx":[161], "ParentIx":159, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"시간이 낭비되었다는 생각이 들기는 했지만 그래도 사람을 구했다는 뿌듯함에 그 생각은 금세 없어졌다." ,"ImagePath":"","Choice":[], "Ix" : 161, "ChildIx":[-1], "ParentIx":160, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"계속 숨어 계세요…." ,"ImagePath":"","Choice":[], "Ix" : 162, "ChildIx":[163], "ParentIx":155, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"계속 숨어 계세요...." ,"ImagePath":"","Choice":[], "Ix" : 162, "ChildIx":[163], "ParentIx":155, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"???: 제발 도와주세요 이 상자 안에서 나오지도 못하고 더 이상은 못 버틸 것 같아요" ,"ImagePath":"","Choice":[], "Ix" : 163, "ChildIx":[164], "ParentIx":162, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"OO: 죄송합니다. 하지만 저희가 시간이 부족해서 어쩔 수 없습니다." ,"ImagePath":"","Choice":[], "Ix" : 164, "ChildIx":[165], "ParentIx":163, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"???: 안돼!!!!" ,"ImagePath":"","Choice":[], "Ix" : 165, "ChildIx":[166], "ParentIx":164, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
@@ -292,4 +292,4 @@
 {"Line":"드론이 지나갔다고 생각이 든 당신은 일어나 뒤를 봅니다." ,"ImagePath":"","Choice":[], "Ix" : 291, "ChildIx":[292], "ParentIx":289, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"그런데 드론은 다시 돌아오고 있었고, 당신은 드론에게 발각되었습니다. " ,"ImagePath":"","Choice":[], "Ix" : 292, "ChildIx":[293], "ParentIx":291, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
 {"Line":"얼마 지나지 않아 테러리스트들이 나타났고 당신과 대원들은 적들을 처리하느라 생각보다 많은 시간을 소요하게 되었습니다." ,"ImagePath":"","Choice":[], "Ix" : 293, "ChildIx":[-1], "ParentIx":292, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
-{"Line":"**: 으음…비밀번호는 어떻게 됩니까?","ImagePath":"","Choice":[], "Ix" : 294, "ChildIx":[28], "ParentIx":26, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
+{"Line":"**: 으음...비밀번호는 어떻게 됩니까?","ImagePath":"","Choice":[], "Ix" : 294, "ChildIx":[28], "ParentIx":26, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0}
