@@ -30,12 +30,11 @@ public class ButtonManager : MonoBehaviour
     {
         num.text = (int.Parse(num.text) + 1).ToString();
         GameManager.instance.numCo++;
-        print(GameManager.instance.numCo);
     }
 
     public void coworkerDown(Text num)
     {
-        if (int.Parse(num.text) <= 10)
+        if (int.Parse(num.text) <= 1)
             return;
         GameManager.instance.numCo--;
         num.text = (int.Parse(num.text) - 1).ToString();

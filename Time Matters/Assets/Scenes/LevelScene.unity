@@ -752,7 +752,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -299}
+  m_AnchoredPosition: {x: 0, y: 1001}
   m_SizeDelta: {x: -1810, y: -3302}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &387526836
@@ -1310,7 +1310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1001}
+  m_AnchoredPosition: {x: 0, y: -299}
   m_SizeDelta: {x: -1810, y: -3302}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1165343031
@@ -2496,6 +2496,8 @@ MonoBehaviour:
   playerName: 
   remainTime: 0
   numCo: 0
+  eventFlag: 0
+  numViewAds: 0
 --- !u!4 &1844309548
 Transform:
   m_ObjectHideFlags: 0

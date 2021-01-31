@@ -13,10 +13,20 @@ public class InGameManager : MonoBehaviour
 
     private void Start()
     {
+        updateTime();
+        updateCo();
+    }
+
+    public void updateTime()
+    {
         hour.text = (GameManager.instance.remainTime / minPerHour).ToString();
 
         int T_min = GameManager.instance.remainTime % minPerHour;
         minute.text = T_min == 0 ? "00" : T_min.ToString();
+    }
+
+    public void updateCo()
+    {
         numCo.text = GameManager.instance.numCo.ToString();
     }
 }

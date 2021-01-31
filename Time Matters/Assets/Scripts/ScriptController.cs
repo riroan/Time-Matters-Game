@@ -15,6 +15,8 @@ public class Node
     [SerializeField] int Flag;
     [SerializeField] int LoseCo;
     [SerializeField] int LoseTime;
+    [SerializeField] int TimeThreshold;
+    [SerializeField] int EventFlag;
     public int numEvent;
     public Node[] children;
     public Node parent;
@@ -24,6 +26,8 @@ public class Node
     public bool isHead { get => ParentIx <= -1; } 
     public bool isLoseCo { get => LoseCo > 0; }
     public bool isLoseTime { get => LoseTime > 0; }
+    public int timeThreshold { get => TimeThreshold; }
+    public int eventFlag { get => EventFlag; }
     public int flag { get => Flag; }
     public int ix { get => Ix;  }
     public int loseCo { get => LoseCo; }
@@ -77,9 +81,7 @@ public class Graph
         string[] str = txt.text.Split('\n');
         nodes = new Node[str.Length];
         for (int i = 0; i < str.Length; i++)
-        {
             nodes[i] = JsonUtility.FromJson<Node>(str[i]);
-        }
     }
 
     public Node this[int ix] { get { return nodes[ix]; } }
@@ -90,12 +92,16 @@ public class ScriptController : MonoBehaviour
     bool isTyping = false;          // 지금 스토리가 입력되는중인지
     bool mustChoose = false;        // 선택지가 있는지
     bool isGameOver = false;        // 게임오버?
-    bool isGameEnd = false;         // 게임 끝?
+    bool isGameEnd = false;
+    int endFlag = 0;                // 게임 끝?
     int currentScriptIx = 0;        // 현재 스크립트 인덱스
     int rememberIx = -1;            // 돌발이벤트에서 돌아갈곳이 있는지
     int chapterIx = 0;              // 챕터 인덱스
     const int maxChoice = 3;        // 최대 선택지 개수
     const int minPerHour = 60;      // 1시간= 60분
+    const int happyEnding = -3;
+    const int deathEnding = -4;
+    const int fireEnding = -5;
 
     Graph currentScript;
     List<Graph> chapters = new List<Graph>();
@@ -111,21 +117,12 @@ public class ScriptController : MonoBehaviour
     [SerializeField] GameObject[] chooseBttn;
     [SerializeField] float dialogSpeed = 0.2f;
 
+    [SerializeField] GameObject endObject;
+
     public GameObject gameOverObject;
 
-    readonly string[] chapterPath = new string[] { "Story/prolog", "Story/Chapter1","Story/Chapter2"};
+    readonly string[] chapterPath = new string[] { "Story/prolog", "Story/Chapter1","Story/Chapter2","Story/Chapter3"};
 
-    IEnumerator textEffect(Text T)
-    {
-        string str = T.text;
-        for (int i = 0; i < 4; i++)
-        {
-            T.text = "<color=#ff0000>" + str +"</color>";
-            yield return new WaitForSeconds(0.15f);
-            T.text = "<color=#ffffff>" + str + "</color>";
-            yield return new WaitForSeconds(0.15f);
-        }
-    }
 
     private void Start()
     {
@@ -187,6 +184,8 @@ public class ScriptController : MonoBehaviour
     void updateCo()
     {
         GameManager.instance.numCo -= currentScript[currentScriptIx].loseCo;
+        if (GameManager.instance.numCo < 0)
+            GameManager.instance.numCo = 0;
         theInGame.numCo.text = GameManager.instance.numCo.ToString();
         StartCoroutine("textEffect", theInGame.numCo);
     }
@@ -194,6 +193,8 @@ public class ScriptController : MonoBehaviour
     void updateTime()
     {
         GameManager.instance.remainTime -= currentScript[currentScriptIx].loseTime;
+        if (GameManager.instance.remainTime < 0)
+            GameManager.instance.remainTime = 0;
         theInGame.hour.text = (GameManager.instance.remainTime / minPerHour).ToString();
         theInGame.minute.text = (GameManager.instance.remainTime % minPerHour).ToString();
         StartCoroutine("textEffect", theInGame.hour);
@@ -237,23 +238,55 @@ public class ScriptController : MonoBehaviour
 
     void ending()
     {
-        if (!isGameEnd)
-            isGameEnd = true;
-        else
+        Text endText = endObject.transform.Find("Text").GetComponent<Text>();
+        Image endImage = endObject.transform.Find("Back").GetComponent<Image>();
+        GameObject endBttn = endObject.transform.Find("BackBttn").gameObject;
+        endObject.SetActive(true);
+        IEnumerator fadeCoroutine = FadeIn(endImage, 1f, 1f, 1f);
+        if (endFlag == happyEnding)
         {
-            story.text = "도시를 지켜냈다.\n(대충 이겼다는 뜻)";
-            //gameO.SetActive(true);
+            typeCoroutine = Typing(endText, "서울은 무사히 지켜내고 당신도 돌아갈 수 있었다...", dialogSpeed, endBttn);
         }
+        else if (endFlag == deathEnding)
+        {
+            fadeCoroutine = FadeIn(endImage, 0.3f, 0f, 0f);
+            endText.color = new Color(1f, 1f, 1f);
+            typeCoroutine = Typing(endText, "테러리스트의 총격을 맞고 사망했다...", dialogSpeed, endBttn);
+        }
+        else if (endFlag == fireEnding)
+        {
+            fadeCoroutine = FadeIn(endImage, 0.7f, 0.7f, 0.7f);
+            typeCoroutine = Typing(endText, "당신은 목숨을 건졌지만 서울은 그만 불타고 말았다...", dialogSpeed, endBttn);
+        }
+        StartCoroutine(fadeCoroutine);
+        StartCoroutine(typeCoroutine);
     }
 
     void updateIx()
     {
-        if (currentScript[currentScriptIx].childIx[0] == -2)
+        if (currentScript[currentScriptIx].childIx[0] == -2)    // 게임 오버?
         {
             gameOver();
             return;
         }
-        if (currentScript[currentScriptIx].isRandom)    // 만약 랜덤이벤트다?
+        if (currentScript[currentScriptIx].childIx[0] < -2)     // 게임 엔딩?
+        {
+            isGameEnd = true;
+            endFlag = currentScript[currentScriptIx].childIx[0];
+            return;
+        }
+        if (currentScript[currentScriptIx].eventFlag > 0)
+        {
+            if((currentScript[currentScriptIx].eventFlag & GameManager.instance.eventFlag) > 0)
+                currentScriptIx = currentScript[currentScriptIx].childIx[1];
+            else
+                currentScriptIx = currentScript[currentScriptIx].childIx[0];
+        }
+        else if (currentScript[currentScriptIx].timeThreshold > 0)   // 남은 시간에 따라 달라지는가?
+        {
+            currentScriptIx = currentScript[currentScriptIx].childIx[System.Convert.ToInt32(currentScript[currentScriptIx].timeThreshold > GameManager.instance.remainTime)];
+        }
+        else if (currentScript[currentScriptIx].isRandom)    // 만약 랜덤이벤트다?
         {
             // 랜덤 결과 불러옴(확률 동일)
             int randomNumber = Random.Range(0, currentScript[currentScriptIx].childIx.Length);
@@ -270,15 +303,8 @@ public class ScriptController : MonoBehaviour
                 }
                 else
                 {
-                    try
-                    {
-                        nextChapter();
-                        return;
-                    }
-                    catch 
-                    {
-                        ending();
-                    }
+                    nextChapter();
+                    return;
                 }
             }
             if (currentScript[currentScriptIx].numEvent > 0)            // 돌발 이벤트가 있는가?
@@ -317,7 +343,21 @@ public class ScriptController : MonoBehaviour
         Frame.gameObject.SetActive(false);
     }
 
-    IEnumerator Typing(Text txt, string message, float speed)
+    public void revive()
+    {
+        isGameOver = false;
+        if (rememberIx >= 0)
+        {
+            currentScriptIx = rememberIx;
+            rememberIx = -1;
+        }
+        else
+            currentScriptIx++;
+        theInGame.updateCo();
+        theInGame.updateTime();
+    }
+
+    IEnumerator Typing(Text txt, string message, float speed, GameObject bttn = null)
     {
         isTyping = true;
         for (int i = 0; i < message.Length; i++)
@@ -326,7 +366,35 @@ public class ScriptController : MonoBehaviour
             yield return new WaitForSeconds(speed);
         }
         isTyping = false;
-        showChooseBttn();
-        updateIx();
+        if (bttn != null)
+        {
+            bttn.SetActive(true);
+        }
+        else
+        {
+            showChooseBttn();
+            updateIx();
+        }
+    }
+
+    IEnumerator textEffect(Text T)
+    {
+        string str = T.text;
+        for (int i = 0; i < 4; i++)
+        {
+            T.text = "<color=#ff0000>" + str + "</color>";
+            yield return new WaitForSeconds(0.15f);
+            T.text = "<color=#ffffff>" + str + "</color>";
+            yield return new WaitForSeconds(0.15f);
+        }
+    }
+
+    IEnumerator FadeIn(Image image, float r, float g, float b)
+    {
+        for (float i = 0f; i < 1f; i += 0.02f)
+        {
+            image.color = new Color(r, g, b, i);
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }

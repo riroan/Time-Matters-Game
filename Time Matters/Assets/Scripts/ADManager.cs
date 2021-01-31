@@ -6,6 +6,7 @@ using UnityEngine.Advertisements;
 public class ADManager : MonoBehaviour
 {
     ScriptController theScript;
+
     private void Awake()
     {
         theScript = FindObjectOfType<ScriptController>();
@@ -19,7 +20,9 @@ public class ADManager : MonoBehaviour
             Advertisement.Show();
             GameManager.instance.numViewAds--;
             theScript.gameOverObject.SetActive(false);
-            
+            GameManager.instance.remainTime += 60;
+            GameManager.instance.numCo += 10;
+            theScript.revive();
         }
     }
 }
