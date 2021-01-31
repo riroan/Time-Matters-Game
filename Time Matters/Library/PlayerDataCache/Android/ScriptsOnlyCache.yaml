@@ -70,19 +70,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12164}
     - Class: 114
-      Script: {instanceID: 12400}
+      Script: {instanceID: 12264}
     - Class: 114
-      Script: {instanceID: 12494}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12924}
+      Script: {instanceID: 12496}
     - Class: 114
-      Script: {instanceID: 13204}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 13224}
+      Script: {instanceID: 13206}
     - Class: 114
-      Script: {instanceID: 13326}
+      Script: {instanceID: 13226}
     - Class: 114
-      Script: {instanceID: 16760}
+      Script: {instanceID: 13328}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -129,15 +129,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11944}
     - Class: 114
-      Script: {instanceID: 12400}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12600}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 12924}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 13204}
+      Script: {instanceID: 13206}
     - Class: 114
-      Script: {instanceID: 13326}
+      Script: {instanceID: 13328}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -186,15 +186,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11944}
     - Class: 114
-      Script: {instanceID: 12400}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12924}
+      Script: {instanceID: 12926}
     - Class: 114
-      Script: {instanceID: 13204}
+      Script: {instanceID: 13206}
     - Class: 114
-      Script: {instanceID: 13258}
+      Script: {instanceID: 13260}
     - Class: 114
-      Script: {instanceID: 13326}
+      Script: {instanceID: 13328}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -366,7 +366,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: a4ae32bff881991cd3cd846a911be5ef
+      Hash: b036e37c6b267ff28482a3c7edeb99d0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -402,7 +402,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: a3210404bea3cfeeb6bf1380960203ca
+      Hash: a49344a9c4e952913e146f7816eccb39
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScriptController
@@ -460,6 +460,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: aa8ceb2c39bb2e00fab957423a64947e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InGameManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -588,7 +594,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 227bf3b75f9c62e2874b93fe9eaddd49
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonManager
@@ -700,12 +706,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: aa8ceb2c39bb2e00fab957423a64947e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InGameManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity

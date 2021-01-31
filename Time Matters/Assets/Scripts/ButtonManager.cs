@@ -6,8 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    public void goInGame()
+    [SerializeField] GameObject alert;
+    public void goInGame(Text name)
     {
+        if (name.text == "")
+        {
+            alert.SetActive(true);
+            return;
+        }
+        GameManager.instance.playerName = name.text;
         SceneManager.LoadScene("InGameScene");
     }
 
