@@ -97,6 +97,7 @@ public class ScriptController : MonoBehaviour
     int currentScriptIx = 0;        // 현재 스크립트 인덱스
     int rememberIx = -1;            // 돌발이벤트에서 돌아갈곳이 있는지
     int chapterIx = 0;              // 챕터 인덱스
+    string currentTypeText = "";
     const int maxChoice = 3;        // 최대 선택지 개수
     const int minPerHour = 60;      // 1시간= 60분
     const int happyEnding = -3;
@@ -113,7 +114,7 @@ public class ScriptController : MonoBehaviour
 
     [SerializeField] Image dialogImage;
     [SerializeField] Image Frame;
-    [SerializeField] Text story;
+    public Text story;
     [SerializeField] GameObject[] chooseBttn;
     [SerializeField] float dialogSpeed = 0.2f;
 
@@ -137,7 +138,7 @@ public class ScriptController : MonoBehaviour
 
     public void goNextDialog()  // 화면터치시 실행되는 함수
     {
-        if (isGameOver)
+        if (isGameOver && !isTyping)
         {
             gameOver();
             return;
@@ -147,6 +148,13 @@ public class ScriptController : MonoBehaviour
             ending();
             return;
         }
+        if (!isGameOver && !isTyping)
+        {
+            isCoOver();
+            isTimeOver();
+            if (isGameOver)
+                return;
+        }
         if (!isTyping)          // 글자가 입력되는중이 아닐경우
         {
             nextDialog();       // 다음 대사 불러옴
@@ -155,7 +163,7 @@ public class ScriptController : MonoBehaviour
         {
             StopCoroutine(typeCoroutine);
             showChooseBttn();       // 버튼 보이기
-            story.text = currentScript[currentScriptIx].line;       // 글자 즉시 입력
+            story.text = currentTypeText;       // 글자 즉시 입력
             isTyping = false;       // 입력 끝남
             updateIx();             // 다음대사 인덱스 찾음
         }
@@ -176,7 +184,8 @@ public class ScriptController : MonoBehaviour
                 showImage();
             else
                 hideImage();
-            typeCoroutine = Typing(story, currentScript[currentScriptIx].line, dialogSpeed);
+            currentTypeText = currentScript[currentScriptIx].line;
+            typeCoroutine = Typing(story, currentTypeText, dialogSpeed);
             StartCoroutine(typeCoroutine);
         }
     }
@@ -262,6 +271,32 @@ public class ScriptController : MonoBehaviour
         StartCoroutine(typeCoroutine);
     }
 
+    void isCoOver()   // 대원수 엔딩
+    {
+        if (chapterIx == 2)
+            return;
+        if (GameManager.instance.numCo == 0)
+        {
+            currentTypeText = "마지막 남은 대원이 죽었다...\n\n 어떠한 무기도 가지고 있지 않은 나는 그저 죽음만을 기다릴 뿐이다...";
+            typeCoroutine = Typing(story, currentTypeText, dialogSpeed);
+            StartCoroutine(typeCoroutine);
+            isGameOver = true;
+        }
+    }
+
+    void isTimeOver()  // 시간 엔딩
+    {
+        if (chapterIx == 2)
+            return;
+        if (GameManager.instance.remainTime == 0)
+        {
+            currentTypeText = "시간은 더 이상 없고 폭발물은 발사되었다...\n\n";
+            typeCoroutine = Typing(story, currentTypeText, dialogSpeed);
+            StartCoroutine(typeCoroutine);
+            isGameOver = true;
+        }
+    }
+
     void updateIx()
     {
         if (currentScript[currentScriptIx].childIx[0] == -2)    // 게임 오버?
@@ -330,7 +365,6 @@ public class ScriptController : MonoBehaviour
 
     void showImage()
     {
-        //story.transform.position = new Vector3(0, -1.2f);
         dialogImage.gameObject.SetActive(true);
         Frame.gameObject.SetActive(true);
         dialogImage.sprite = Resources.Load<Sprite>(currentScript[currentScriptIx].imagePath);
@@ -338,7 +372,6 @@ public class ScriptController : MonoBehaviour
 
     void hideImage()
     {
-        //story.transform.position = new Vector3(0, 0.8f);
         dialogImage.gameObject.SetActive(false);
         Frame.gameObject.SetActive(false);
     }
@@ -355,6 +388,9 @@ public class ScriptController : MonoBehaviour
             currentScriptIx++;
         theInGame.updateCo();
         theInGame.updateTime();
+        currentTypeText = "모두 끝난줄 알았지만 나는 잠시 기절한 것 뿐이었고 대원들과 시간도 남아있었다.";
+        typeCoroutine = Typing(story, currentTypeText, dialogSpeed);
+        StartCoroutine(typeCoroutine);
     }
 
     IEnumerator Typing(Text txt, string message, float speed, GameObject bttn = null)
@@ -367,9 +403,7 @@ public class ScriptController : MonoBehaviour
         }
         isTyping = false;
         if (bttn != null)
-        {
             bttn.SetActive(true);
-        }
         else
         {
             showChooseBttn();
@@ -380,7 +414,7 @@ public class ScriptController : MonoBehaviour
     IEnumerator textEffect(Text T)
     {
         string str = T.text;
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++)     // 4번 반짝거림
         {
             T.text = "<color=#ff0000>" + str + "</color>";
             yield return new WaitForSeconds(0.15f);
@@ -391,7 +425,7 @@ public class ScriptController : MonoBehaviour
 
     IEnumerator FadeIn(Image image, float r, float g, float b)
     {
-        for (float i = 0f; i < 1f; i += 0.02f)
+        for (float i = 0f; i < 1f; i += 0.02f)      // 서서히 나타남
         {
             image.color = new Color(r, g, b, i);
             yield return new WaitForSeconds(0.01f);

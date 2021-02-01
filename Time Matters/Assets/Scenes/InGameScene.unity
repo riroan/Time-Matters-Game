@@ -3840,13 +3840,13 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1424492471}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1882783073}
-        m_MethodName: ShowAD
+        m_MethodName: showRewardAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4767,6 +4767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6dd46e284a99f4eb8753e474c9dc7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alert: {fileID: 0}
 --- !u!4 &1767449194
 Transform:
   m_ObjectHideFlags: 0
@@ -4978,6 +4979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2f528ef5f8294438404fb64f3d1cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rewardAdsBttn: {fileID: 1424492470}
 --- !u!1 &1951964360
 GameObject:
   m_ObjectHideFlags: 0

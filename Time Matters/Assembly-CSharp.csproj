@@ -634,7 +634,16 @@
       <HintPath>E:/Time-Matters-Game/Time Matters/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="GoogleMobileAds.csproj">
+      <Project>{7737262C-838A-3651-CBEE-6DAFE7542242}</Project>
+      <Name>GoogleMobileAds</Name>
+    </ProjectReference>
+    <ProjectReference Include="GoogleMobileAds.Editor.csproj">
+      <Project>{F21C1C52-774C-C43C-5296-03CCB091877D}</Project>
+      <Name>GoogleMobileAds.Editor</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

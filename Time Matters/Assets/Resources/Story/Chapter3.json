@@ -18,7 +18,7 @@
 {"Line":"OO은 명기의 말을 듣고 좁은 틈 사이로 들어가는 순간 명기은 OO을 잡아당겼다." ,"ImagePath":"","Choice":[], "Ix" : 17, "ChildIx":[18], "ParentIx":16, "numEvent":0, "TimeThreshold":0, "Flag":0, "LoseCo":0, "LoseTime":0,"CoThreshold":0,"EventFlag":0}
 {"Line":"OO이 넘어진 사이 명기은 바지춤에서 권총을 꺼내 들고 뒤이어 따라오던 대원 하나를 향해 발사했다." ,"ImagePath":"","Choice":[], "Ix" : 18, "ChildIx":[19], "ParentIx":17, "numEvent":0, "TimeThreshold":0, "Flag":0, "LoseCo":0, "LoseTime":0,"CoThreshold":0,"EventFlag":0}
 {"Line":"그러고 난 뒤 문밖으로 수류탄을 던진다" ,"ImagePath":"","Choice":[], "Ix" : 19, "ChildIx":[20], "ParentIx":18, "numEvent":0, "TimeThreshold":0, "Flag":0, "LoseCo":0, "LoseTime":0,"CoThreshold":0,"EventFlag":0}
-{"Line":"쾅!" ,"ImagePath":"","Choice":[], "Ix" : 20, "ChildIx":[21], "ParentIx":19, "numEvent":0, "TimeThreshold":0, "Flag":0, "LoseCo":0, "LoseTime":0,"CoThreshold":0,"EventFlag":0}
+{"Line":"쾅!" ,"ImagePath":"images/explode","Choice":[], "Ix" : 20, "ChildIx":[21], "ParentIx":19, "numEvent":0, "TimeThreshold":0, "Flag":0, "LoseCo":0, "LoseTime":0,"CoThreshold":0,"EventFlag":0}
 {"Line":"문 바로 밖에서 터졌는지 엄청난 소리와 함께 중간에서 총을 맞은 대원이 상반신만 안으로 밀려들어왔다." ,"ImagePath":"","Choice":[], "Ix" : 21, "ChildIx":[22], "ParentIx":20, "numEvent":0, "TimeThreshold":0, "Flag":0, "LoseCo":0, "LoseTime":0,"CoThreshold":0,"EventFlag":0}
 {"Line":"OO: 이게 무슨...?" ,"ImagePath":"","Choice":[], "Ix" : 22, "ChildIx":[23], "ParentIx":21, "numEvent":0, "TimeThreshold":0, "Flag":0, "LoseCo":0, "LoseTime":0,"CoThreshold":0,"EventFlag":0}
 {"Line":"명기: 혼란스럽겠지. 하지만 걱정마 난 널 죽일 생각은 없으니까." ,"ImagePath":"","Choice":[], "Ix" : 23, "ChildIx":[24], "ParentIx":22, "numEvent":0, "TimeThreshold":0, "Flag":0, "LoseCo":0, "LoseTime":0,"CoThreshold":0,"EventFlag":0}
