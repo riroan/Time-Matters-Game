@@ -815,7 +815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -676.5001}
+  m_AnchoredPosition: {x: 0, y: -676.50006}
   m_SizeDelta: {x: -420.95166, y: -1629.1772}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &283089535
@@ -1214,7 +1214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1940.7899}
+  m_AnchoredPosition: {x: 0, y: 1940.79}
   m_SizeDelta: {x: 1820, y: 2400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &329820872
@@ -1764,8 +1764,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -640}
-  m_SizeDelta: {x: 1700, y: 1000}
+  m_AnchoredPosition: {x: 0, y: -630}
+  m_SizeDelta: {x: 1550, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &654423091
 MonoBehaviour:
@@ -1786,7 +1786,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3aa179f822ac3e94b872cc368d525333, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5359,9 +5359,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc714ca4f209e0943bcabc9d8eaf06a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  story: {fileID: 1098443038}
   dialogImage: {fileID: 654423091}
   Frame: {fileID: 1601874989}
-  story: {fileID: 1098443038}
   chooseBttn:
   - {fileID: 321655005}
   - {fileID: 20712562}

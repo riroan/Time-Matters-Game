@@ -21,9 +21,13 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         reset();
-        if (instance) Destroy(gameObject);
+        if (instance) 
+        { 
+            Destroy(gameObject);
+            return;
+        }
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(this);
     }
 
     public void getName(Text TName)

@@ -27,7 +27,7 @@ public class ButtonManager : MonoBehaviour
             return;
         }
         GameManager.instance.playerName = name.text;
-        theAudio.switchAudio("inGame");
+        theAudio.switchAudio("1F");
         SceneManager.LoadScene("InGameScene");
     }
 
@@ -49,7 +49,7 @@ public class ButtonManager : MonoBehaviour
 
     public void coworkerUp(Text num)
     {
-        if (GameManager.instance.numCo == maxCo)
+        if (GameManager.instance.numCo >= maxCo)
             return;
         num.text = (int.Parse(num.text) + 1).ToString();
         GameManager.instance.numCo++;
@@ -57,7 +57,7 @@ public class ButtonManager : MonoBehaviour
 
     public void coworkerDown(Text num)
     {
-        if (GameManager.instance.numCo == minCo)
+        if (GameManager.instance.numCo <= minCo)
             return;
         GameManager.instance.numCo--;
         num.text = (int.Parse(num.text) - 1).ToString();
@@ -68,7 +68,7 @@ public class ButtonManager : MonoBehaviour
         Text hour = time.transform.Find("hour").GetComponent<Text>();
         Text minute = time.transform.Find("minute").GetComponent<Text>();
 
-        if (GameManager.instance.remainTime == maxTime)
+        if (GameManager.instance.remainTime >= maxTime)
             return;
         GameManager.instance.remainTime += 10;
         int hourI = GameManager.instance.remainTime / 60;
@@ -85,7 +85,7 @@ public class ButtonManager : MonoBehaviour
         Text hour = time.transform.Find("hour").GetComponent<Text>();
         Text minute = time.transform.Find("minute").GetComponent<Text>();
 
-        if (GameManager.instance.remainTime == minTime)
+        if (GameManager.instance.remainTime <= minTime)
             return;
         GameManager.instance.remainTime -= 10;
         int hourI = GameManager.instance.remainTime / 60;

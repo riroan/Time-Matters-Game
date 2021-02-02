@@ -5,26 +5,42 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioClip mainBGM;
-    [SerializeField] AudioClip inGameBGM;
-    AudioSource audio;
+    [SerializeField] AudioClip firstBGM;
+    [SerializeField] AudioClip secondBGM;
+    [SerializeField] AudioClip thirdBGM;
+    [SerializeField] AudioClip winBGM;
+    [SerializeField] AudioClip deathBGM;
 
-    void Start()
+    AudioSource audio_;
+
+    public static AudioManager instance;
+
+    void Awake()
     {
+        if (instance)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
         DontDestroyOnLoad(transform.gameObject);
-        audio = GetComponent<AudioSource>();
+        audio_ = GetComponent<AudioSource>();
     }
 
     public void switchAudio(string pos)
     {
-        switch (pos)
-        {
-            case "main":
-                audio.clip = mainBGM;
-                break;
-            case "inGame":
-                audio.clip = inGameBGM;
-                break;
-        }
-        audio.Play();
+        if (pos == "main")
+            audio_.clip = mainBGM;
+        else if (pos == "1F")
+            audio_.clip = firstBGM;
+        else if (pos == "2F")
+            audio_.clip = secondBGM;
+        else if (pos == "3F")
+            audio_.clip = thirdBGM;
+        else if (pos == "win")
+            audio_.clip = winBGM;
+        else if (pos == "death")
+            audio_.clip = deathBGM;
+        audio_.Play();
     }
 }

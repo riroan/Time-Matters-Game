@@ -109,12 +109,13 @@ public class ScriptController : MonoBehaviour
     List<int>[] history;
 
     InGameManager theInGame;
+    AudioManager theAudio;
 
     IEnumerator typeCoroutine;
 
+    public Text story;
     [SerializeField] Image dialogImage;
     [SerializeField] Image Frame;
-    public Text story;
     [SerializeField] GameObject[] chooseBttn;
     [SerializeField] float dialogSpeed = 0.2f;
 
@@ -127,6 +128,7 @@ public class ScriptController : MonoBehaviour
 
     private void Start()
     {
+        theAudio = FindObjectOfType<AudioManager>();
         theInGame = FindObjectOfType<InGameManager>();
         foreach (string path in chapterPath)
             chapters.Add(new Graph(path));
@@ -242,6 +244,7 @@ public class ScriptController : MonoBehaviour
             gameOverObject.SetActive(true);
             if (!GameManager.instance.canViewAds)
                 gameOverObject.transform.Find("Ads").gameObject.SetActive(false);
+            theAudio.switchAudio("death");
         }
     }
 
@@ -254,18 +257,22 @@ public class ScriptController : MonoBehaviour
         IEnumerator fadeCoroutine = FadeIn(endImage, 1f, 1f, 1f);
         if (endFlag == happyEnding)
         {
+            fadeCoroutine = FadeIn(endImage, 1f,1f, 1f);
             typeCoroutine = Typing(endText, "서울은 무사히 지켜내고 당신도 돌아갈 수 있었다...", dialogSpeed, endBttn);
+            theAudio.switchAudio("win");
         }
         else if (endFlag == deathEnding)
         {
             fadeCoroutine = FadeIn(endImage, 0.3f, 0f, 0f);
             endText.color = new Color(1f, 1f, 1f);
             typeCoroutine = Typing(endText, "테러리스트의 총격을 맞고 사망했다...", dialogSpeed, endBttn);
+            theAudio.switchAudio("death");
         }
         else if (endFlag == fireEnding)
         {
             fadeCoroutine = FadeIn(endImage, 0.7f, 0.7f, 0.7f);
             typeCoroutine = Typing(endText, "당신은 목숨을 건졌지만 서울은 그만 불타고 말았다...", dialogSpeed, endBttn);
+            theAudio.switchAudio("win");
         }
         StartCoroutine(fadeCoroutine);
         StartCoroutine(typeCoroutine);
@@ -361,6 +368,15 @@ public class ScriptController : MonoBehaviour
             currentScriptIx = 11;
         else
             currentScriptIx = 0;
+        switch (chapterIx)
+        {
+            case 2:
+                theAudio.switchAudio("2F");
+                break;
+            case 3:
+                theAudio.switchAudio("3F");
+                break;
+        }
     }
 
     void showImage()
@@ -391,6 +407,18 @@ public class ScriptController : MonoBehaviour
         currentTypeText = "모두 끝난줄 알았지만 나는 잠시 기절한 것 뿐이었고 대원들과 시간도 남아있었다.";
         typeCoroutine = Typing(story, currentTypeText, dialogSpeed);
         StartCoroutine(typeCoroutine);
+        switch (chapterIx)
+        {
+            case 1:
+                theAudio.switchAudio("1F");
+                break;
+            case 2:
+                theAudio.switchAudio("2F");
+                break;
+            case 3:
+                theAudio.switchAudio("3F");
+                break;
+        }
     }
 
     IEnumerator Typing(Text txt, string message, float speed, GameObject bttn = null)

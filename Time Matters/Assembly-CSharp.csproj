@@ -69,7 +69,9 @@
     <Compile Include="Assets\Scripts\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\InGameManager.cs" />
+    <Compile Include="Assets\Scripts\Initializer.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\ReportManager.cs" />
     <Compile Include="Assets\Scripts\ScriptController.cs" />
     <Compile Include="Assets\Scripts\UtilButton.cs" />
     <None Include="Assets\Resources\Story\prologue.txt" />

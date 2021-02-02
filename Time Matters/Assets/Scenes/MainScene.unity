@@ -233,7 +233,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainBGM: {fileID: 8300000, guid: ad7aaad2e57eb014e8f51b3f7c8fc110, type: 3}
-  inGameBGM: {fileID: 8300000, guid: 989c2e1abec6973489398ad55e3fafc8, type: 3}
+  firstBGM: {fileID: 8300000, guid: eac231f0f36777445bf3ec4150038332, type: 3}
+  secondBGM: {fileID: 8300000, guid: bab69081cb24b39489f60ddad05043b4, type: 3}
+  thirdBGM: {fileID: 8300000, guid: 338b3f799119c96478545deb58fcd3f2, type: 3}
+  winBGM: {fileID: 8300000, guid: cf31e418c8270ae44b858f16e9f6d0f0, type: 3}
+  deathBGM: {fileID: 8300000, guid: bd24d4da1bedcba45aa446220549bd8b, type: 3}
 --- !u!82 &249582519
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1009,7 +1013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1746973743
 RectTransform:
   m_ObjectHideFlags: 0
