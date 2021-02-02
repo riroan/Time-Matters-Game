@@ -7,6 +7,18 @@ using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] GameObject alert;
+    AudioManager theAudio;
+
+    const int minTime = 60;
+    const int maxTime = 180;
+    const int minCo = 10;
+    const int maxCo = 20;
+
+    private void Start()
+    {
+        theAudio = FindObjectOfType<AudioManager>();
+    }
+
     public void goInGame(Text name)
     {
         if (name.text == "")
@@ -15,11 +27,13 @@ public class ButtonManager : MonoBehaviour
             return;
         }
         GameManager.instance.playerName = name.text;
+        theAudio.switchAudio("inGame");
         SceneManager.LoadScene("InGameScene");
     }
 
     public void goMain()
     {
+        theAudio.switchAudio("main");
         SceneManager.LoadScene("MainScene");
     }
 
@@ -35,13 +49,15 @@ public class ButtonManager : MonoBehaviour
 
     public void coworkerUp(Text num)
     {
+        if (GameManager.instance.numCo == maxCo)
+            return;
         num.text = (int.Parse(num.text) + 1).ToString();
         GameManager.instance.numCo++;
     }
 
     public void coworkerDown(Text num)
     {
-        if (int.Parse(num.text) <= 1)
+        if (GameManager.instance.numCo == minCo)
             return;
         GameManager.instance.numCo--;
         num.text = (int.Parse(num.text) - 1).ToString();
@@ -51,35 +67,33 @@ public class ButtonManager : MonoBehaviour
     {
         Text hour = time.transform.Find("hour").GetComponent<Text>();
         Text minute = time.transform.Find("minute").GetComponent<Text>();
-        int hourI = int.Parse(hour.text);
 
-        GameManager.instance.remainTime += 30;
-        if (minute.text == "30")
-        {
-            hour.text = (hourI + 1).ToString();
+        if (GameManager.instance.remainTime == maxTime)
+            return;
+        GameManager.instance.remainTime += 10;
+        int hourI = GameManager.instance.remainTime / 60;
+        int minI = GameManager.instance.remainTime % 60;
+        if (minI == 0)
             minute.text = "00";
-        }
         else
-            minute.text = "30";
+            minute.text = minI.ToString();
+        hour.text = hourI.ToString();
     }
 
     public void timeDown(GameObject time)
     {
         Text hour = time.transform.Find("hour").GetComponent<Text>();
         Text minute = time.transform.Find("minute").GetComponent<Text>();
-        int hourI = int.Parse(hour.text);
 
-        if (hour.text == "0" && minute.text == "00")
+        if (GameManager.instance.remainTime == minTime)
             return;
-        GameManager.instance.remainTime -= 30;
-        if (minute.text == "30")
-        {
+        GameManager.instance.remainTime -= 10;
+        int hourI = GameManager.instance.remainTime / 60;
+        int minI = GameManager.instance.remainTime % 60;
+        if (minI == 0)
             minute.text = "00";
-        }
         else
-        {
-            hour.text = (hourI - 1).ToString();
-            minute.text = "30";
-        }
+            minute.text = minI.ToString();
+        hour.text = hourI.ToString();
     }
 }

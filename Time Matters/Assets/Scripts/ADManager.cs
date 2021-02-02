@@ -37,8 +37,8 @@ public class ADManager : MonoBehaviour
         ad.LoadAd(getAdRequest());
         ad.OnUserEarnedReward += (sender, e) =>
         {
-            GameManager.instance.numCo += 10;
-            GameManager.instance.remainTime += 60;
+            GameManager.instance.numCo += 5;
+            GameManager.instance.remainTime += 30;
             theScript.revive();
             gameObject.SetActive(false);
         };

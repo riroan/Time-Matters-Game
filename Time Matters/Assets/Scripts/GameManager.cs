@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
 
     public void reset()
     {
-        numCo = 10;
-        remainTime = 60;
+        numCo = 15;
+        remainTime = 90;
         playerName = "창근";
         eventFlag = (char)0;
         numViewAds = maxViewAds;
