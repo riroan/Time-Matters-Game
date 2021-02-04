@@ -419,7 +419,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 8c09659f93308bf255f689f828bb209a
+      Hash: 87d86d08b7e2df72ee02014eb5a57c60
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScriptController

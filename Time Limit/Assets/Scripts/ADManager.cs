@@ -7,7 +7,7 @@ using GoogleMobileAds.Api;
 
 public class ADManager : MonoBehaviour
 {
-    bool isTestMode = true;
+    bool isTestMode = false;
     const string rewardTestID = "ca-app-pub-3940256099942544/5224354917";
     const string rewardID = "ca-app-pub-2200600415384912/9150552358";
     RewardedAd ad;

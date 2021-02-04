@@ -105,6 +105,7 @@ public class ScriptController : MonoBehaviour
     const int happyEnding = -3;
     const int deathEnding = -4;
     const int fireEnding = -5;
+    const int pollutEnding = -6;
 
     Graph currentScript;
     List<Graph> chapters = new List<Graph>();
@@ -125,7 +126,7 @@ public class ScriptController : MonoBehaviour
     [SerializeField] GameObject endObject;
     public GameObject gameOverObject;
 
-    readonly string[] chapterPath = new string[] { /*"Story/prolog", "Story/Chapter1","Story/Chapter2",*/"Story/Chapter3"};
+    readonly string[] chapterPath = new string[] { "Story/prolog", "Story/Chapter1","Story/Chapter2","Story/Chapter3"};
 
     private void Start()
     {
@@ -136,6 +137,7 @@ public class ScriptController : MonoBehaviour
         history = new List<int>[chapterPath.Length];
         for (int i = 0; i < history.Length; i++)
             history[i] = new List<int>();
+
         currentScript = chapters[chapterIx];
     }
 
@@ -258,15 +260,17 @@ public class ScriptController : MonoBehaviour
         GameObject endBttn = endObject.transform.Find("BackBttn").gameObject;
         endObject.SetActive(true);
         IEnumerator fadeCoroutine = FadeIn(endImage, 1f, 1f, 1f);
+
         if (endFlag == happyEnding)
         {
-            fadeCoroutine = FadeIn(endImage, 0f, 0f, 0f, "happy");
+            endImage.sprite = Resources.Load<Sprite>("images/happyEnding");
+            fadeCoroutine = FadeIn(endImage, 1f, 1f, 1f, "happy");
             typeCoroutine = Typing(endText, "서울은 무사히 지켜내고 당신도 돌아갈 수 있었다...", dialogSpeed, endBttn);
             theAudio.switchAudio("win");
         }
         else if (endFlag == deathEnding)
         {
-            fadeCoroutine = FadeIn(endImage, 0.3f, 0f, 0f,"death");
+            fadeCoroutine = FadeIn(endImage, 0f, 0f, 0f, "death");
             endText.color = new Color(1f, 1f, 1f);
             typeCoroutine = Typing(endText, "테러리스트의 총격을 맞고 사망했다...", dialogSpeed, endBttn);
             endingImage.sprite = Resources.Load<Sprite>("images/happyEnding");
@@ -274,9 +278,16 @@ public class ScriptController : MonoBehaviour
         }
         else if (endFlag == fireEnding)
         {
-            fadeCoroutine = FadeIn(endImage, 0.7f, 0.7f, 0.7f,"fire");
+            fadeCoroutine = FadeIn(endImage, 1f, 1f, 1f, "fire");
             typeCoroutine = Typing(endText, "당신은 목숨을 건졌지만 서울은 그만 불타고 말았다...", dialogSpeed, endBttn);
             endingImage.sprite = Resources.Load<Sprite>("images/firedEnding");
+            theAudio.switchAudio("win");
+        }
+        else if (endFlag == pollutEnding)
+        {
+            endImage.sprite = Resources.Load<Sprite>("images/happyEnding");
+            fadeCoroutine = FadeIn(endImage, 1f, 1f, 1f, "happy");
+            typeCoroutine = Typing(endText, "서울은 무사히 지켜내고 집으로 무사히 돌아갈 수 있었지만..\n바다의 오염은 막을 수 없었다...", dialogSpeed, endBttn);
             theAudio.switchAudio("win");
         }
         StartCoroutine(fadeCoroutine);
@@ -418,6 +429,7 @@ public class ScriptController : MonoBehaviour
         StartCoroutine(typeCoroutine);
         switch (chapterIx)
         {
+            case 0:
             case 1:
                 theAudio.switchAudio("1F");
                 break;
@@ -470,8 +482,6 @@ public class ScriptController : MonoBehaviour
         }
 
         if (ending == "happy")
-            endingImage.sprite = Resources.Load<Sprite>("images/happyEnding");
-        else if (ending == "death")
             endingImage.sprite = Resources.Load<Sprite>("images/happyEnding");
         else if (ending == "fire")
             endingImage.sprite = Resources.Load<Sprite>("images/firedEnding");

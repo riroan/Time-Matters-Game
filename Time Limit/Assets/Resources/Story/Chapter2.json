@@ -227,4 +227,4 @@
 {"Line":"시간이 없기에 수류탄으로 한 번에 해결하기로 합니다." ,"ImagePath":"images/grenade","Choice":[], "Ix" : 226, "ChildIx":[227], "ParentIx":220, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0, "TimeThreshold":0,"CoThreshold":0,"EventFlag":0}
 {"Line":"수류탄은 정확히 방 안으로 들어갔고 잠시 뒤 쾅 하는 소리와 함께 먼지와 파편이 나옵니다." ,"ImagePath":"","Choice":[], "Ix" : 227, "ChildIx":[228], "ParentIx":226, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0, "TimeThreshold":0,"CoThreshold":0,"EventFlag":0}
 {"Line":"다행히 적은 제압된 것 같습니다." ,"ImagePath":"","Choice":[], "Ix" : 228, "ChildIx":[229], "ParentIx":227, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0, "TimeThreshold":0,"CoThreshold":0,"EventFlag":0}
-{"Line":"하지만 먼지 때문에 시계가 확보되지 않아 먼지가 가라앉기를 기다립니다." ,"ImagePath":"","Choice":[], "Ix" : 229, "ChildIx":[-1], "ParentIx":228, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":0, "TimeThreshold":0,"CoThreshold":0,"EventFlag":0}
+{"Line":"하지만 먼지 때문에 시계가 확보되지 않아 먼지가 가라앉기를 기다립니다." ,"ImagePath":"","Choice":[], "Ix" : 229, "ChildIx":[-1], "ParentIx":228, "numEvent":0, "Flag":0, "LoseCo":0, "LoseTime":3, "TimeThreshold":0,"CoThreshold":0,"EventFlag":0}
