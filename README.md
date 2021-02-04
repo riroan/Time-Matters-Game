@@ -17,7 +17,9 @@
 ---
 
 ## 인게임 플레이
-![Alt text](/src/thumb1.jpg)
+<img src="src/thumb1.jpg" width="180" height="400"></img>
+<img src="src/thumb2.jpg" width="180" height="400"></img>
+<img src="src/thumb3.jpg" width="180" height="400"></img>
 
 ---
 
