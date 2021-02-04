@@ -16,6 +16,11 @@
 
 ---
 
+## 인게임 플레이
+![Alt text](/images/thumb1.jpg)
+
+---
+
 ## 파이팅
 
 Since 2020/12/28~
