@@ -17,7 +17,7 @@
 ---
 
 ## 인게임 플레이
-![Alt text](/images/thumb1.jpg)
+![Alt text](/src/thumb1.jpg)
 
 ---
 
