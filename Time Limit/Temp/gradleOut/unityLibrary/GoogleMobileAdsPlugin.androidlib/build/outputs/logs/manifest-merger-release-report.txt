@@ -1,0 +1,45 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:2:1-7:12
+INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:2:1-7:12
+	package
+		ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:2:70-100
+		INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+		INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:2:101-126
+		INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+		INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:2:127-150
+		INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+		INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+application
+ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:3:3-6:17
+uses-library#org.apache.http.legacy
+ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:4:5-84
+	android:required
+		ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:4:19-43
+	android:name
+		ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:4:44-81
+meta-data#com.google.android.gms.ads.APPLICATION_ID
+ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:5:5-130
+	android:value
+		ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:5:73-127
+	android:name
+		ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:5:16-72
+uses-sdk
+INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+		ADDED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+		INJECTED from E:\Time-Matters-Game\Time Limit\Temp\gradleOut\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml

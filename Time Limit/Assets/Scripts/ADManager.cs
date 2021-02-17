@@ -10,20 +10,41 @@ public class ADManager : MonoBehaviour
     bool isTestMode = false;
     const string rewardTestID = "ca-app-pub-3940256099942544/5224354917";
     const string rewardID = "ca-app-pub-2200600415384912/9150552358";
-    RewardedAd ad;
+    const string frontTestID = "ca-app-pub-3940256099942544/1033173712";
+    const string frontID = "ca-app-pub-2200600415384912/4008209768";
+    RewardedAd rewardAd;
+    InterstitialAd frontAd;
 
     public Button rewardAdsBttn;
     ScriptController theScript;
 
+    [SerializeField] GameObject board;
+
     private void Start()
     {
         theScript = FindObjectOfType<ScriptController>();
+        
+        loadFrontAd();
         loadRewardAd();
     }
 
     private void Update()
     {
-        rewardAdsBttn.interactable = ad.IsLoaded();
+        rewardAdsBttn.interactable = rewardAd.IsLoaded();
+    }
+
+    void loadFrontAd()
+    {
+        frontAd = new InterstitialAd(isTestMode ? frontTestID : frontID);
+        frontAd.LoadAd(getAdRequest());
+        frontAd.OnAdClosed += (sender, e) =>
+        {};
+    }
+
+    public void showFrontAd()
+    {
+        frontAd.Show();
+        loadFrontAd();
     }
 
     AdRequest getAdRequest()
@@ -33,20 +54,20 @@ public class ADManager : MonoBehaviour
 
     void loadRewardAd()
     {
-        ad = new RewardedAd(isTestMode ? rewardTestID : rewardID);
-        ad.LoadAd(getAdRequest());
-        ad.OnUserEarnedReward += (sender, e) =>
+        rewardAd = new RewardedAd(isTestMode ? rewardTestID : rewardID);
+        rewardAd.LoadAd(getAdRequest());
+        rewardAd.OnUserEarnedReward += (sender, e) =>
         {
             GameManager.instance.numCo += 5;
             GameManager.instance.remainTime += 30;
             theScript.revive();
-            gameObject.SetActive(false);
+            board.SetActive(false);
         };
     }
 
     public void showRewardAd()
     {
-        ad.Show();
+        rewardAd.Show();
         loadRewardAd();
     }
 }

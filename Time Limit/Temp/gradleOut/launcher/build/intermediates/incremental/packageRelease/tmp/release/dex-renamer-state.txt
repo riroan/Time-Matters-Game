@@ -1,0 +1,4 @@
+#Wed Feb 17 23:33:00 KST 2021
+base.0=E\:\\Time-Matters-Game\\Time Limit\\Temp\\gradleOut\\launcher\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

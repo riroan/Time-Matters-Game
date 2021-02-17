@@ -75,19 +75,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 12590}
+      Script: {instanceID: 12588}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12866}
     - Class: 114
-      Script: {instanceID: 13370}
+      Script: {instanceID: 13366}
     - Class: 114
-      Script: {instanceID: 13690}
+      Script: {instanceID: 13686}
     - Class: 114
-      Script: {instanceID: 13710}
+      Script: {instanceID: 13706}
     - Class: 114
-      Script: {instanceID: 13830}
+      Script: {instanceID: 13826}
     - Class: 114
-      Script: {instanceID: 13846}
+      Script: {instanceID: 13842}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -136,15 +136,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12196}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 12982}
     - Class: 114
-      Script: {instanceID: 13078}
+      Script: {instanceID: 13076}
     - Class: 114
-      Script: {instanceID: 13370}
+      Script: {instanceID: 13366}
     - Class: 114
-      Script: {instanceID: 13690}
+      Script: {instanceID: 13686}
     - Class: 114
-      Script: {instanceID: 13830}
+      Script: {instanceID: 13826}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -195,17 +195,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12196}
     - Class: 114
-      Script: {instanceID: 12696}
+      Script: {instanceID: 12694}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 12716}
     - Class: 114
-      Script: {instanceID: 13370}
+      Script: {instanceID: 13366}
     - Class: 114
-      Script: {instanceID: 13690}
+      Script: {instanceID: 13686}
     - Class: 114
-      Script: {instanceID: 13750}
+      Script: {instanceID: 13746}
     - Class: 114
-      Script: {instanceID: 13830}
+      Script: {instanceID: 13826}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -213,8 +213,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -474,12 +472,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerController
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
@@ -665,7 +657,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 38f6eb04974b6b1c4ec88f96741b8860
+      Hash: b45aae69036ed0ef3f9a181bc4d30927
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ADManager
@@ -770,4 +762,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainScene.unity
   - Assets/Scenes/LevelScene.unity
   - Assets/Scenes/InGameScene.unity
-  playerPath: C:/Users/riroan/Desktop/TimeLimit.apk
+  playerPath: C:/Users/riroan/Desktop/TimeLimit.aab

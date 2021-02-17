@@ -8,6 +8,7 @@ public class ButtonManager : MonoBehaviour
 {
     [SerializeField] GameObject alert;
     AudioManager theAudio;
+    ADManager theAD;
 
     const int minTime = 60;
     const int maxTime = 120;
@@ -17,6 +18,7 @@ public class ButtonManager : MonoBehaviour
     private void Start()
     {
         theAudio = FindObjectOfType<AudioManager>();
+        theAD = FindObjectOfType<ADManager>();
     }
 
     public void goInGame(Text name)
@@ -33,8 +35,11 @@ public class ButtonManager : MonoBehaviour
 
     public void goMain()
     {
-        if(SceneManager.GetActiveScene().name == "InGameScene")
+        if (SceneManager.GetActiveScene().name == "InGameScene")
+        {
+            theAD.showFrontAd();
             theAudio.switchAudio("main");
+        }
         SceneManager.LoadScene("MainScene");
     }
 
