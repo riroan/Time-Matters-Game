@@ -7,11 +7,11 @@ using GoogleMobileAds.Api;
 
 public class ADManager : MonoBehaviour
 {
-    bool isTestMode = false;
-    const string rewardTestID = "ca-app-pub-3940256099942544/5224354917";
-    const string rewardID = "ca-app-pub-2200600415384912/9150552358";
-    const string frontTestID = "ca-app-pub-3940256099942544/1033173712";
-    const string frontID = "ca-app-pub-2200600415384912/4008209768";
+    bool isTestMode = true;
+    const string rewardTestID = "";
+    const string rewardID = "";
+    const string frontTestID = "";
+    const string frontID = "";
     RewardedAd rewardAd;
     InterstitialAd frontAd;
 

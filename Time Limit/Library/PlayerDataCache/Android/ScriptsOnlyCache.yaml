@@ -762,4 +762,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainScene.unity
   - Assets/Scenes/LevelScene.unity
   - Assets/Scenes/InGameScene.unity
-  playerPath: C:/Users/riroan/Desktop/TimeLimit.aab
+  playerPath: C:/Users/riroan/Desktop/timelimit.apk
